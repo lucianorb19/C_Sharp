@@ -1,0 +1,90 @@
+C# CURSO UDEMY
+
+INSTALAÇÕES
+Visual Studio Comunitty
+
+
+
+SOBRE A LINGUAGEM
+LINGUAGEM PRÉ-COMPILADA
+CÓDIGO -> PRÉ COMPILAÇÃO NO CIL (COMMON INTERMEDIATE LANGUAGE) -> COMPILAÇÃO JIT(JUST IN TIME) NA CLR (COOMON LANGUAGE RUNTIME) .NET (MÁQUINA VIRTUAL) -> CÓDIGO DE MÁQUINA
+
+
+
+CLASSES FORMAM NAMESPACES (AGRUPAMENTO LÓGICO) 
+        |
+        V
+        ASSEMBLYs (AGRUPAMENTO FÍSICO - DLL ou EXE - BUILD - SUBPROJETO) -> APLICAÇÃO
+
+
+
+MACETES
+IDENTAÇÃO AUTOMÁTICA - CTRL + K + D
+CW+TAB TAB - ESCREVE Console.WriteLine()
+SABER O VALOR MÍNIMO OU MÁXIMO DE UM TIPO DE VARIÁVEL NUMÉRICA
+int.MinValue;
+int.MaxValue;
+
+
+
+RECOMENDAÇÕES
+COLOCAR L AO FINAL DO VALOR DE INTEIRO DO TIPO long
+long x = 2465795L  (LETRA NO FINAL DO NÚMERO? QUE DOIDEIRA)
+float x = 4.5f (LETRA f AO FINAL DO NÚMERO)
+
+
+
+TIPOS DE VARIÁVEIS - MAIS COMUNS
+C#          .Net FrameworkType    Signed   Bytes(tamanho)    Faixa de valor
+____________________________________________________________________________
+INTEIRO
+_______
+int         System.Int32          YES      4                 -2.147.438.648 a 2.147.438.647
+long        System.Int64          YES      8                 -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
+sbyte       System.SByte          YES      1                 -128 a 127
+byte        System.Byte           NO       1                 0 a 255
+
+FLOAT
+______
+float       System.Single         YES      4                 1.175494351 E - 38 a 3,402823466 E + 38
+double      System.Double         YES      8                 2.2250738585072014 E - 308 a 1,7976931348623158 E + 308
+decimal     System.Decimal        YES      12                ±1,0 x 10-28 a ±7,9228 x 1028
+
+STRING
+______
+char        System.Char           -        2     
+
+BOOL
+_____
+bool        System.Boolean        -        true or false
+
+
+
+STRING
+CADEIA DE CARACTÉRES IMUTÁVEL - ASPAS DUPLAS
+string nome = "Luciano";
+
+
+CHAR
+REPRESENTA UM ÚNICO CARACTERE - USAR ASPAS SIMPLES
+char letra = 'A';
+
+PARA ATRIBUIR VALORES, USAR O CARACTERE DIRETO OU SEU CÓDIGO UNICODE EM https://symbl.cc/pt/unicode-table/
+char letra = 'A'
+char letra = '\u0041'
+
+
+OBJECT
+TODA VARIÁVEL HERDA DE OBJECT
+object nome = "luciano";
+object valor = 15;
+object numero = 'a';
+object x = 40.25f
+
+
+
+OVERFLOW DE VARIÁVEL
+SEMPRE QUE É ATRIBUÍDO A UMA VARIÁVEL UM VALOR QUE FOGE DO SEU INTERVALO, ELA ASSUME O VALOR OPOSTO. POR EXEMPLO, VARIÁVEIS DO TIPO sbyte ASSUMEM VALORES DE -128 A 127. SE FOR ATRIBUÍDO sbtye x = 128; x vai assumir valor -128.
+
+
+
