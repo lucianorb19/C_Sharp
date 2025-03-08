@@ -12,3 +12,4 @@ C:\Users\Luciano\Desktop\C-\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\net8.0\ref
 C:\Users\Luciano\Desktop\C-\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\net8.0\PrimeiroProjeto.pdb
 C:\Users\Luciano\Desktop\C-\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\net8.0\PrimeiroProjeto.genruntimeconfig.cache
 C:\Users\Luciano\Desktop\C-\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\net8.0\ref\PrimeiroProjeto.dll
+C:\Users\Luciano\Desktop\C-\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\net8.0\PrimeiroProjeto.sourcelink.json
