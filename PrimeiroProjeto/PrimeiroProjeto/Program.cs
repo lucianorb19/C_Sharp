@@ -144,6 +144,88 @@ namespace PrimeiroProjeto
             Console.WriteLine($"Trapézio: {area_trapezio.ToString("f3", CultureInfo.InvariantCulture)}");
             Console.WriteLine($"Quadrado: {area_quadrado.ToString("f3", CultureInfo.InvariantCulture)}");
             Console.WriteLine($"Retângulo: {area_retangulo.ToString("f3", CultureInfo.InvariantCulture)}");
+            
+
+            //EXERCÍCIO_08
+            Console.WriteLine("Digite um número inteiro: ");
+            int numero = int.Parse(Console.ReadLine());
+            if(numero < 0)
+            {
+                Console.WriteLine("Negativo");
+            }
+            else
+            {
+                Console.WriteLine("Não negativo");
+            }
+            
+
+            //EXERCÍCIO_09
+            Console.WriteLine("Digite um número inteiro: ");
+            int numero = int.Parse(Console.ReadLine());
+            if(numero%2 == 0)
+            {
+                Console.WriteLine("Par");
+            }
+            else
+            {
+                Console.WriteLine("Ímpar");
+            }
+            
+
+
+            //EXERCÍCIO_10
+            Console.WriteLine("Digite o primeiro número inteiro: ");
+            int valor1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo número inteiro: ");
+            int valor2 = int.Parse(Console.ReadLine());
+
+            if (valor1 > valor2 || valor1==valor2)
+            {
+                if (valor1 % valor2 == 0)
+                {
+                    Console.WriteLine("São múltiplos");
+                }
+                else//valor 1%valor 2 != 0
+                {
+                    Console.WriteLine("Não são múltiplos");
+                }
+            }
+            else //valor 2 > valor1
+            {
+                if (valor2 % valor1 == 0)
+                {
+                    Console.WriteLine("São múltiplos");
+                }
+                else//valor 2%valor 1 != 0
+                {
+                    Console.WriteLine("Não são múltiplos");
+                }
+            }
+            
+
+            //EXERCÍCIO_11
+            int duracao = 0;
+
+            Console.WriteLine("Digite a hora de ínicio do jogo [24h]: ");
+            int hora_inicio = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a hora de término do jogo [24h]: ");
+            int hora_fim = int.Parse(Console.ReadLine());
+
+            if (hora_inicio < hora_fim) //JOGO NO MESMO DIA
+            {
+                duracao = hora_fim - hora_inicio;
+            }
+            else if (hora_inicio == hora_fim)//JOGO DUROU 24H
+            {
+                duracao = 24;
+            }
+            else//JOGO COMEÇA EM UM DIA E TERMINA NO OUTRO
+            {
+                int aux1 = 24 - hora_inicio;
+                duracao = aux1 + hora_fim;
+            }
+
+            Console.WriteLine($"O jogo durou {duracao} horas!");
             */
 
 

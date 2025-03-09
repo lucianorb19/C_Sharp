@@ -51,7 +51,7 @@ char        System.Char           -        2
 
 BOOL
 _____
-bool        System.Boolean        -        true or false
+bool        System.Boolean        -        True or False
 
 
 
@@ -81,6 +81,18 @@ object x = 40.25f
 OVERFLOW DE VARIÁVEL
 SEMPRE QUE É ATRIBUÍDO A UMA VARIÁVEL UM VALOR QUE FOGE DO SEU INTERVALO, ELA ASSUME O VALOR OPOSTO. POR EXEMPLO, VARIÁVEIS DO TIPO sbyte ASSUMEM VALORES DE -128 A 127. SE FOR ATRIBUÍDO sbtye x = 128; x vai assumir valor -128.
 
+
+
+ESCOPO DE VARIÁVEL
+TODA VARIÁVEL PRECISA SER DECLARADA (SEU TIPO) E INICIALIZADA (ATRIBUIR ALGUM VALOR A ELA)
+UMA VARIÁVEL DENTRO DE UM ESTRUTURA MENOR NÃO É VISÍVEL FORA DELA
+static void Main(...){
+        double x = 110;
+        if (x>100){
+                double desconto = preco * 0.1;
+        }
+        Console.WriteLine(desconto); //desconto NÃO É VISÍVEL FORA DO IF
+}
 
 
 
@@ -180,6 +192,21 @@ PRECEDÊNCIA
 () QUEBRA PRECEDÊNCIA
 
 
+-----OPERADORES COMPARATIVOS-----
+> MAIOR
+< MENOR
+>= MAIOR OU IGUAL
+<= MENOR OU IGUAL
+== IGUAL
+!= DIFERENTE
+
+
+---OPERADORES LÓGICOS-----
+&& E - 2ª MAIOR PRECEDÊNCIA
+|| OU - 3ª MAIOR PRECEDÊNCIA
+!  NÃO - MAIOR PRECEDÊNCIA
+
+ 
 
 -----ENTRADA DE DADOS-----
 Console.ReadLine(); 
@@ -209,6 +236,34 @@ double numero = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); 
 Console.WriteLine(numero.ToString("f2",CultureInfo.InvariantCulture));// SAÍDA 4.55
 
 
+
+CONDICIONAL - IF ELSE
+SIMPLES
+if (condicao1){
+        comando1
+}
+
+COMPOSTA
+if(condicao1){
+        comando1
+}
+else{
+        comando2
+}
+
+ANINHADA/ENCADEADA
+if(condicao1){
+        comando1
+}
+else if(condicao2){
+        comando2
+}
+else if(condicao3){
+        comando3
+}
+else{
+        comando4
+}
 
 
 
