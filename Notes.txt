@@ -128,6 +128,45 @@ Console.WriteLine(nome +" tem "+idade+" anos e R$"+saldo.ToString("f2")+" na con
 
 
 
+-----ATRIBUIÇÃO-----
+= -> RECEBE
+a += 2 -> a RECEBE a + 2 (TAMBÉM FUNCIONA COM STRING)
+a -= 2 -> ...
+a *= 2 -> ...
+a /= 2 -> ...
+a %= 2 -> a = a%2
+a++ -> a=a+1
+a-- -> a=a-1
+
+DIFERENÇA ++a E a++
+a=10;
+b=a++; (B VALE 10 E A VALE 11)
+
+a=10;
+b=++a; (B VALE 11 E A VALE 11)
+
+OU SEJA, x=++A - INCREMENTA O a E DEPOIS ATRIBUI SEU VALOR PARA x
+         x=a++ - ATIBUI a SEM INCREMENTO A x E DEPOIS INCREMENTA A
+
+
+-----CONVERSÃO DE TIPOS-----
+IMPLÍCITA - ATRIBUIR A UMA VARIÁVEL O VALOR DE OUTRA QUE "CABE" DENTRO DELA
+float a = 5.2f;
+double b = a; //CONVERSÃO IMPLÍCITA
+
+EXPLÍCITA / CASTING - FORÇAR A CONVERSÃO DO VALOR DE UMA VARIÁVEL PARA OUTRO TIPO, ASSUMINDO O RISCO DA PERDA DE DADOS
+double a = 5.2;
+float b = (float)a;
+
+CASTING EM OPERAÇÕES
+int a = 5;
+int b = 2;
+double resultado = a / b; //RESULTADO É UM INTEIRO PORQUE O COMPILADOR ENTENDE SOMENTE AS PARTES INTEIRAS DE VARIÁVEIS INTEIRAS
+double resultado1 = (double) a / b;
+
+
+
+
 
 
 

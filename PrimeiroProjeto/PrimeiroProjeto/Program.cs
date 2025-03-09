@@ -11,6 +11,7 @@ namespace PrimeiroProjeto
     {
         static void Main(string[] args)//ENTRY POINT - ONDE A APLICÃÇÃO COMEÇA A SER EXECUTADA
         {
+            /*
             //EXERCÍCIO_1
             string produto1 = "Computador";
             string produto2 = "Mesa de escritório";
@@ -29,6 +30,12 @@ namespace PrimeiroProjeto
             Console.WriteLine($"Medida com oito casas decimais: {medida.ToString("f8")}");
             Console.WriteLine($"Arredondado (três casas decimais): {medida.ToString("f3")}");
             Console.WriteLine($"Separador decimal invariant culture: {medida.ToString("f3", CultureInfo.InvariantCulture)}");
+            */
+            int a = 5;
+            int b = 2;
+            double resultado = (double) a / b;
+            Console.WriteLine(resultado);
+            
 
 
         }
