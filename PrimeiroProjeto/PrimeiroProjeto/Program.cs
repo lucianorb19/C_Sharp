@@ -2,6 +2,7 @@
 //Console.WriteLine("Hello, World!");
 
 using System;//REFERÊNCIA AO NAMESPACE SYSTEM - PADRÃO DO VISUAL STUDIO
+using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.Numerics; //CultureInfo.InvariantCulture
@@ -226,8 +227,159 @@ namespace PrimeiroProjeto
             }
 
             Console.WriteLine($"O jogo durou {duracao} horas!");
-            */
+            
 
+
+            //EXERCÍCIO_12
+            double preco = 0;
+
+            Console.WriteLine("Código do item e quantidade: ");
+            string[] dados = Console.ReadLine().Split();
+
+            int codigo_item = int.Parse(dados[0], CultureInfo.InvariantCulture);
+            int quantidade_item = int.Parse(dados[1], CultureInfo.InvariantCulture);
+
+            if (codigo_item == 1)
+            {
+                preco = quantidade_item * 4;
+            }
+            else if (codigo_item == 2)
+            {
+                preco = quantidade_item * 4.5;
+            }
+            else if (codigo_item == 3)
+            {
+                preco = quantidade_item * 5;
+            }
+            else if (codigo_item == 4)
+            {
+                preco = quantidade_item * 2;
+            }
+            else if (codigo_item == 5)
+            {
+                preco = quantidade_item * 1.5;
+            }
+
+            Console.WriteLine($"Total: R$ {preco.ToString("f2", CultureInfo.InvariantCulture)}");
+            
+
+
+            //EXERCÍCIO_13
+            Console.WriteLine("Digite um valor numério qualuer: ");
+            double valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            
+            if (valor >= 0 && valor <= 25)
+            {
+                Console.WriteLine("Intervalo: [0,25]");
+            }
+            else if (valor > 25 && valor <= 50)
+            {
+                Console.WriteLine("Intervalo: (25,50]");
+            }
+            else if (valor > 50 && valor <= 75)
+            {
+                Console.WriteLine("Intervalo: (50,75]");
+            }
+            else if (valor > 75 && valor <= 100)
+            {
+                Console.WriteLine("Intervalo: (75,100]");
+            }
+            else
+            {
+                Console.WriteLine("Fora de intervalo");
+            }
+            
+
+
+            //EXERCÍCIO_14
+            Console.WriteLine("Digite as coordenadas X e Y (com uma casa decimal: )");
+            string[] coordenadas = Console.ReadLine().Split();
+            double x = double.Parse(coordenadas[0], CultureInfo.InvariantCulture);
+            double y = double.Parse(coordenadas[1], CultureInfo.InvariantCulture);
+
+            if (x == 0 && y == 0)
+            {
+                Console.WriteLine("Origem");
+            }
+            else if (x > 0)
+            {
+                if (y > 0)
+                {
+                    Console.WriteLine("Q1");
+                }
+                else //y < 0
+                {
+                    Console.WriteLine("Q4");
+                }
+            }
+            else // x < 0
+            {
+                if (y > 0)
+                {
+                    Console.WriteLine("Q2");
+                }
+                else //y < 0
+                {
+                    Console.WriteLine("Q3");
+                }
+            }
+            
+
+
+            //EXERCÍCIO_15
+            double imposto = 0;
+            double faixa1 = 0;
+            double faixa2 = 0;
+            double faixa3 = 0;
+
+            Console.WriteLine("Digite o salário: ");
+            double salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            if (salario > 0 && salario <= 2000)//
+            {
+                Console.WriteLine("Isento");
+            }
+            else if (salario > 2000 && salario <= 3000)//faixa1
+            {
+                //2500
+                faixa1 = (salario - 2000);
+                imposto += faixa1 * 0.08;
+                Console.WriteLine($"Faixa 1 - {faixa1} - cobrado 8%");
+            }
+
+            else if (salario > 3000 && salario <= 4500)//faixa2
+            {
+                //3500
+                faixa2 = (salario - 3000);//500
+                imposto += faixa2 * 0.18;
+
+                faixa1 = (salario - faixa2) - 2000;//3500 - 500 = 3000 -> 3000 - 2000 = 1000
+                imposto += faixa1 * 0.08;
+
+                Console.WriteLine($"Faixa 1 - {faixa1} - cobrado 8%");
+                Console.WriteLine($"Faixa 2 - {faixa2} - cobrado 18%");
+            }
+
+            else if (salario > 4500)//faixa3
+            {
+                //5000
+                faixa3 = (salario - 4500); //500
+                imposto += faixa3 * 0.28;
+
+                faixa2 = (salario - faixa3) - 3000;//5000 - 500 = 4500 -> 4500 - 3000 = 1500
+                imposto += faixa2 * 0.18;
+
+                faixa1 = salario - faixa3 - faixa2 - 2000;//5000 - 500 - 1500 = 3000 -> 3000 - 2000 = 1000
+                imposto += faixa1 * 0.08;
+
+                Console.WriteLine($"Faixa 1 - {faixa1} - cobrado 8%");
+                Console.WriteLine($"Faixa 2 - {faixa2} - cobrado 18%");
+                Console.WriteLine($"Faixa 3 - {faixa3} - cobrado 28%");
+
+            }
+
+            Console.WriteLine($"Imposto de renda: {imposto}");
+            */
 
 
 
