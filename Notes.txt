@@ -161,8 +161,55 @@ float b = (float)a;
 CASTING EM OPERAÇÕES
 int a = 5;
 int b = 2;
-double resultado = a / b; //RESULTADO É UM INTEIRO PORQUE O COMPILADOR ENTENDE SOMENTE AS PARTES INTEIRAS DE VARIÁVEIS INTEIRAS
+double resultado = a / b; //RESULTADO É UM INTEIRO PORQUE O COMPILADOR ENTENDE SOMENTE AS PARTES INTEIRAS DE VARIÁVEIS INTEIRAS PROCESSADAS
 double resultado1 = (double) a / b;
+
+
+-----OPERADORES ARITMÉTICOS-----
++ SOMA
+- SUBTRAÇÃO
+* MULTIPLICAÇÃO
+/ DIVISÃO
+% MOD
+Math.Pow(x, y) - EXPONENCIAÇÃO -> x elevado a y
+Math.Sqrt(x) RAIZ QUADRADA
+
+
+PRECEDÊNCIA
+* / % -> + -
+() QUEBRA PRECEDÊNCIA
+
+
+
+-----ENTRADA DE DADOS-----
+Console.ReadLine(); 
+LÊ ATÉ A QUEBRA DE LINHA - ENTER
+ENTRADA DE DADOS SEMPRE COMO STRING
+
+LER STRINGS DE UM VETOR
+string frase = Console.ReadLine();//STRING RECEBE TODAS AS PALAVRAS
+string[] vetor = frase.Split(' ');//CADA PALAVRA É SALVA NUMA POSIÇÃO DO VETOR
+string p0 = vetor[0];
+string p1 = vetor[1];  //CADA PALAVRA É ATRIBUÍDA A UMA NOVA VARIÁVEL
+string p2 = vetor[2];
+
+CONVERTER TIPOS NA ENTRADA
+int n1 = int.Parse(Consolo.ReadLine());
+
+variavel = tipo_variavel.Parse(Console.ReadLine());
+
+CONVERSÃO DE DECIMAIS COM , OU .
+SE A MÁQUINA ESTIVER EM PT-BR, PREENCHER AS VARIÁVEIS COM . DÁ ERRO
+double numero = double.Parse(Console.ReadLine()); //ENTRADA 4.55
+Console.WriteLine(numero);// SAÍDA 455
+
+PARA QUE FUNCIONE USANDO .
+Using System.Globalization
+double numero = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); //ENTRADA 4.55
+Console.WriteLine(numero.ToString("f2",CultureInfo.InvariantCulture));// SAÍDA 4.55
+
+
+
 
 
 

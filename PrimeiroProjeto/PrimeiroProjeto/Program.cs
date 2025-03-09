@@ -30,12 +30,33 @@ namespace PrimeiroProjeto
             Console.WriteLine($"Medida com oito casas decimais: {medida.ToString("f8")}");
             Console.WriteLine($"Arredondado (três casas decimais): {medida.ToString("f3")}");
             Console.WriteLine($"Separador decimal invariant culture: {medida.ToString("f3", CultureInfo.InvariantCulture)}");
-            */
-            int a = 5;
-            int b = 2;
-            double resultado = (double) a / b;
-            Console.WriteLine(resultado);
             
+
+            //EXERCÍCIO_2
+            Console.WriteLine("Digite seu nome completo: ");
+            string nome = Console.ReadLine();
+            
+            Console.WriteLine("Quantos quartos tem na sua casa? ");
+            int numero_quartos = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Digite o preço de um produto: ");
+            double preco_produto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            
+            Console.WriteLine("Digite seu último nome, idade e altura (mesma linha): ");
+            string[] dados = Console.ReadLine().Split(' ');
+            string ultimo_nome = dados[0];
+            int idade = int.Parse(dados[1]);
+            double altura = double.Parse(dados[2], CultureInfo.InvariantCulture);
+
+
+            Console.WriteLine($"Nome: {nome}");
+            Console.WriteLine($"Quantidade de quartos: {numero_quartos}");
+            Console.WriteLine($"Preço do produto: {preco_produto.ToString("f2",CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Último nome: {ultimo_nome}");
+            Console.WriteLine($"Idade: {idade}");
+            Console.WriteLine($"Altura: {altura.ToString("f2", CultureInfo.InvariantCulture)}");
+            */
+
 
 
         }
