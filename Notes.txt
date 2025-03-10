@@ -26,6 +26,15 @@ int.MinValue;
 int.MaxValue;
 
 
+-----DEBUGGING-----
+CRIAR UM BREAKE POINT - LINHA ONDE SERÁ INICIADO O DEBUG - F9
+INICIAR O DEBUG - F5
+CHEGANDO AO BREAK POINT - EXECUTAR CADA PASSO - F11 (EXECUTA ATÉ O PASSO A PASSO DE FUNÇÕES EXTERNAS) OU F10
+INTERROMPER O DEBUG - SHIFT + F5
+
+
+JANELA Locals - GUARDA OS VALORES DE TODAS AS VARIÁVEIS DO ESCOPO
+
 
 ----------TIPOS DE VARIÁVEIS----------
 
@@ -237,7 +246,7 @@ Console.WriteLine(numero.ToString("f2",CultureInfo.InvariantCulture));// SAÍDA 
 
 
 
-CONDICIONAL - IF ELSE
+-----CONDICIONAL - IF ELSE-----
 SIMPLES
 if (condicao1){
         comando1
@@ -265,6 +274,38 @@ else{
         comando4
 }
 
+
+-----WHILE-----
+while (condicao){
+        comando
+}
+
+
+
+-----FUNÇÕES-----
+static <tipo saida> <nome_funcao> (<parametros>){
+        <codigo>
+        <return variavel>
+}
+
+FUNÇÕES AO FINAL, FORA DA MAIN E DENTRO DA CLASS Program - SE ESTIVEREM NO MESMO ARQUIVO .cs
+
+//EXEMPLO
+static int Maior_de_tres(int n1, int n2, int n3)
+{
+    int f_maior = n1;
+
+    if (n2 >= f_maior)
+    {
+        f_maior = n2;
+    }
+    else if (n3 >= f_maior)
+    {
+        f_maior = n3;
+    }
+
+    return f_maior;
+}
 
 
 

@@ -379,14 +379,182 @@ namespace PrimeiroProjeto
             }
 
             Console.WriteLine($"Imposto de renda: {imposto}");
+            
+
+
+            //EXERCÍCIO_16
+            string senha = "2002";
+            string tentativa = "";
+
+            while (tentativa != senha)
+            {
+                Console.Write("Digite a senha: ");
+                tentativa = Console.ReadLine();
+                if (tentativa != senha)
+                {
+                    Console.WriteLine("Senha inválida");
+                }
+            }
+            Console.WriteLine("Acesso permitido");
+            
+
+
+            //EXERCÍCIO_17
+            int x = 1;
+            int y = 1;
+
+            while (x != 0 && y != 0)//ENQUANTO NENHUM COORDENADA FOR NULA
+            {
+                Console.Write("Digite as coordenadas X e Y (mesma linha, separadas por espaço): ");
+                string[] coordenadas = Console.ReadLine().Split();
+                x = int.Parse(coordenadas[0]);
+                y = int.Parse(coordenadas[1]);
+
+                if (x != 0 && y != 0)
+                {
+                    if (x > 0)
+                    {
+                        if (y > 0)
+                        {
+                            Console.WriteLine("Primeiro");
+                        }
+                        else //y < 0
+                        {
+                            Console.WriteLine("Quarto");
+                        }
+                    }
+                    else // x < 0
+                    {
+                        if (y > 0)
+                        {
+                            Console.WriteLine("Segundo");
+                        }
+                        else //y < 0
+                        {
+                            Console.WriteLine("Terceiro");
+                        }
+                    }
+                }
+            }
+            
+
+
+            //EXERCÍCIO_18
+            int op = 0;
+            int alcool = 0;
+            int gasolina = 0;
+            int diesel = 0;
+
+            while (op != 4)
+            {
+                Console.WriteLine("Qual tipo de combustível será abastecido: ");
+                Console.WriteLine("1 - Álcool\n" +
+                                  "2 - Gasolina\n" +
+                                  "3 - Diesel\n" +
+                                  "4 - Sair");
+                Console.Write("-> ");
+
+                op = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+
+                if (op == 1)
+                {
+                    alcool++;
+                }
+                else if(op == 2)
+                {
+                    gasolina++;
+                }
+                else if (op == 3)
+                {
+                    diesel++;
+                }
+                else if (op == 4)
+                {
+                    Console.WriteLine("Muito obrigado!");
+                }
+                else
+                {
+                    Console.WriteLine("Código inválido!");
+                }
+
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Quantidade de abastecimentos");
+            Console.WriteLine($"Álcool: {alcool}\n" +
+                              $"Gasolina: {gasolina}\n" +
+                              $"Diesel: {diesel}");
+            */
+
+
+            
+
+
+
+
+
+
+
+
+
+            //RASCUNHO
+            /*
+            Console.WriteLine("Digite três números inteiros: ");
+            string[] numeros = Console.ReadLine().Split();
+            int valor1 = int.Parse(numeros[0]);
+            int valor2 = int.Parse(numeros[1]);
+            int valor3 = int.Parse(numeros[2]);
+
+            Console.WriteLine($"{valor1} - {valor2} - {valor3}");
+
+            int maior = Maior_de_tres(valor1, valor2, valor3);
+            Console.WriteLine($"Maior: {maior}");
+
+
+            //--------------------------------------------------------
+
+            double numero = 0;
+            double raiz_numero = 0;
+
+            while (numero >= 0)
+            {
+                Console.Write("Digite um número inteiro positivo: ");
+                numero = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                raiz_numero = Math.Sqrt(numero);
+
+                Console.WriteLine($"Raiz de {numero} : {raiz_numero.ToString("f2", CultureInfo.InvariantCulture)}");
+            }
+
+            Console.WriteLine("Número negativo!");
+
             */
 
 
 
-
-
-
-
         }
+
+
+
+        //FUNÇÕES DO ARQUIVO AQUI
+
+        /*
+        static int Maior_de_tres(int n1, int n2, int n3)
+        {
+            int f_maior = n1;
+
+            if (n2 >= f_maior)
+            {
+                f_maior = n2;
+            }
+            if (n3 >= f_maior)
+            {
+                f_maior = n3;
+            }
+
+            return f_maior;
+        }
+        */
+
     }
 }
