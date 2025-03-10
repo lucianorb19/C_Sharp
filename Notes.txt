@@ -282,6 +282,12 @@ while (condicao){
 
 
 
+---FOR---
+for(inicio; condicao; incremento){
+        comando
+}
+
+
 -----FUNÇÕES-----
 static <tipo saida> <nome_funcao> (<parametros>){
         <codigo>

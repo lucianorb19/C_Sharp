@@ -35,7 +35,7 @@ namespace PrimeiroProjeto
             Console.WriteLine($"Separador decimal invariant culture: {medida.ToString("f3", CultureInfo.InvariantCulture)}");
             
 
-
+            //--------------------------------------------------
             //EXERCÍCIO_2
             Console.WriteLine("Digite seu nome completo: ");
             string nome = Console.ReadLine();
@@ -62,6 +62,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_03
             double pi = 3.14159;
             Console.WriteLine("Digite o raio do círculo: ");
@@ -71,6 +72,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_04
             Console.WriteLine("Primeiro número inteiro: ");
             int a = int.Parse(Console.ReadLine());
@@ -89,6 +91,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_05
             Console.WriteLine("Número do funcionário: ");
             int numero_funcionario = int.Parse(Console.ReadLine());
@@ -104,6 +107,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_06
             Console.WriteLine("Peça 1: ");
             string[] peca1 = Console.ReadLine().Split(' ');
@@ -124,6 +128,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_07
             double pi = 3.14159;
 
@@ -147,6 +152,8 @@ namespace PrimeiroProjeto
             Console.WriteLine($"Retângulo: {area_retangulo.ToString("f3", CultureInfo.InvariantCulture)}");
             
 
+
+            //--------------------------------------------------
             //EXERCÍCIO_08
             Console.WriteLine("Digite um número inteiro: ");
             int numero = int.Parse(Console.ReadLine());
@@ -160,6 +167,8 @@ namespace PrimeiroProjeto
             }
             
 
+
+            //--------------------------------------------------
             //EXERCÍCIO_09
             Console.WriteLine("Digite um número inteiro: ");
             int numero = int.Parse(Console.ReadLine());
@@ -174,6 +183,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_10
             Console.WriteLine("Digite o primeiro número inteiro: ");
             int valor1 = int.Parse(Console.ReadLine());
@@ -204,6 +214,8 @@ namespace PrimeiroProjeto
             }
             
 
+
+            //--------------------------------------------------
             //EXERCÍCIO_11
             int duracao = 0;
 
@@ -230,6 +242,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_12
             double preco = 0;
 
@@ -264,6 +277,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_13
             Console.WriteLine("Digite um valor numério qualuer: ");
             double valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
@@ -291,6 +305,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_14
             Console.WriteLine("Digite as coordenadas X e Y (com uma casa decimal: )");
             string[] coordenadas = Console.ReadLine().Split();
@@ -326,6 +341,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_15
             double imposto = 0;
             double faixa1 = 0;
@@ -382,6 +398,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_16
             string senha = "2002";
             string tentativa = "";
@@ -399,6 +416,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_17
             int x = 1;
             int y = 1;
@@ -439,6 +457,7 @@ namespace PrimeiroProjeto
             
 
 
+            //--------------------------------------------------
             //EXERCÍCIO_18
             int op = 0;
             int alcool = 0;
@@ -485,10 +504,172 @@ namespace PrimeiroProjeto
             Console.WriteLine($"Álcool: {alcool}\n" +
                               $"Gasolina: {gasolina}\n" +
                               $"Diesel: {diesel}");
+            
+
+
+
+            //--------------------------------------------------
+            //EXERCÍCIO_19
+            int x = 0;
+            
+            while (x < 1 || x > 100)
+            {
+                Console.Write("Digite um valor x, sendo 1 <= x <= 100 : ");
+                x = int.Parse(Console.ReadLine());
+
+                if (x >= 1 && x <= 100)
+                {
+                    Console.WriteLine($"Ímpares de 1 a {x}: ");
+                    int i = 1;
+                    for (i = 1; i <= x; i++)
+                    {
+                        if (i%2 != 0)//SE FOR IMPAR
+                        {
+                            Console.WriteLine(i);
+                        }
+                    }
+                }
+                else//X FORA DO INTERVALO
+                {
+                    Console.WriteLine("Valor fora do intervalo!");
+                    Console.WriteLine();
+                }
+            }
+            
+
+
+
+            //--------------------------------------------------
+            //EXERCICIO_20
+            Console.Write("Quantos números serão lidos: ");
+            int quantidade_valores = int.Parse(Console.ReadLine());
+
+            int i = 0;
+            int quantidade_in = 0;
+            int quantidade_out = 0;
+
+            for (i = 1; i <= quantidade_valores; i++)
+            {
+                Console.Write($"Valor {i}: ");
+                int valor = int.Parse(Console.ReadLine());
+                if (valor >= 10 && valor <= 20)
+                {
+                    quantidade_in++;
+                }
+                else
+                {
+                    quantidade_out++;
+                }
+            }
+
+            Console.WriteLine($"{quantidade_in} in\n{quantidade_out} out");
+            
+
+
+
+            //--------------------------------------------------
+            //EXERCICIO_21
+            int peso1 = 2;
+            int peso2 = 3;
+            int peso3 = 5;
+            double media_ponderada1 = 0;
+            double media_ponderada2 = 0;
+            double media_ponderada3 = 0;
+
+            Console.Write("Quantos casos de teste serão processados: ");
+            int quantidade_conjuntos = int.Parse(Console.ReadLine());
+
+            int i = 0;
+            for (i = 1; i <= quantidade_conjuntos; i++)//QUANTOS CONJUNTOS FOREM
+            {
+                double aux_media_ponderada = 0;
+
+                string[] dados = Console.ReadLine().Split();//DIGITAR 3 VALORES E ENTER
+                double valor1 = double.Parse(dados[0], CultureInfo.InvariantCulture);
+                double valor2 = double.Parse(dados[1], CultureInfo.InvariantCulture);
+                double valor3 = double.Parse(dados[2], CultureInfo.InvariantCulture);
+
+                aux_media_ponderada = ((valor1 * peso1) + (valor2 * peso2) + (valor3 * peso3)) / (peso1 + peso2 + peso3);
+                
+                if (i == 1)
+                {
+                    media_ponderada1 = aux_media_ponderada;
+                }
+                else if (i == 2)
+                {
+                    media_ponderada2 = aux_media_ponderada;
+                }
+                else if (i == 3)
+                {
+                    media_ponderada3 = aux_media_ponderada;
+                }
+
+            }
+
+            Console.WriteLine($"{media_ponderada1.ToString("f1", CultureInfo.InvariantCulture)}\n" +
+                              $"{media_ponderada2.ToString("f1", CultureInfo.InvariantCulture)}\n" +
+                              $"{media_ponderada3.ToString("f1", CultureInfo.InvariantCulture)}");
+            
+
+
+
+            //--------------------------------------------------
+            //EXERCICIO_22
+            Console.Write("Quantos pares de números serão processados: ");
+            int quantidade_pares = int.Parse(Console.ReadLine());
+
+            int i = 0;
+            for (i = 1; i <= quantidade_pares; i++)
+            {
+                string[] par = Console.ReadLine().Split();
+                double valor1 = double.Parse(par[0], CultureInfo.InvariantCulture);
+                double valor2 = double.Parse(par[1], CultureInfo.InvariantCulture);
+
+                if (valor2 == 0)
+                {
+                    Console.WriteLine("Divisão impossível");
+                }
+                else//QUALQUER CASO ONDE O DENOMINADOR NÃO É 0
+                {
+                    double divisao = valor1 / valor2;
+                    Console.WriteLine($"{divisao.ToString("f1",CultureInfo.InvariantCulture)}");
+                }
+
+            }
+            
+
+
+
+            //--------------------------------------------------
+            //EXERCICIO_23
+            int fatorial = 0;
+
+            Console.Write("Digite o número para cálculo do fatorial: ");
+            int numero = int.Parse(Console.ReadLine());
+
+            if (numero == 1 || numero == 0)
+            {
+                fatorial = 1;
+            }
+            else
+            {
+                int i = 0;
+                int a = numero;
+                for (i = numero - 1; i > 1; i--)//i == 4 - 3 - 2
+                {
+                    fatorial = a * i; // 20 - 60 - 120
+                    Console.WriteLine($"{a} x {i} = {fatorial}");
+                    a = fatorial;
+                }
+            }
+            Console.WriteLine(fatorial);
             */
 
 
-            
+
+            //--------------------------------------------------
+            //EXERCICIO_24
+
 
 
 
