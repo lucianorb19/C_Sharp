@@ -663,12 +663,88 @@ namespace PrimeiroProjeto
                 }
             }
             Console.WriteLine(fatorial);
-            */
+            
 
 
 
             //--------------------------------------------------
             //EXERCICIO_24
+            Console.Write("Digite o número inteiro para que seus divisores sejam calculados: ");
+            int numero = int.Parse(Console.ReadLine());
+            
+            if (numero == 0)
+            {
+                Console.WriteLine("0 não tem divisores");
+            }
+
+            else if (numero < 0)
+            {
+                int i = 0;
+                for (i = -1; i >= numero; i--)
+                {
+                    //Console.WriteLine(i);
+                    if (numero % i == 0)
+                    {
+                       Console.WriteLine(i);
+                    }
+                }
+            }
+
+            else//NÚMERO > 0
+            {
+                int i = 0;
+                for (i = 1; i <= numero; i++)
+                {
+                    if (numero % i == 0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
+            
+
+            //--------------------------------------------------
+            //EXERCICIO_25
+            Console.Write("Digite o número para ser processado (inteiro positivo): ");
+            int numero = int.Parse(Console.ReadLine());
+
+            if (numero < 0)
+            {
+                int i = 0;
+                for (i = 0; i >= numero; i--)
+                {
+                    int numero_linha;
+                    double quadrado_linha;
+                    double cubo_linha;
+
+                    numero_linha = i;
+                    quadrado_linha = Math.Pow(numero_linha, 2);
+                    cubo_linha = Math.Pow(numero_linha, 3);
+
+                    Console.Write($"{numero_linha} {quadrado_linha} {cubo_linha}");
+                    Console.WriteLine();
+                }
+            }
+
+            else
+            {
+                int i = 0;
+                for (i = 1; i <= numero; i++)
+                {
+                    int numero_linha;
+                    double quadrado_linha;
+                    double cubo_linha;
+
+                    numero_linha = i;
+                    quadrado_linha = Math.Pow(numero_linha, 2);
+                    cubo_linha = Math.Pow(numero_linha, 3);
+
+                    Console.Write($"{numero_linha} {quadrado_linha} {cubo_linha}");
+                    Console.WriteLine();
+                }
+            }
+            */
+
 
 
 
