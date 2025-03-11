@@ -105,12 +105,12 @@ namespace PrimerioProjetoOrientadoObjeto
 
             double salario_medio = (funcionario1.Salario+funcionario2.Salario)/2;
             Console.WriteLine($"Salário médio: {salario_medio.ToString("f2",CultureInfo.InvariantCulture)}");
-            */
+            
 
 
 
             //------------------------------------------------------------- 
-            //EXERCÍCIO_28
+            //EXERCÍCIO_29
 
             Produto produto1 = new Produto();
 
@@ -123,6 +123,92 @@ namespace PrimerioProjetoOrientadoObjeto
             produto1.Quantidade = int.Parse(Console.ReadLine());
 
             Console.WriteLine($"Dados do produto: {produto1}");
+            Console.WriteLine();
+
+            Console.Write("Quantidade desse produto a ser adicionada: ");
+            int quantidade = int.Parse(Console.ReadLine());
+            produto1.AdicionarProdutos(quantidade);
+            Console.WriteLine();
+
+            Console.WriteLine($"Dados atualizados: {produto1}");
+            Console.WriteLine();
+
+            Console.Write("Quantidade desse produto a ser removida: ");
+            quantidade = int.Parse(Console.ReadLine());
+            produto1.RemoverProdutos(quantidade);
+
+            Console.WriteLine($"Dados atualizados: {produto1}");
+            Console.WriteLine();
+            
+
+
+            //------------------------------------------------------------- 
+            //EXERCÍCIO_30
+            Retangulo retangulo1 = new Retangulo();
+
+            Console.WriteLine("Digite a largura e a altura do retângulo: ");
+            Console.Write("Largura: ");
+            retangulo1.Largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Altura: ");
+            retangulo1.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double area_retangulo = retangulo1.Area();
+            double perimetro_retangulo = retangulo1.Perimetro();
+            double diagonal_retangulo = retangulo1.Diagonal();
+
+            Console.WriteLine($"Área: {area_retangulo.ToString("f2", CultureInfo.InvariantCulture)}\n" +
+                              $"Perímetro: {perimetro_retangulo.ToString("f2", CultureInfo.InvariantCulture)}\n" +
+                              $"Diagonal: {diagonal_retangulo.ToString("f2", CultureInfo.InvariantCulture)}");
+            
+
+
+
+            //------------------------------------------------------------- 
+            //EXERCÍCIO_31
+            Funcionario1 funcionario = new Funcionario1();
+
+
+            Console.WriteLine("Digite os dados do funcionário: ");
+            Console.Write("Nome: ");
+            funcionario.Nome = Console.ReadLine();
+            Console.Write("Salário Bruto: ");
+            funcionario.Salario_Bruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Imposto: ");
+            funcionario.Imposto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.WriteLine($"Funcionário: {funcionario}");
+            Console.WriteLine();
+
+            Console.Write("Digite a porcentagem para aumentar o salário bruto: ");
+            double porcentagem = double.Parse(Console.ReadLine());
+            funcionario.AumentarSalario(porcentagem);
+            Console.WriteLine();
+
+            Console.WriteLine($"Dados atualizados: {funcionario}");
+            
+
+
+
+            //------------------------------------------------------------- 
+            //EXERCÍCIO_32
+            Aluno aluno = new Aluno();
+
+            Console.Write("Nome do aluno: ");
+            aluno.Nome = Console.ReadLine();
+            Console.WriteLine("Digite as três notas do aluno [ENTER a cada nota]");
+            Console.Write("1º Trimestre [máximo 30]--> ");
+            aluno.Nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("2º Trimestre [máximo 35]--> ");
+            aluno.Nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("3º Trimestre [máximo 35]--> ");
+            aluno.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            aluno.StatusAluno();
+            */
+
+
+
+
 
 
 
