@@ -321,6 +321,7 @@ TIPO ESTUTURADO QUE PODE CONTER MEMBROS, QUE SÃO:
 ATRIBUTOS - DADOS/CAMPOS
 MÉTODOS - FUNÇÕES OPERAÇÕES
 
+
 ALÉM DE:
 CONSTRUTORES - 
 SOBRECARGA - 
@@ -328,6 +329,7 @@ ENCAPSULAMENTO -
 HERANÇA - 
 POLIMORFISMO - 
 
+TODA CLASSE EM C# HERDA DA CLASSE OBJECT
 NOMES DE ATRIBUTOS - COMEÇANDO MAIÚSCULO
 ACESSO A UM ATRIBUTO DA CLASSE COM <objeto da classe>.<nome atributo>
 
@@ -366,6 +368,133 @@ namespace PrimerioProjetoOrientadoObjeto
         }
     }
 }
+
+
+
+MÉTODOS
+public <tipo retorno> <nome método>(<parametros>){
+        <codigo>
+        return <variavel/valor>
+}
+
+NO EXEMPLO DO TRIÂNGULO, UM MÉTODO QUE CALCULE SUA ÁREA
+
+namespace PrimeiroProjetoOrientadoObjeto
+{
+    class Triangulo //PRECISA DO PUBLIC ?
+    {
+        public double A;
+        public double B;
+        public double C;
+
+        public double Area_Triangulo()
+        {
+            //ÁREA DO TRIÂNGULO CALCULADA PELA FÓRMULA DE HERON
+            //FUNÇÃO SEM PARÂMETROS PQ SÓ USA AS PRÓPRIAS INFORMAÇÕES DO OBJETO
+            double p = (A + B + C)/2;
+            double area_triangulo = Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+            return area_triangulo;
+         }
+
+    }
+}
+
+
+E NO PROGRAMA PRINCIPAL
+//ÁREA DE TRIÂNGULO USANDO CLASSE TRIANGULO E FÓRMULAR DE HERON
+Triangulo x, y; //INICIALIZAÇÃO DOS OBJETOS TRIÂNGULO
+
+x = new Triangulo();
+y = new Triangulo();//INSTANCIAÇÃO DOS OBJETOS TRIANGULO
+
+Console.WriteLine("Lados primeiro triangulo: ");
+x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+Console.WriteLine("Lados segundo triangulo: ");
+y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+double area_x = x.Area_Triangulo();
+double area_y = y.Area_Triangulo();
+
+Console.WriteLine($"Área do triangulo X: {area_x.ToString("f4", CultureInfo.InvariantCulture)}\n" +
+                  $"Área do triângulo Y: {area_y.ToString("f4", CultureInfo.InvariantCulture)}");
+
+if (area_x == area_y)
+{
+    Console.WriteLine("Áreas iguais!");
+}
+else if (area_x > area_y)
+{
+    Console.WriteLine("Maior área: triângulo X");
+}
+else // areay > areax
+{
+    Console.WriteLine("Maior área: triângulo Y");
+}
+
+
+---OBJECTS E TO STRING-----
+ToString É UM MÉTODO DA CLASSE GENÉRICA OBJECT QUE PODE SER SOBRESPOSTO NA CLASSE DESEJADA.
+SUA UTILIDADE É PERMITIR MOSTRAR OS DADOS DO OBJETO DA MANEIRA DESEJADA, PRECISANDO SOMENTE, NO PROGRAMA PRINCIPAL,
+INDICAR O NOME DO OBJETO
+
+NO EXEMPLO DA CLASSE PRODUTO
+class Produto
+{
+    public string Nome;
+    public double Preco;
+    public int Quantidade;
+
+    public double ValorTotalEmEstoque()
+    {
+        return Preco* Quantidade;
+    }
+
+    public override string ToString()
+    {
+        return $"{Nome}, $ {Preco.ToString("f2",CultureInfo.InvariantCulture)}, " +
+            $"quantidade em estoque: {Quantidade}, " +
+            $"valor total em estoque: $ {ValorTotalEmEstoque().
+            ToString("f2",CultureInfo.InvariantCulture)}";
+    }
+
+}
+
+
+E NO CÓDIGO PRINCIPAL
+Console.WriteLine($"Dados do produto: {produto1}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----UML-----
+
+REPRESENTAÇÃO DE CLASSE NA UML
+
+------------------------------------------
+                NOME CLASSE
+------------------------------------------
+             -ATRIBUTO: TIPO;
+             -ATRIBUTO: TIPO;
+------------------------------------------
+    +MÉTODO(<PARAMETROS>): <TIPO RETORNO>
+    +MÉTODO(<PARAMETROS>): <TIPO RETORNO>
+------------------------------------------
+
 
 
 

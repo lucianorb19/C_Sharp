@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrimeiroProjetoOrientadoObjeto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8a740991d5377b5303ab82ad83d84494a636cc9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+deec2d29f329311a14bfd35c288697a18721f4f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrimeiroProjetoOrientadoObjeto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrimeiroProjetoOrientadoObjeto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
