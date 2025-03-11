@@ -314,6 +314,65 @@ static int Maior_de_tres(int n1, int n2, int n3)
 }
 
 
+-----ORIENTAÇÃO A OBJETOS-----
+
+CLASSE
+TIPO ESTUTURADO QUE PODE CONTER MEMBROS, QUE SÃO:
+ATRIBUTOS - DADOS/CAMPOS
+MÉTODOS - FUNÇÕES OPERAÇÕES
+
+ALÉM DE:
+CONSTRUTORES - 
+SOBRECARGA - 
+ENCAPSULAMENTO - 
+HERANÇA - 
+POLIMORFISMO - 
+
+NOMES DE ATRIBUTOS - COMEÇANDO MAIÚSCULO
+ACESSO A UM ATRIBUTO DA CLASSE COM <objeto da classe>.<nome atributo>
+
+CRIAR CLASSE NO VISUAL STUDIO COMMUNITY
+BOTÃO DIREITO NO NAMESPACE ATUAL - ADD - CLASS - NOMEAR (PRIMEIRA LETRA MAIÚSCULA)
+
+EXEMPLO
+namespace PrimeiroProjetoOrientadoObjeto
+{
+    public class Triangulo //PRECISA DO PUBLIC ?
+    {
+        public double A;
+        public double B;
+        public double C;
+
+    }
+}
+
+
+
+NO PROGRAMA PRINCIPAL
+INICIALIZAR OBJETOS DO TIPO DA CLASSE E INSTANCIÁ-LOS
+namespace PrimerioProjetoOrientadoObjeto
+{
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Triangulo x, y; //INICIALIZAÇÃO DOS OBJETOS TRIÂNGULO
+
+            x = new Triangulo();
+            y = new Triangulo();//INSTANCIAÇÃO DOS OBJETOS TRIANGULO
+
+            x.A = 10;
+        }
+    }
+}
+
+
+
+
+
+
+
 
 
 

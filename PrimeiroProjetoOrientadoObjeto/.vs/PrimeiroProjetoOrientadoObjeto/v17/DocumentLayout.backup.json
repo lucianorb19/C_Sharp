@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjetoOrientadoObjeto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|c:\\users\\creas\\desktop\\c-\\primeiroprojetoorientadoobjeto\\primeiroprojetoorientadoobjeto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|solutionrelative:primeiroprojetoorientadoobjeto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|c:\\users\\creas\\desktop\\c-\\primeiroprojetoorientadoobjeto\\primeiroprojetoorientadoobjeto\\triangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|solutionrelative:primeiroprojetoorientadoobjeto\\triangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Program.cs",
+              "RelativeDocumentMoniker": "PrimeiroProjetoOrientadoObjeto\\Program.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Program.cs*",
+              "RelativeToolTip": "PrimeiroProjetoOrientadoObjeto\\Program.cs*",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwCgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T13:34:15.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Triangulo.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Triangulo.cs",
+              "RelativeDocumentMoniker": "PrimeiroProjetoOrientadoObjeto\\Triangulo.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Triangulo.cs",
+              "RelativeToolTip": "PrimeiroProjetoOrientadoObjeto\\Triangulo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T13:37:59.749Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
