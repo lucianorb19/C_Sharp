@@ -262,15 +262,18 @@ namespace PrimerioProjetoOrientadoObjeto
 
             //------------------------------------------------------------- 
             //EXERCÍCIO_35
+            //Conta conta; //NÃO FUNCIONA - PELO ESCOPO?
             Conta conta = new Conta();
 
             Console.Write("Digite o número da conta [4 dígitos numéricos]\n--> ");
-            conta.NumeroConta = Console.ReadLine();
+            //conta.NumeroConta = Console.ReadLine();
+            string numero_conta = Console.ReadLine();
 
             Console.Write("Titular da conta: ");
             string titular_conta = Console.ReadLine();
 
-            conta.TitularConta = titular_conta;
+
+            //conta.TitularConta = titular_conta;
 
             bool continuar = true;
             while (continuar)
@@ -280,12 +283,18 @@ namespace PrimerioProjetoOrientadoObjeto
                 op = op.ToUpper();
                 if (op == "S" || op == "SIM")
                 {
-                    conta.PrimeiroDeposito();
+                    //conta.PrimeiroDeposito();
+                    Console.Write("Digite o valor do depósito inicial: $ ");
+                    double deposito_inicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    conta = new Conta(numero_conta, titular_conta, deposito_inicial);
+                    Console.WriteLine();
 
                     continuar = false;
                 }
                 else if (op == "N" || op == "NAO" || op == "NÃO")
                 {
+                    conta = new Conta(numero_conta, titular_conta);
+                    Console.WriteLine();
                     continuar = false;
                 }
                 else//QUALQUER ENTRADA QUE NÃO SEJA S SIM N NAO NÃO
@@ -296,11 +305,10 @@ namespace PrimerioProjetoOrientadoObjeto
             }
             
             Console.WriteLine(conta);
-
             conta.Depositar();
             conta.Saque();
 
-            
+
 
 
 

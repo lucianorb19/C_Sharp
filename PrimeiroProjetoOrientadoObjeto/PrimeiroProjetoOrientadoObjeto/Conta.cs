@@ -11,52 +11,41 @@ namespace PrimeiroProjetoOrientadoObjeto
         private double _saldo;
 
         //AUTOPROPERTIES PARA NÚMERO DA CONTA E TITULAR DA CONTA
-        //internal int NumeroConta { get; set; }
-        internal string _numeroConta;
+        internal string NumeroConta { get; private set; }
+        //internal string _numeroConta;
         internal string TitularConta { get; set; }
 
         //CONSTRUTORES
-        //PADRÃO
         internal Conta()
         {
 
         }
-
         //CONSTRUTOR COM NÚMERO DA CONTA E TITULAR
         internal Conta(string numero_conta, string titular_conta)
         {
-            _numeroConta = numero_conta;
             TitularConta = titular_conta;
+            _saldo = 0;
+            
+            //SÓ ACEITA NÚMERO DE CONTA COM 4 DÍGITOS NUMÉRICOS
+            while (numero_conta.Length != 4 || numero_conta.All(char.IsDigit) == false)
+            {
+                Console.Write("Número da conta inválido. Tente novamente\n" +
+                              "Digite o número da conta [4 dígitos numéricos]\n--> ");
+                numero_conta = Console.ReadLine();
+            }
+            NumeroConta = numero_conta;
         }
 
-        //CONSTRUTOR COMPLETO
-        internal Conta(string numero_conta, string titular_conta, double saldo)
+        //CONSTRUTOR COMPLETO - COM SOBRECARGA
+        internal Conta(string numero_conta, string titular_conta, double saldo) : this(numero_conta,titular_conta)
         {
-            _numeroConta = numero_conta;
-            TitularConta = titular_conta;
             _saldo = saldo;
-        }
-        //PROPERTIE - _numeroConta
-        internal string NumeroConta
-        {
-            get { return _numeroConta; }
-            set
-            {
-                //SÓ ACEITA NÚMERO DE CONTA COM 4 DÍGITOS NUMÉRICOS
-                while (value.Length !=4 || value.All(char.IsDigit)==false)
-                {
-                    Console.Write("Entrada inválida. Tente novamente\n" +
-                                  "Digite o número da conta [4 dígitos numéricos]\n--> ");
-                    value = Console.ReadLine();
-                }
-                _numeroConta = value;
-            }
         }
 
         //DEMAIS MÉTODOS
         public override string ToString()
         {
-            return $"Conta: {_numeroConta}, " +
+            return $"Conta: {NumeroConta}, " +
                    $"Titular: {TitularConta}, " +
                    $"Saldo:  $ {_saldo.ToString("f2",CultureInfo.InvariantCulture)}\n";
             
@@ -64,9 +53,7 @@ namespace PrimeiroProjetoOrientadoObjeto
 
         internal void PrimeiroDeposito()
         {
-            Console.Write("Digite o valor do depósito inicial: $ ");
-            _saldo += double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.WriteLine();
+            
         }
         internal void Depositar()
         {

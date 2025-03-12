@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj",
+      "projectUniqueName": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj",
       "projectName": "PrimeiroProjetoOrientadoObjeto",
-      "projectPath": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj",
+      "projectPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj",
       "packagesPath": "C:\\Users\\CREAS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\obj\\",
+      "outputPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
