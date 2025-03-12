@@ -15,9 +15,16 @@ namespace PrimeiroProjetoOrientadoObjeto
         public int Quantidade;
         */
 
+        /*
         private string _nome;
         private double _preco;
         private int _quantidade;
+        */
+
+        private string _nome;
+        public double Preco { get; private set; }
+        public int Quantidade { get; private set; }
+        //private set DETERMINA QUE O MÉTODO set DESSES ATRIBUTOS SÓ É ACESSÍVEL NA CLASSE
 
         //CLASSE Produto AGORA COM CONSTRUTORES PERSONALIZADOS
         //CONSTRUTOR PADRÃO - SÓ PARA HABILITAR SEU USO
@@ -30,16 +37,16 @@ namespace PrimeiroProjetoOrientadoObjeto
         public Produto1(string nome, double preco, int quantidade)
         {
             _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
+            Preco = preco;
+            Quantidade = quantidade;
         }
 
         //CONTRUTOR COM NOME, PREÇO E QUANTIDADE 0
         public Produto1(string nome, double preco)
         {
             _nome = nome;
-            _preco = preco;
-            _quantidade = 0;//SEM ESSSA LINHA, POR PADRÃO, SERIA 0
+            Preco = preco;
+            Quantidade = 0;//SEM ESSSA LINHA, POR PADRÃO, SERIA 0
         }
 
         //PROPERTIES
@@ -54,6 +61,7 @@ namespace PrimeiroProjetoOrientadoObjeto
             }
         }
 
+        /*
         public double Preco
         {
             get { return _preco; }
@@ -63,6 +71,7 @@ namespace PrimeiroProjetoOrientadoObjeto
         {
             get { return _quantidade; }
         }
+        */
 
 
         //GETS E SETS
@@ -97,20 +106,20 @@ namespace PrimeiroProjetoOrientadoObjeto
         //DEMAIS MÉTODOS DA CLASSE
         public double ValorTotalEmEstoque()
         {
-            return _preco * _quantidade;
+            return Preco * Quantidade;
         }
 
         //USO DE this
         public void AdicionarProdutos(int Quantidade)
         {
-            this._quantidade += Quantidade;
+            this.Quantidade += Quantidade;
             //ATRIBUTO Quantidade, QUE É DO OBJETO, É SOMADO AO VALOR Quantidade, QUE É O PARÂMETRO
             //PASSADO NA FUNÇÃO
         }
 
         public void RemoverProdutos(int quantidade)
         {
-            if (quantidade > _quantidade)//CASO TENTE RETIRAR MAIS PRODUTOS DO QUE TENHA NO ESTOQUE
+            if (quantidade > Quantidade)//CASO TENTE RETIRAR MAIS PRODUTOS DO QUE TENHA NO ESTOQUE
             {
                 Console.WriteLine("Quantidade acima do número em estoque! Operação não pode " +
                     "ser realizada.Tente novamente");
@@ -122,14 +131,14 @@ namespace PrimeiroProjetoOrientadoObjeto
             }
             else//CASO A QUANTIDADE A SER REMOCIDA SEJA IGUAL OU MAIOR A QUE ESTIVER NO ESTOQUE
             {
-                _quantidade -= quantidade;
+                Quantidade -= quantidade;
             }
         }
 
         public override string ToString()//FUNÇÃO SOBREPOSTA QUE MOSTRA OS DADOS DO OBJETO
         {
-            return $"{_nome}, $ {_preco.ToString("f2", CultureInfo.InvariantCulture)}, " +
-                $"quantidade em estoque: {_quantidade}, " +
+            return $"{_nome}, $ {Preco.ToString("f2", CultureInfo.InvariantCulture)}, " +
+                $"quantidade em estoque: {Quantidade}, " +
                 $"valor total em estoque: $ {ValorTotalEmEstoque().
                 ToString("f2", CultureInfo.InvariantCulture)}";
         }

@@ -371,7 +371,7 @@ namespace PrimerioProjetoOrientadoObjeto
 
 
 
-MÉTODOS
+-----MÉTODOS-----
 public <tipo retorno> <nome método>(<parametros>){
         <codigo>
         return <variavel/valor>
@@ -437,7 +437,7 @@ else // areay > areax
 }
 
 
----OBJECTS E TO STRING-----
+-----OBJECTS E TO STRING-----
 ToString É UM MÉTODO DA CLASSE GENÉRICA OBJECT QUE PODE SER SOBRESPOSTO NA CLASSE DESEJADA.
 SUA UTILIDADE É PERMITIR MOSTRAR OS DADOS DO OBJETO DA MANEIRA DESEJADA, PRECISANDO SOMENTE, NO PROGRAMA PRINCIPAL,
 INDICAR O NOME DO OBJETO
@@ -561,7 +561,7 @@ Produto1 produto2 = new Produto1();
 
 
 
------SINTAXE ALTERNATIVA PARA INICIALIZAR ATRIBUTOS DO OBJETO-----
+-----SINTAXE ALTERNATIVA PARA CONSTRUTOR-----
 AO INVÉS DE DEPENDER DO CONTRUTOR, O C# PERMITE INICIALIZAR OS ATRIBUTOS DIRETO NO PROGRAMA PRINCIPAL,
 DESDE QUE NA CLASSE DO OBJETO, NÃO HAJA SOMENTE UM CONSTRUTOR ESPECÍFICO, MAS SIM TAMBÉM UM CONSTRUTOR PADRÃO E
 QUE OS ATRIBUTOS NÃO SEJAM PRIVATE
@@ -576,7 +576,7 @@ Produto1 produto1 = new Produto1()
 
 
 
------PALAVRA THIS-----
+-----THIS-----
 É USADA PARA REFERENCIAR O ATRIBUTO DA PRÓPRIA CLASSE, CASO HAJA ALGUMA OUTRA VARIÁVEL LOCAL DE MESMO NOME,
 ALÉM DE SERVIR TAMBÉM PARA UTILIZAR AS INFORMAÇÕES DE OUTRO CONTRUTOR EM UM CONSTRUTOR E 
 PASSAR O PRÓPRIO OBJETO COMO ARGUMENTO NA CHAMADA DE UM MÉTODO OU CONSTRUTOR.
@@ -697,6 +697,71 @@ NO PROGRAMA PRINCIPAL
 produto1.Nome = "TVZONA";
 string nome = produto1.Nome; //USO DO GET PELA PROPERTIE
 Console.WriteLine(nome);
+
+
+-----AUTO PROPERTIES (PROPRIEDADES AUTO IMPLEMENTADAS)-----
+SÃO PROPERTIES SIMPLIFICADAS QUE PODEM SER UTILIZADAS PARA ATRIBUTOS QUE NÃO PRECISAM DE NENHUM LÓGICA INTERNA ELABORADA
+
+AUTO PROPERTIE PARA OS ATRIBUTOS PREÇO E QUANTIDADE DA CLASSE PRODUTOS
+NA CLASSE
+public double Preco { get; private set; }
+public int Quantidade { get; private set; }
+//private set DETERMINA QUE O MÉTODO set DESSES ATRIBUTOS SÓ É ACESSÍVEL NA CLASSE
+
+SUBSTITUINDO AS PROPERTIES MANUAIS
+public double Preco
+{
+    get { return _preco; }
+}
+
+public int Quantidade
+{
+    get { return _quantidade; }
+}
+
+NO PROGRAMA PRINCIPAL
+//DA MESMA FORMA QUE ANTERIORMENTE
+produto1.Nome = "TVZONA";
+string nome = produto1.Nome; //USO DO GET PELA PROPERTIE
+Console.WriteLine(nome);
+
+
+
+
+-----MODIFICADORES DE ACESSO-----
+
+PARA MEMBROS DAS CLASSES
+
+                      própria classe   subclasse no assembly   classes do assembly   subclasse fora do assembly   classes fora do assembley
+public              |       X                   X                       X                        X                           X
+
+protected internal  |       X                   X                       X                        X                           
+
+internal            |       X                   X                       X                                                    
+
+protected           |       X                   X                                                X                           
+
+private protected   |       X                   X                                                                            
+
+private             |       X                                                                    X                           
+
+
+*assembly == projeto
+
+PARA CLASSES
+CLASSE ACESSÍVEL POR QUALQUER OUTRA - public class
+CLASSE ACESSÍVEL SOMENTE NO PROJETO - internal class (padrão)
+CLASSE ACESSÍVEL SOMENTE PELA CLASSE MÃE (CLASSE MAIOR QUE TEM A MENOR DENTRO DELA) - private class
+
+
+
+-----BOAS PRÁTICAS-----
+ORDEM DE IMPLEMENTAÇÃO NA CLASSE
+-ATRIBUTOS PRIVADOS
+-AUTOPROPERTIES
+-CONSTRUTORES
+-PROPERTIES MANUAIS
+-DEMAIS MÉTODOS
 
 
 

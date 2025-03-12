@@ -262,18 +262,44 @@ namespace PrimerioProjetoOrientadoObjeto
 
             //------------------------------------------------------------- 
             //EXERCÍCIO_35
-            Produto1 produto1 = new Produto1("TV",1200,10);
+            Conta conta = new Conta();
 
+            Console.Write("Digite o número da conta [4 dígitos numéricos]\n--> ");
+            conta.NumeroConta = Console.ReadLine();
 
-            double valor = produto1.Preco;
-            double q = produto1.Quantidade;
+            Console.Write("Titular da conta: ");
+            string titular_conta = Console.ReadLine();
 
-            Console.WriteLine($"Preço: {valor}\nQuantidade: {q}");
+            conta.TitularConta = titular_conta;
+
+            bool continuar = true;
+            while (continuar)
+            {
+                Console.Write("Haverá depósito inicial? [S/N]\n--> ");
+                string op = Console.ReadLine();
+                op = op.ToUpper();
+                if (op == "S" || op == "SIM")
+                {
+                    conta.PrimeiroDeposito();
+
+                    continuar = false;
+                }
+                else if (op == "N" || op == "NAO" || op == "NÃO")
+                {
+                    continuar = false;
+                }
+                else//QUALQUER ENTRADA QUE NÃO SEJA S SIM N NAO NÃO
+                {
+                    Console.WriteLine("Entrada inválida.");
+                    Console.WriteLine();
+                }
+            }
             
-            //Console.WriteLine();
+            Console.WriteLine(conta);
 
-            //Console.WriteLine($"Dados atualizados: {produto1}");
-            //Console.WriteLine();
+            conta.Depositar();
+            conta.Saque();
+
             
 
 
