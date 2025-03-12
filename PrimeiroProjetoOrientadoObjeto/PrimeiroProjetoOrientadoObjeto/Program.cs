@@ -1,6 +1,7 @@
 ﻿using PrimeiroProjetoOrientadoObjeto;
 using System;
 using System.Globalization;
+using System.Reflection.Metadata;
 
 
 namespace PrimerioProjetoOrientadoObjeto
@@ -255,22 +256,25 @@ namespace PrimerioProjetoOrientadoObjeto
 
             Console.WriteLine($"Dados atualizados: {produto1}");
             Console.WriteLine();
-            
+            */
 
 
 
             //------------------------------------------------------------- 
             //EXERCÍCIO_35
-            Produto1 produto1 = new Produto1()
-            {
-                Nome = "TV",
-                Preco = 1500,
-                Quantidade = 10
-            };
+            Produto1 produto1 = new Produto1("TV",1200,10);
 
-            Console.WriteLine($"Dados atualizados: {produto1}");
-            Console.WriteLine();
-            */
+
+            double valor = produto1.Preco;
+            double q = produto1.Quantidade;
+
+            Console.WriteLine($"Preço: {valor}\nQuantidade: {q}");
+            
+            //Console.WriteLine();
+
+            //Console.WriteLine($"Dados atualizados: {produto1}");
+            //Console.WriteLine();
+            
 
 
 

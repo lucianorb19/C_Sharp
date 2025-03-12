@@ -563,7 +563,8 @@ Produto1 produto2 = new Produto1();
 
 -----SINTAXE ALTERNATIVA PARA INICIALIZAR ATRIBUTOS DO OBJETO-----
 AO INVÉS DE DEPENDER DO CONTRUTOR, O C# PERMITE INICIALIZAR OS ATRIBUTOS DIRETO NO PROGRAMA PRINCIPAL,
-DESDE QUE NA CLASSE DO OBJETO, NÃO HAJA SOMENTE UM CONSTRUTOR ESPECÍFICO, MAS SIM TAMBÉM UM CONSTRUTOR PADRÃO.
+DESDE QUE NA CLASSE DO OBJETO, NÃO HAJA SOMENTE UM CONSTRUTOR ESPECÍFICO, MAS SIM TAMBÉM UM CONSTRUTOR PADRÃO E
+QUE OS ATRIBUTOS NÃO SEJAM PRIVATE
 
 NO PROGRAMA PRINCIPAL
 Produto1 produto1 = new Produto1()
@@ -623,6 +624,79 @@ NESSE CASO ACIMA, NA CLASSE ChessMatch, o método PlaceNewPiece UTILIZA O PRÓPR
 
 
 
+-----ENCAPSULAMENTO-----
+PRINCÍPIO QUE CONSISTE EM ESCONDER DETALHES DE IMPLEMENTAÇÃO DE UM COMPONENTE, EXPONDO APENAS
+OPERAÇÕES SEGURAS E QUE O MANTENHA EM ESTADO CONSISTENTE.
+A PRÓPRIA CLASSE DEVE GARANTIR ESSA CONSISTÊNCIA.
+
+TODO ATRIBUTO PRIVATE (SÓ PODE SER ACESSADO PELA PRÓPRIA CLASSE)
+E 
+GET E SET PARA CADA ATRIBUTO (PERMITE IMPLEMENTAR LÓGICAS PARA GET E SET DOS ATRIBUTOS)
+(NÃO É USUAl NO C#)
+
+private string _nome;
+private double _preco;
+private int _quantidade;
+
+public string GetNome()
+{
+    return _nome;
+}
+
+public void SetNome(string nome)
+{
+    _nome = nome;
+}
+
+UM ATRIBUTO PRIVATE MUDA SEU PADRÃO DE ESCRITA
+private string _nome;
+
+
+
+-----PROPERTIES NO LUGAR DE GETS E SETS-----
+UMA PROPERTIE PODE SER USADA PARA TORNAR MAIS INTUITIVO O USO DOS ATRIBUTOS NO PROGRAMA PRINCIPAL E
+MANTER A LÓGICA E SEGURANÇA NA IMPLEMENTAÇÃO DO SET E GET DOS ATRIBUTOS
+
+COM GET E SET
+NA CLASSE
+public string GetNome()
+{
+    return _nome;
+}
+
+public void SetNome(string nome)
+{
+    //NOME SÓ É MODIFICADO SE NÃO FOR VAZIO E TIVER MAIS QUE UMA LETRA
+    if (nome != null && nome.Length > 1)
+    {
+        _nome = nome;
+    }
+}
+
+NO PROGRAMA PRINCIPAL
+produto1.SetNome("TVZONA");
+string nome = produto1.GetNome();
+Console.WriteLine(nome);
+
+
+
+COM PROPERTIE APLICADA AO GET E SET DE _nome
+NA CLASSE
+public string Nome
+{
+    get { return _nome; }
+    set {
+        if (value != null && value.Length > 1)//value VAI SER OQ ESTIVER SENDO ATRIBUÍDO AO NOME, NO PROGRAMA PRINCIPAL
+        {
+            _nome = value;
+        }
+    }
+}
+
+NO PROGRAMA PRINCIPAL
+produto1.Nome = "TVZONA";
+string nome = produto1.Nome; //USO DO GET PELA PROPERTIE
+Console.WriteLine(nome);
 
 
 
@@ -631,6 +705,19 @@ NESSE CASO ACIMA, NA CLASSE ChessMatch, o método PlaceNewPiece UTILIZA O PRÓPR
 
 
 
+
+
+
+-----RASCUNHOS-----
+SABER SE VARIÁVEL ESTÁ VAZIA
+STRING
+nome == null
+
+NUMÉRICA
+valor == 0 (POR PADRÃO, NÚMEROS ASSUMEM VALOR 0)
+
+SABER TAMANHO DA STRING
+nome.Legth > 1
 
 
 
