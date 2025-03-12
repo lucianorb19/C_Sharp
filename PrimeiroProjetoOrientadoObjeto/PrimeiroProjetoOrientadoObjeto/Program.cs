@@ -204,13 +204,73 @@ namespace PrimerioProjetoOrientadoObjeto
             aluno.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             aluno.StatusAluno();
+            
+
+
+
+            //------------------------------------------------------------- 
+            //EXERCÍCIO_33
+            //POO USANDO MEMBROS ESTÁTICOS
+            Console.Write("Qual a cotação do dólar: ");
+            double p_cotacao_dolar = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantos dólares você vai comprar? ");
+            double p_dolares_a_comprar = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double resultado = ConversorMoeda.ConversorDolar(p_cotacao_dolar, p_dolares_a_comprar);
+
+            Console.WriteLine($"Valor a ser pago em reais: {resultado.ToString("f2",CultureInfo.InvariantCulture)}");
+            
+
+
+            //------------------------------------------------------------- 
+            //EXERCÍCIO_34
+
+            Console.WriteLine("Digite os dados do produto: ");
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
+            Console.Write("Preço: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //Console.Write("Quantidade em estoque: ");
+            //int quantidade = int.Parse(Console.ReadLine());
+
+            //USO DE CONSTRUTOR PERSONALIZADO
+            Produto1 produto1 = new Produto1(nome, preco);
+            //USO CONSTRUTOR PADRÃO
+            Produto1 produto2 = new Produto1();
+
+            Console.WriteLine($"Dados do produto: {produto1}");
+            Console.WriteLine();
+
+            Console.Write("Quantidade desse produto a ser adicionada: ");
+            int quantidade_adicionar = int.Parse(Console.ReadLine());
+            produto1.AdicionarProdutos(quantidade_adicionar);
+            Console.WriteLine();
+
+            Console.WriteLine($"Dados atualizados: {produto1}");
+            Console.WriteLine();
+
+            Console.Write("Quantidade desse produto a ser removida: ");
+            int quantidade_remover = int.Parse(Console.ReadLine());
+            produto1.RemoverProdutos(quantidade_remover);
+
+            Console.WriteLine($"Dados atualizados: {produto1}");
+            Console.WriteLine();
+            
+
+
+
+            //------------------------------------------------------------- 
+            //EXERCÍCIO_35
+            Produto1 produto1 = new Produto1()
+            {
+                Nome = "TV",
+                Preco = 1500,
+                Quantidade = 10
+            };
+
+            Console.WriteLine($"Dados atualizados: {produto1}");
+            Console.WriteLine();
             */
-
-
-
-
-
-
 
 
 
