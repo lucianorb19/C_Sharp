@@ -936,6 +936,39 @@ double y = x ?? 0;
 //CASO O VALOR DE x SEJA null, Y RECEBE 0
 
 
+-----VETORES-----
+UM ARRANJO UNIDIMENSIONAL
+HOMOGÊNIO - SÓ ACEITA DADOS DO MESMO TIPO
+ACESSÍVEL VIA POSIÇÃO - 0 A N
+ALOCAÇÃO ESTÁTICA - TAMANHO FIXO - NUM BLOCO CONTÍGUO DE MEMÓRIA
+-ACESSO IMEDITADO :)
+-DIFICULDADE DE INSERIR E DELETAR ELEMENTOS :(
+
+TODO NOME DE VETOR É UM PONTEIRO PARA SEUS VALORES NA MEMÓRIA HEAP
+DECLARAÇÃO
+<tipo vetor>[] <nome vetor> = new <tipo vetor>[<tamanho vetor>]
+double[] vetor1 = new double[10]; //VETOR DE doubles COM 1O POSIÇÕES (0 a 9)
+
+
+VETOR DE OBJECTS
+É POSSÍVEL CRIAR VETORES DE OBJETOS, NO QUAL CADA POSIÇÃO É UM OBJETO COM TODOS SEUS ATRIBUTOS
+Product[] vetor1 = new Product[10]; //VETOR COM 10 OBJETOS
+
+     STACK                               VETOR DE OBJETOS
+
+   MEMÓRIA STACK                           MEMÓRIA HEAP  
+                                       --------------------
+                             
+     0x100358                          |      TV  | 1300  
+    ----------      ==========>        | ---------------
+      vetor1                           |    JBL   | 2000 
+                                       | ---------------
+                                       | AIRFRYER | 750
+
+
+
+
+
 
 
 

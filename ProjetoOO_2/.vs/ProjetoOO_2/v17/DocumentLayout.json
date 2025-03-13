@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{479415B6-06B0-43C9-8EBA-7DEEFBA816B0}|ProjetoOO_2\\ProjetoOO_2.csproj|solutionrelative:projetooo_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{479415B6-06B0-43C9-8EBA-7DEEFBA816B0}|ProjetoOO_2\\ProjetoOO_2.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_2\\projetooo_2\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{479415B6-06B0-43C9-8EBA-7DEEFBA816B0}|ProjetoOO_2\\ProjetoOO_2.csproj|solutionrelative:projetooo_2\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{479415B6-06B0-43C9-8EBA-7DEEFBA816B0}|ProjetoOO_2\\ProjetoOO_2.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_2\\projetooo_2\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{479415B6-06B0-43C9-8EBA-7DEEFBA816B0}|ProjetoOO_2\\ProjetoOO_2.csproj|solutionrelative:projetooo_2\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{479415B6-06B0-43C9-8EBA-7DEEFBA816B0}|ProjetoOO_2\\ProjetoOO_2.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_2\\projetooo_2\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{479415B6-06B0-43C9-8EBA-7DEEFBA816B0}|ProjetoOO_2\\ProjetoOO_2.csproj|solutionrelative:projetooo_2\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -28,7 +36,7 @@
               "RelativeDocumentMoniker": "ProjetoOO_2\\Program.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_2\\ProjetoOO_2\\Program.cs",
               "RelativeToolTip": "ProjetoOO_2\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAIwFIAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAIwHwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T12:47:23.614Z",
               "IsPinned": true,
@@ -37,6 +45,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_2\\ProjetoOO_2\\Room.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_2\\Room.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_2\\ProjetoOO_2\\Room.cs",
+              "RelativeToolTip": "ProjetoOO_2\\Room.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T17:42:42.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_2\\ProjetoOO_2\\Product.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_2\\Product.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_2\\ProjetoOO_2\\Product.cs",
+              "RelativeToolTip": "ProjetoOO_2\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T17:06:13.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Point.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_2\\ProjetoOO_2\\Point.cs",
               "RelativeDocumentMoniker": "ProjetoOO_2\\Point.cs",
@@ -44,8 +78,7 @@
               "RelativeToolTip": "ProjetoOO_2\\Point.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T13:23:18.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T13:23:18.768Z"
             }
           ]
         }
