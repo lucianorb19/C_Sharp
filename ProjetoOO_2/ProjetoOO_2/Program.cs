@@ -81,29 +81,10 @@ namespace ProjetoOO_2
             //TEN ROOMS AVAILABLE
             Room[] vector_rooms = new Room[10];
 
-
-            
             for (int i = 0; i < number_of_rents; i++)
             {
-                
-                //SHOWING THE BUSY ROOMS FIRST
-                Console.Write("Busy Rooms: ");
-                int counter = 0;
-                for (int x = 0; x < 10; x++)
-                {
-                    
-                    if (vector_rooms[x] != null)
-                    {
-                        Console.Write($"{vector_rooms[x].RoomNumber} - ");
-                        counter++;                       
-                    }
-                }
-                //IF ALL ROOMS AVAILABLE
-                if (counter == 0)
-                {
-                    Console.WriteLine("All rooms available!");
-                }
-                Console.WriteLine();
+                //SHOWING BUSY ROOMS BEFORE RESERVING
+                Room.ShowBusyRooms(vector_rooms);
 
                 //RESERVING ROOM
                 Console.WriteLine($"Rent #{i + 1}: ");
@@ -113,34 +94,12 @@ namespace ProjetoOO_2
                 string email = Console.ReadLine();
                 Console.Write("Room Number: ");
                 int room_number = int.Parse(Console.ReadLine());
-
-                //IF THE ROOM IS AVAILABLE
-                if (vector_rooms[room_number] == null)
-                {
-                    vector_rooms[room_number] = new Room();
-                    vector_rooms[room_number].RoomGuest = name;
-                    vector_rooms[room_number].GuestEmail = email;
-                    vector_rooms[room_number].RoomNumber = room_number;
-                }
-                else
-                {
-                    Console.WriteLine("Room already taken.");
-                }
-            
+                Room.ReserveRoom(name, email, room_number,vector_rooms);
             }
             Console.WriteLine();
 
-
-            //SHOWING VECTOR WITH DATA
-            Console.WriteLine("Busy rooms:");
-            for (int i = 0; i < 10; i++)
-            {
-                //SHOW ONLY THE POSITIONS WITH DATA
-                if (vector_rooms[i] != null)
-                {
-                    Console.WriteLine($"{vector_rooms[i].RoomNumber}: {vector_rooms[i]}");
-                }
-            }
+            //SHOWING DETAILS ABOUT EACH ROOM TAKEN
+            Room.ShowBusyRoomsDetails(vector_rooms);
 
 
 
