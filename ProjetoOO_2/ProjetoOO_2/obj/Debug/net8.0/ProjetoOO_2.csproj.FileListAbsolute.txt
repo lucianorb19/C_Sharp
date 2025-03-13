@@ -1,0 +1,15 @@
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\bin\Debug\net8.0\ProjetoOO_2.exe
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\bin\Debug\net8.0\ProjetoOO_2.deps.json
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\bin\Debug\net8.0\ProjetoOO_2.runtimeconfig.json
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\bin\Debug\net8.0\ProjetoOO_2.dll
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\bin\Debug\net8.0\ProjetoOO_2.pdb
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ProjetoOO_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ProjetoOO_2.AssemblyInfoInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ProjetoOO_2.AssemblyInfo.cs
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ProjetoOO_2.csproj.CoreCompileInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ProjetoOO_2.sourcelink.json
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ProjetoOO_2.dll
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\refint\ProjetoOO_2.dll
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ProjetoOO_2.pdb
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ProjetoOO_2.genruntimeconfig.cache
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_2\ProjetoOO_2\obj\Debug\net8.0\ref\ProjetoOO_2.dll

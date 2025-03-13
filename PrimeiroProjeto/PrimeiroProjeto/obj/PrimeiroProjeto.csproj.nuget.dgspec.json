@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj": {}
+    "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj": {
+    "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
+        "projectUniqueName": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
         "projectName": "PrimeiroProjeto",
-        "projectPath": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
+        "projectPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
         "packagesPath": "C:\\Users\\CREAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CREAS\\Desktop\\C-\\PrimeiroProjeto\\PrimeiroProjeto\\obj\\",
+        "outputPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjeto\\PrimeiroProjeto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

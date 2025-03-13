@@ -764,6 +764,123 @@ ORDEM DE IMPLEMENTAÇÃO NA CLASSE
 -DEMAIS MÉTODOS
 
 
+-----VARIÁVEIS POR REFERÊNCIA (PONTEIROS) E VARIÁVEIS POR VALORES (STRUCTS)------
+
+PONTEIRO
+TODO OBJETO DE UMA CLASSE É PONTEIRO
+QUANDO O OBJETO É DECLARADO, SEU NOME É UM PONTEIRO.
+
+Produto p1;   //CRIA NA MEMÓRIA UM PONTEIRO p1 QUE AINDA NÃO APONTA PARA NADA
+p1 = new Ponteiro("TV", 1300.00, 15);
+
+AGORA NA MEMÓRIA STACK, O p1 PONTEIRO GUARDA UM ENDEREÇO DA MEMÓRIA HEAP.
+NESSE ENDEREÇO ESTÃO AS INFORMAÇÕES DO OBJETO
+ 
+---------------------------------------------------------
+     STACK                         VARIÁVEL APONTADA
+
+   MEMÓRIA STACK                      MEMÓRIA HEAP  
+                             
+     0x100358                      TV   |  1300  | 15
+    ----------      ==========>    -------------------
+        p1
+---------------------------------------------------------
+
+Produto p2;
+p2 = p1;
+
+AGORA TANTO p2 QUANTO p1 APONTAM PARA O MESMO ENDEREÇO DE MEMÓRIA
+
+---------------------------------------------------------
+     STACK                          VARIÁVEL APONTADA
+
+   MEMÓRIA STACK                      MEMÓRIA HEAP  
+                             
+     0x100358                      TV   |  1300  | 15
+    ----------      ==========>    -------------------
+        p1                        // 
+                                 //
+     0x100358                   //
+    ----------      ===========//
+        p2
+---------------------------------------------------------
+
+*UM PONTEIRO PODE RECEBER VALOR null, O QUE RESERVA NA MEMÓRIA UM ESPAÇO COM VALOR null/0/ESPECÍFICO DA MEMÓRIA.
+
+
+STRUCT
+TODAS DECLARAÇÃO DE VARIÁVEIS "SIMPLES" - int double byte long float char....- SÃO VARIÁVEIS DO TIPO STRUCT
+ALÉM DOS TIPOS DateTime e TimeSpan
+O VALOR ATRIBUÍDO A ELAS NÃO ENVOLVE REFERÊNCIA E NEM MESMO A MEMÓRIA HEAP, APENAS CÓPIA.
+
+double x,y;
+
+x = 10;
+y = x;
+//y RECEBE UMA CÓPIA DO VALOR DE x
+
+---------------------------------------------------------
+
+       STACK                        VARIÁVEL APONTADA
+
+   MEMÓRIA STACK                      MEMÓRIA HEAP  
+                             
+        10                     
+    ---------                            
+        x
+
+
+        10                     
+    ---------                            
+        y
+
+---------------------------------------------------------
+
+STRUCTS PODEM SER CRIADOS, ASSIM COMO CLASSES, PARA GUARDAR VALORES COMPOSTOS
+CONSIDERANDO QUE ELES NÃO TEM TODOS OS RECURSOS DE UMA CLASSE.
+BOTÃO DIREITO NO PROJETO - ADD - CLASS - NOMEAR - TROCAR class POR struct
+
+UM STRUCT QUE REPRESENTA UM PONTO CARTESIANO
+
+namespace PrimeiroProjeto{
+    struct Point{
+        public double X,Y;
+
+        public override string ToString(){
+            return $"({X},{Y})";
+        }
+    }
+}
+
+
+NO PROGRAMA PRINCIPAL
+//Point ponto; //NÃO FUNCIONA
+Point ponto = new Point();
+
+ponto.X = 20;
+ponto.Y = 10;
+Console.WriteLine(ponto);
+
+NO STRUCT, TAMBÉM PODEM SER USADOS CONTRUTORES
+NO PROGRAMA PRINCIPAL
+Point ponto = new Point();
+Console.WriteLine(ponto);
+//VALORES DOUBLE INICIADOS COM 0 0
+
+
+
+-----VALORE PADRÃO PARA TIPOS DE VARIÁVEIS-----
+CASO NÃO SEJA ATRIBUÍDO DIRETAMENTE, AS VARIÁVEIS DECLARADAS ASSUMEM VALORES PADRÃO
+NÚMEROS - 0
+BOOL - false
+CHAR - CARACTERE CÓDIGO 0
+OBJETO - null
+
+
+
+
+
+
 
 
 

@@ -8,11 +8,13 @@ namespace PrimeiroProjetoOrientadoObjeto
     {
         //ATRIBUTO PRIVADO PARA SALDO DA CONTA
         //PRIVADO PARA NÃO SER DIRETAMENTE MODIFICADO
-        private double _saldo;
+        //private double _saldo;
 
         //AUTOPROPERTIES PARA NÚMERO DA CONTA E TITULAR DA CONTA
+        internal double Saldo { get; private set; }
+        //private set - SALDO SÓ PODE SER MODIFICADO PELOS MÉTODOS DA CLASSE
         internal string NumeroConta { get; private set; }
-        //internal string _numeroConta;
+        //private set - NÚMERO SÓ PODE SER MODIFICADO PELOS MÉTODOS DA CLASSE
         internal string TitularConta { get; set; }
 
         //CONSTRUTORES
@@ -24,7 +26,7 @@ namespace PrimeiroProjetoOrientadoObjeto
         internal Conta(string numero_conta, string titular_conta)
         {
             TitularConta = titular_conta;
-            _saldo = 0;
+            Saldo = 0;
             
             //SÓ ACEITA NÚMERO DE CONTA COM 4 DÍGITOS NUMÉRICOS
             while (numero_conta.Length != 4 || numero_conta.All(char.IsDigit) == false)
@@ -36,10 +38,10 @@ namespace PrimeiroProjetoOrientadoObjeto
             NumeroConta = numero_conta;
         }
 
-        //CONSTRUTOR COMPLETO - COM SOBRECARGA
+        //CONSTRUTOR COMPLETO - COM SOBRECARGA (APROVEITA A LÓGICA DO CONSTRUTOR ACIMA)
         internal Conta(string numero_conta, string titular_conta, double saldo) : this(numero_conta,titular_conta)
         {
-            _saldo = saldo;
+            Saldo = saldo;
         }
 
         //DEMAIS MÉTODOS
@@ -47,18 +49,14 @@ namespace PrimeiroProjetoOrientadoObjeto
         {
             return $"Conta: {NumeroConta}, " +
                    $"Titular: {TitularConta}, " +
-                   $"Saldo:  $ {_saldo.ToString("f2",CultureInfo.InvariantCulture)}\n";
+                   $"Saldo:  $ {Saldo.ToString("f2",CultureInfo.InvariantCulture)}\n";
             
         }
 
-        internal void PrimeiroDeposito()
-        {
-            
-        }
         internal void Depositar()
         {
             Console.Write("Digite um valor para depósito: $");
-            _saldo += double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Saldo += double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.WriteLine();
             Console.WriteLine($"Dados atualizados da conta\n" +
                               $"{this}");//MOSTRA OS DADOS DA CONTA ATUALIZADOS
@@ -67,15 +65,26 @@ namespace PrimeiroProjetoOrientadoObjeto
 
         internal void Saque()
         {
-            Console.WriteLine("Taxa de saque: $5.00");
+            Console.WriteLine("---Taxa de saque: $5.00---");
             Console.Write("Digite um valor para sacar: $");
-            _saldo -= double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            _saldo -= 5; //TAXA DE SAQUE
-            Console.WriteLine("Taxa de $5.00 aplicada.");
-            Console.WriteLine();
-            Console.WriteLine($"Dados atualizados da conta\n" +
-                              $"{this}");//MOSTRA OS DADOS DA CONTA ATUALIZADOS
-            Console.WriteLine();
+            double saque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            if (saque <= 0)//NÃO EXISTE SAQUE NEGATIVO OU ZERO
+            {
+                Console.WriteLine("Informe um valor válido!");
+                this.Saque();
+            }
+            else
+            {
+                Saldo -= saque;
+                Saldo -= 5; //TAXA DE SAQUE
+                Console.WriteLine($"Saque: -${saque.ToString("f2", CultureInfo.InvariantCulture)}\n" +
+                                  $"Com taxa: -${(saque + 5).ToString("f2", CultureInfo.InvariantCulture)}");
+                Console.WriteLine();
+                Console.WriteLine($"Dados atualizados da conta\n" +
+                                  $"{this}");//MOSTRA OS DADOS DA CONTA ATUALIZADOS
+                Console.WriteLine();
+            }
+            
         }
 
 

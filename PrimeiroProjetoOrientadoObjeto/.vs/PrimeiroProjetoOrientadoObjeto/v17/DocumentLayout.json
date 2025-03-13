@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|c:\\users\\creas\\desktop\\c_sharp\\primeiroprojetoorientadoobjeto\\primeiroprojetoorientadoobjeto\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|solutionrelative:primeiroprojetoorientadoobjeto\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|c:\\users\\creas\\desktop\\c_sharp\\primeiroprojetoorientadoobjeto\\primeiroprojetoorientadoobjeto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|solutionrelative:primeiroprojetoorientadoobjeto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|c:\\users\\creas\\desktop\\c_sharp\\primeiroprojetoorientadoobjeto\\primeiroprojetoorientadoobjeto\\produto1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|solutionrelative:primeiroprojetoorientadoobjeto\\produto1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|c:\\users\\creas\\desktop\\c_sharp\\primeiroprojetoorientadoobjeto\\primeiroprojetoorientadoobjeto\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|solutionrelative:primeiroprojetoorientadoobjeto\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34340201-815C-4BF9-9A17-D64502375C99}|PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto.csproj|c:\\users\\creas\\desktop\\c_sharp\\primeiroprojetoorientadoobjeto\\primeiroprojetoorientadoobjeto\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,17 +54,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Program.cs",
               "RelativeDocumentMoniker": "PrimeiroProjetoOrientadoObjeto\\Program.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Program.cs",
               "RelativeToolTip": "PrimeiroProjetoOrientadoObjeto\\Program.cs",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAgwCsBAABDAAAAAAAAAA==",
+              "ViewState": "AgIAACYBAAAAAAAAAAD4vzMBAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T13:34:15.852Z",
               "EditorCaption": ""
@@ -155,25 +155,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Produto1.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Produto1.cs",
               "RelativeDocumentMoniker": "PrimeiroProjetoOrientadoObjeto\\Produto1.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Produto1.cs",
               "RelativeToolTip": "PrimeiroProjetoOrientadoObjeto\\Produto1.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAYwCQAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwB0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T12:34:16.295Z"
+              "WhenOpened": "2025-03-12T12:34:16.295Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Conta.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Conta.cs",
               "RelativeDocumentMoniker": "PrimeiroProjetoOrientadoObjeto\\Conta.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\PrimeiroProjetoOrientadoObjeto\\PrimeiroProjetoOrientadoObjeto\\Conta.cs",
               "RelativeToolTip": "PrimeiroProjetoOrientadoObjeto\\Conta.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T16:44:36.848Z",
               "EditorCaption": ""
