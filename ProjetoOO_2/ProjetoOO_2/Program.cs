@@ -130,14 +130,49 @@ namespace ProjetoOO_2
             {
                 Console.WriteLine(obj);
             }
-            */
+            
 
 
 
             //---------------------------------------------------
             //EXERCÍCIO_40
 
-            
+            Console.Write("How many employees will be registred:/" +
+                          "Quantos funcionários serão registrados: ");
+            int n = int.Parse(Console.ReadLine());
+
+            List<Funcionario> lista_funcionarios = new List<Funcionario>();
+
+            //GETTING DATA FOR EMPLOYESS
+            //RECEBENDO DADOS PARA FUNCIONÁRIOS
+            for (int i =0; i < n; i++)
+            {
+                Console.WriteLine($"Employee #{i+1}");
+                Funcionario funcionario = new Funcionario();
+                //REGISTRING INFORMATION
+                //REGISTRANDO INFORMAÇÕES
+                funcionario = Funcionario.RegisterEmployee(lista_funcionarios);
+                //ADDED AT LIST END
+                //ADICIONADO AO FINAL DA LISTA
+                lista_funcionarios.Add(funcionario);
+                Console.WriteLine();
+            }
+
+            //SHOWING EMPLOYEES REGISTRED
+            //MOSTRANDO FUNCIONÁRIOS REGISTRADOS
+            Funcionario.ShowEmployees(lista_funcionarios);
+
+            //SALARY RASE / AUMENTO SALARIAL
+            Funcionario.SalaryRase(lista_funcionarios);
+
+            Funcionario.ShowEmployees(lista_funcionarios);
+            */
+
+
+            //---------------------------------------------------
+            //EXERCÍCIO_41
+
+
 
 
 
