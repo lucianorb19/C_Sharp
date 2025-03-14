@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Net.Http.Headers;
+using System.Collections.Generic; //LISTA
 namespace ProjetoOO_2
 {
     internal class Program
@@ -101,7 +102,7 @@ namespace ProjetoOO_2
 
             //SHOWING DETAILS ABOUT EACH ROOM TAKEN
             Room.ShowBusyRoomsDetails(vector_rooms);
-            */
+            
 
 
 
@@ -111,8 +112,6 @@ namespace ProjetoOO_2
             //string[] vetor = new string[] { "Luciano", "Ana", "Goiaba" };
             Point[] vetor_coordenadas = new Point[2];
 
-
-
             for (int i = 0; i < vetor_coordenadas.Length; i++)
             {
                
@@ -121,8 +120,7 @@ namespace ProjetoOO_2
                 double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.Write("Y: ");
                 double y = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                
-                
+
                 vetor_coordenadas[i] = new Point(x,y);
                 Console.WriteLine(vetor_coordenadas[i]);
                 Console.WriteLine();
@@ -132,6 +130,20 @@ namespace ProjetoOO_2
             {
                 Console.WriteLine(obj);
             }
+            */
+
+
+
+            //---------------------------------------------------
+            //EXERCÍCIO_40
+
+            
+
+
+
+
+
+
 
 
 

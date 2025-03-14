@@ -1133,10 +1133,113 @@ int y = (int)obj;
 LAÇO DE REPETIÇÃO PARA PERCORRER COLEÇÕES
 MUITO USADO PARA PERCORRER SEQUÊNCIAS DE OBJETOS
 
+CONSIDERANDO UM VETOR DE OBJETOS DO TIPO Point
+CADA OBJETO POINT E UM CONJUNTO DE DUAS COORDENADAS X E Y.
+CADA REPETIÇÃO DO LAÇO MOSTRA OS DOIS PONTOS.
+
+foreach(Point obj in vetor_coordenadas)
+{
+    Console.WriteLine(obj);
+}
 
 
 
+-----LISTAS-----
+HOMOGÊNEA
+CADA ELEMENTO OCUPA UMA POSIÇÃO (0 A N)
+INICIA VAZIA E É PREENCHIDA SOB DEMANDA - NÃO É ESTÁTICA COMO O VETOR
+MAIS FÁCIL DE REALIZAR INSERÇÕES E DELEÇÕES
 
+DESVANTAGEM - ACESSO SEQUENCIAL AOS ELEMENTOS
+É UMA LISTA ENCADEADA - CADA ELEMENTO TEM SEU VALOR E UM PONTEIRO PARA A PRÓXIMA POSIÇÃO DA LISTA
+MAS HÁ IMPLEMENTAÇÕES QUE OTIMIZAM ESSE ACESSO PARA SER MAIS RÁPIDO, COMO EM VETORES
+
+NECESSÁRIO USAR A CLASSE List
+using System.Collections.Generic;
+
+DECLARAÇÃO
+List<string> lista1 = new List<string>(); //LISTA VAZIA
+List<string> lista2 = new List<string>{"Luciano", "Goiaba", "Ana"}; //LISTA VAZIA
+
+CONSIDERANDO UMA LISTA lista1
+
+INSERÇÃO
+---
+Add - INSERE UM ITEM AO FINAL
+lista1.Add("Luciano");
+lista1.Add("Ana");
+lista1.Add("Alex");
+
+
+---
+Insert(x,item) - INSERE NA POSIÇÃO x O ITEM
+lista1.Insert(1, "Lucas");
+
+
+INFORMAÇÕES
+---
+Count - TAMANHO DA LISTA
+Console.WriteLine(lista1.Count); 
+
+
+BUSCA NA LISTA
+---
+lista1.Find(<expressão lambda>) - ENCONTRA NA LISTA A PRIMEIRA OCORRÊNCIA DE UM ELEMENTO QUE SATISFAÇA A FUNÇÃO lambda
+
+EX: ENCONTRAR A PRIMEIRA PESSOA DA LISTA CUJO NOME COMEÇA COM A
+
+string nome_com_a = lista1.Find(x => x[0] == 'A');
+//x => x[0] == 'A'  -- EXPRESSÃO LAMBDA QUE DENOTA "ENCONTRAR O ELEMENTO X, TAL QUE A PRIMEIRA POSIÇÃO DE X SEJA 'A'
+Console.WriteLine(nome_com_a);
+
+
+---
+lista1.FindLast(<expressão lambda>) 
+...
+
+
+---
+list.FindIndex(<expressão lambda>) - ENCONTRA NA LISTA A PRIMEIRA POSIÇÃO CUJO ELEMENTO SATISFAÇA A FUNÇÃO LAMBDA
+
+EX: ENCONTRAR A POSIÇÃO DO ELEMENTO QUE SEJA Alex
+
+int pos = lista1.FindIndex(x => x == "Alex");
+Console.WriteLine($"Posição cujo nome é Alex: {pos}");
+Console.WriteLine();
+
+//RETORNA -1 CASO NÃO ENCONTRE
+
+
+---
+list.FindLastIndex
+...
+
+
+---
+list.FindAll(<expressão lambda>) - FILTRA PARA OUTRA LISTA OS ELEMENTOS QUE SATISFAÇAM A EXPRESSÃO
+
+EX: CRIAR UMA LISTA COM TODOS OS NOMES QUE TENHA 5 LETRAS
+
+List<string> lista2 = new List<string>();
+lista2 = lista1.FindAll(x => x.Length == 5);
+
+---
+Remove(item) - REMOVER DA LISTA O ITEM
+lista1.remove("Luciano");
+
+---
+RemoveAll(<expressão lambda>) - REMOVE TODOS DA LISTA QUE SATISFAÇAM A EXPRESSÃO LAMBDA
+
+EX: REMOVER TODOS QUE COMEÇAM COM A
+lista1.RemoveAll(x => x[0] == 'A');
+
+---
+RemoveAt(pos) - REMOVE O ELEMENTO DA POSIÇÃO ESPECÍFICA
+lista1.RemoveAt(2)
+
+---
+RemoveRange(X, N) - REMOVE, A PARTIR DA POSIÇÃO X, N ELEMENTOS
+lista1.RemoveRange(1, 2);
 
 
 
