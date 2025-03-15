@@ -171,6 +171,53 @@ namespace ProjetoOO_2
 
             //---------------------------------------------------
             //EXERCÍCIO_41
+            Console.Write("Ordem da matriz: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[,] matriz = new int[n, n];
+
+
+            //DATA IN - ENTRADA DE DADOS
+            for (int i = 0; i < n; i++)//LINE - LINHA
+            {
+                Console.Write($"Linha {i + 1}: ");
+                string[] values = Console.ReadLine().Split(" "); //VALUES FOR THE LINE - VALORES PARA A LINHA
+
+                for (int j = 0; j < n; j++)//COLUMN - COLUNA
+                {
+                    matriz[i, j] = int.Parse(values[j]);
+                }
+            }
+            Console.WriteLine();
+
+            //MAIN DIAGONAL - LINE == COLUMN
+            //DIAGONAL PRINCIPAL - LINHA == COLUNA
+            Console.WriteLine("Main Diagonal / Diagonal principal");
+            for (int i = 0; i < (matriz.GetLength(0)); i++)
+            {
+                Console.Write($"{matriz[i, i]} ");
+            }
+            Console.WriteLine();
+
+
+            //NEGATIVE VALUES
+            //VALORES NEGATIVOS
+            Console.WriteLine("Negative values - Valores negativos");
+            for (int i = 0; i < (matriz.GetLength(0)); i++)
+            {
+                for (int j = 0; j < (matriz.GetLength(1)); j++)
+                {
+                    if ((matriz[i,j]) < 0)
+                    {
+                        Console.Write($"{matriz[i, j]} ");
+                    }
+                }
+            }
+
+
+
+
+
 
 
 
