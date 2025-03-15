@@ -65,7 +65,8 @@ bool        System.Boolean        -        True or False
 
 
 STRING
-CADEIA DE CARACTÉRES IMUTÁVEL - ASPAS DUPLAS
+CADEIA DE CARACTÉRES - ASPAS DUPLAS
+É UM OBJETO (SEU NOME É UM PONTEIRO QUE APONTA PARA SEU VALOR NA MEMÓRIA HEAP)
 string nome = "Luciano";
 
 
@@ -1286,6 +1287,78 @@ UM VALOR DO TIPO ERRADO, CASO HAJA ALGUM DESCUIDO DA PARTE DO PROGRAMADOR.
 var x = 10; //x É INTEIRO
 var nome = "Luciano"; // nome É string
 var nome1 = 25.75; //nome1 É double, O QUE FOI PERMITIDO MAS NÃO TEM MUITO SENTIDO
+
+
+---SWITCH CASE---
+LAÇO DE REPETIÇÃO QUE PODE SER USADO NO LUGAR DO IF-ELSE IF-ELSE.
+QUANDO A CONDIÇÃO DEPENDE DO VALOR ASSUMIDO POR UMA VARIÁVEL.
+
+int x = int.Parse(Console.ReadLine());
+if(x == 1)
+{
+    Console.WriteLine("First");
+}
+else if(x == 2)
+{
+    Console.WriteLine("Second");
+}
+else if (x == 3)
+{
+    Console.WriteLine("Third");
+}
+else
+{
+    Console.WriteLine("Not in podium");
+}
+
+COM SWITCH CASE
+switch(x)
+{
+    case 1:
+        Console.WriteLine("First");
+        break;
+
+    case 2:
+        Console.WriteLine("Second");
+        break;
+
+    case 3:
+        Console.WriteLine("Third");
+        break;
+
+    default:
+        Console.WriteLine("Not in podium");
+        break;
+}
+
+
+
+---CONDICIONAL TERNÁRIA---
+EXPRESSÃO QUE PODE SUBSTITUIR UM IF-ELSE SIMPLES.
+ELA DEFINE UM RETORNO OU OUTRO, SE UMA CONDIÇÃO É VERDADEIRA OU FALSA
+
+variavel = (condição) ? valor_para_true : valor_para_false;
+
+double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+double desconto = (preco > 50) ? preco * 0.1 : preco * 0.05;
+Console.WriteLine(desconto);
+//CASO O PREÇO SEJA MAIOR QUE 50, O DESCONTO É DE 10%
+//CASO NÃO SEJA, O DESCONTO É DE 5%
+
+
+---FUNÇÕES PARA STRING---
+ToUpper() - RETORNA UMA STRING COMO TODOS CARASTÉRES MAIÚSCULOS
+ToLower() - MINÚSCULO
+Trim() - APAGA ESPAÇOS EM BRANCO NO INÍCIO E FINAL
+Split("x") - SEPARA A STRING EM STRINGS MENORES USANDO O x COMO SEPARADOR - O x PODE SER ESPAÇO EM BRANCO, VÍRGULA, - ELE NÃO É INCLUSO
+IndexOf(x) - RETORNA A POSIÇÃO DA PRIMEIRA OCORRÊNCIA DE x NA STRING
+LastIndexOf(x) - ÚLTIMA OCORRÊNCIA
+Substring(x) - RETORNA A STRING A PARTIR DA POSIÇÃO x
+Substring(x,n) - RETORNA A STRING DE TAMANHO n A PARTIR DA POSIÇÃO x
+Replace('a','b') - RETORNA UMA STRING TROCANDO TODO CARACTERE a POR b
+Replace("a","b") - TROCANDO TODO TRECHO a POR b
+String.IsNullOrEmpty(frase) - RETORNA UM VALOR BOOL true CASO A STRING frase ESTEJA VAZIA OU SEJA NULL //COM ESPAÇO - false
+String.IsNullOrWhiteSpace(frase) - true CASO ESTEJA VAZIA, SÓ ESPAÇOS EM BRANCO OU NULL
 
 
 

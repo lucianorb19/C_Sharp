@@ -286,10 +286,9 @@ namespace ProjetoOO_2
 
             //---------------------------------------------------
             //EXERCÍCIO_43
-
-
-
-
+            string frase="Luciano Goiaba 2";
+            string[] palavaras = frase.Split("i");
+            Console.WriteLine(palavaras[1]);
 
 
 
