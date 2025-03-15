@@ -166,7 +166,7 @@ namespace ProjetoOO_2
             Funcionario.SalaryRase(lista_funcionarios);
 
             Funcionario.ShowEmployees(lista_funcionarios);
-            */
+            
 
 
             //---------------------------------------------------
@@ -213,8 +213,79 @@ namespace ProjetoOO_2
                     }
                 }
             }
+            
 
 
+
+            //---------------------------------------------------
+            //EXERCÍCIO_42
+            Console.Write("How many lines:/ Quantas linhas: ");
+            int n_lines = int.Parse(Console.ReadLine());
+            Console.Write("How many columns:/ Quantas colunas: ");
+            int n_columns = int.Parse(Console.ReadLine());
+
+            int[,] matriz = new int[n_lines,n_columns];
+
+            //DATA IN / ENTRADA DE DADOS
+            for(int i = 0; i < n_lines; i++)
+            {
+                for (int j = 0; j < n_columns; j++)
+                {
+                    Console.Write($"[{i}, {j}]: ");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            Console.WriteLine();
+
+            //DATA OUT / DADOS NA TELA
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    Console.Write($"{matriz[i, j]} ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            Console.Write("Number for processing:/Número para processar: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    if (x == matriz[i, j])//IF X IN MATRIX / CASO ENCONTRE O X NA MATRIZ
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"Number/Número: {x}\nPosition/Posição: [{i},{j}]");
+                        if(j > 0)//IF NOT IN FIRST COLUMN / CASO NÃO ESTEJA NA PRIMEIRA COLUNA
+                        {
+                            Console.WriteLine($"Left / Esquerda: {matriz[i, j - 1]}");
+                        }
+                        if(j < (matriz.GetLength(1)-1))//IF NOT IN LAST COLUMN / SE NÃO ESTIVER NA ÚLTIMA COLUNA
+                        {
+                            Console.WriteLine($"Right / Direita: {matriz[i, j + 1]}");
+                        }
+                        if (i > 0)//IF NOT IN FIRST LINE / CASO NÃO ESTEJA NA PRIMEIRA LINHA
+                        {
+                            Console.WriteLine($"Up / Acima: {matriz[i-1,j]}");
+                        }
+                        if (i < (matriz.GetLength(0)-1))//IF NOT IN LAST LINE / CASO NÃO ESTEJA NA ÚLTIMA LINHA
+                        {
+                            Console.WriteLine($"Down / Abaixo: {matriz[i + 1, j]}");
+                        }
+                    }
+                }
+                Console.WriteLine();
+            }
+            */
+
+
+
+            //---------------------------------------------------
+            //EXERCÍCIO_43
 
 
 
