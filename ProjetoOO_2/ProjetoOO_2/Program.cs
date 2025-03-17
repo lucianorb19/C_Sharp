@@ -286,9 +286,11 @@ namespace ProjetoOO_2
 
             //---------------------------------------------------
             //EXERCÍCIO_43
-            DateTime d1 = DateTime.UtcNow;
-            Console.WriteLine(d1);
+            DateTime a = new DateTime(1997, 03, 19);
+            DateTime b = new DateTime(2025, 03, 17);
 
+            TimeSpan c = b.Subtract(a);
+            Console.WriteLine(c);
 
 
 

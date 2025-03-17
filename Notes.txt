@@ -1362,15 +1362,14 @@ String.IsNullOrWhiteSpace(frase) - true CASO ESTEJA VAZIA, SÓ ESPAÇOS EM BRANC
 
 
 ---DATETIME---
-
 CONSTRUTORES COM SOBRECARGA
-Datetime d1 = new DateTime(2025, 03, 17);
+DateTime d1 = new DateTime(2025, 03, 17);
 //INSTANCIA O DATETIME 17/03/2025 00:00:00
 
-Datetime d1 = new DateTime(2025, 03, 17, 15, 30, 25);
+DateTime d1 = new DateTime(2025, 03, 17, 15, 30, 25);
 //INSTANCIA O DATETIME 17/03/2025 15:30:25
 
-Datetime d1 = new DateTime(2025, 03, 17, 15, 30, 25, 500);
+DateTime d1 = new DateTime(2025, 03, 17, 15, 30, 25, 500);
 //INSTANCIA O DATETIME 17/03/2025 15:30:25 PORQUE A FORMATAÇÃO PADRÃO NÃO CONSIDERA OS MILISEGUNDOS
 
 
@@ -1413,11 +1412,114 @@ DateTime d1 = DateTime.ParseExact("2025-03-17", "yyy-MM-dd",CultureInfo.Invarian
 DateTime d1 = DateTime.ParseExact("17/03/2025 15:30:25", "dd/MM/yyyy HH:mm:ss",CultureInfo.InvariantCulture);
 //PRIMEIROS 4 DIGITOS SÃO O ANO, OS DOIS PRÓXIMOS SÃO MESES E OS DOIS ÚLTIMOS SÃO DIAS - HORAS, MINUTOS, SEGUNDOS
 
-DENTRE OUTRAS....
+
+
+---PROPRIEDADE DATETIME---
+DateTime d = new DateTime(2025, 03, 17, 15, 30, 25, 580)
+
+d.Date - 17/03/2025 00:00:00 //SÓ A DATA
+d.Year - 2025
+d.Month - 03
+d.Day - 15
+d.Hour - 15
+d.Minute - 30
+d.Second - 25
+d.Milliseconds - 580
+d.Ticks - .....
+d.DayOfWeek - Monday
+d.DayOfYear - 76 //DIA DO ANO
+d.Kind - Unspecified //Local or Global? (Local by deafult)
+d.TimeOfDay - 15:30:25.5800000 //TimeSpan da Data
+
+DateTime d = new DateTime(2025, 03, 17, 15, 30, 25)
+
+d.ToLongDateString() - segunda-feira, 17 de março de 2025
+d.ToShortDateString() - 17/03/2025
+d.ToLongTimeString() - 15:30:25
+d.ToShortTimeString() - 15:30
+d.ToString() - 17/03/2025 15:30:25
+
+COM MÁSCARA
+d.ToString("yyyy-MM-dd HH:mm:ss") - 2025-03-17 15:30:25
+d.ToString("yyyy-MM-dd HH:mm:ss.fff") - 2025-03-17 15:30:25.580000
+
+
+---OPERAÇÕES COM DATETIME---
+DateTime d = new DateTime(2025, 03, 17, 15, 30, 25)
+
+ADICIONAR VALORES
+DateTime d2 = d.AddDays(7); - 24/03/2025 15:30:25
+DateTime d2 = d.AddHours(2); - 17/03/2025 17:30:25
+DateTime d2 = d.AddMinutes(40); - 17/03/2025 16:10:25
+
+--OUTRAS--
+Add(TimeSpan)
+AddMilliseconds
+AddMonths
+AddSeconds
+AddTicks
+AddYears
+
+
+DIFERENÇA ENTRE DATAS
+DateTime a = new DateTime(1997, 03, 19)
+DateTime b = new DateTime(2025, 03, 17)
+TimeSpan c = b.Subtract(a); //10225.00:00:00
+
+--OUTRAS--
+DateTime y = x.Subract(TimeSpan)
+
+
 
 
 
 ---TIMESPAN---
+REPRESENTA UMA DURAÇÃO DE TEMPO
+
+TimeSpan t1 = new TimeSpan();
+00:00:00
+
+TimeSpan t1 = new TimeSpan(900000000L) //QUANTIDADE DE TICKS(100 NANOSEGUNDOS)
+00:01:30 //1 MINUTO E MEIO
+
+TimeSpan t1 = new TimeSpan(15, 30, 25);
+15:30:25
+
+TimeSpan t1 = new TimeSpan(4, 15, 30, 25);
+1.15:30:25 //1 DIA, 15 HORAS, 30 MINUTOS E 25 SEGUNDOS
+
+TimeSpan t1 = new TimeSpan(4, 15, 30, 25, 322);
+1.15:30:25.3220000 //1 DIA, 15 HORAS, 30 MINUTOS, 25 SEGUNDOS E 322 MILISEGUNDOS
+
+
+---TIMESPAN FROM---
+PERMITE SABER QUAL O TIMESPAN DE UMA QUANTIDADE DE DIAS OU HORAS OU MILISEGUNDOS OU MINUTOS OU SEGUNDOS OU TICKS
+
+TimeSpan t1 = TimeSpan.FromDays(1.5);
+1.12:00:00 //1 DIA E MEIO
+
+TimeSpan t1 = TimeSpan.FromHours(3.5);
+03:30:00 // 3 HORAS E MEIA
+
+TimeSpan t1 = TimeSpan.FromMinutes(10.5);
+00:10:30 //10 MINUTOS E MEIO
+
+TimeSpan t1 = TimeSpan.FromSeconds(20.5);
+00:00:20.5000000 //20 MINUTOS E MEIO
+
+TimeSpan t1 = TimeSpan.FromMilliseconds(1);
+00:00:00.0010000 //1 MILISEGUNDO
+
+TimeSpan t1 = TimeSpan.FromTicks(900000000L);
+00:01:30 //1 MINUTO E MEIO
+
+
+
+
+
+
+
+
 
 
 
