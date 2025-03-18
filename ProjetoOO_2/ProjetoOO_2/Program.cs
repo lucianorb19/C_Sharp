@@ -290,18 +290,7 @@ namespace ProjetoOO_2
             DateTime d1 = DateTime.Parse("2025-03-18T11:30:55Z");
             Console.WriteLine(d1);
 
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
             //RASCUNHO
             //------------------------------------------
@@ -378,19 +367,6 @@ namespace ProjetoOO_2
 
             Console.WriteLine(y);
             */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         }

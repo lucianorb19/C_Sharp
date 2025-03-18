@@ -1566,6 +1566,61 @@ TimeSpan div = t2.Divide(2.0);
 
 
 
+-----ENUM-----
+MANEIRA DE REPRESENTAR UM CONJUNTO DE CONSTANTES/PALAVRAS, SENDO CADA CONSTANTE/PALAVRA UM VALOR NUMÉRICO.
+EX: UMA CLASSE PEDIDO, CUJO ATRIBUTO Status É UM ENUM DA SEGUINTE FORMA
+
+class Order
+{
+public int Id { get; set; }
+public DateTime Moment { get; set; }
+public OrderStatus Status { get; set; }
+}
+
+ATRIBUTO Status É DO TIPO enum OrderStatus, SENDO ESSE enum
+
+enum OrderStatus : int
+    {
+        PendingPayment = 0,
+        Processing = 1,
+        Shipped = 2,
+        Delivered = 3
+    }
+
+ASSIM, OS ESTADOS DO PEDIDO PODEM SER RELACIONADOS COM ESSES VALORES NO MOMENTO DE INSTANCIAR UM OBJETO Order
+
+NO PROGRAMA PRINCIPAL
+Order order1 = new Order
+{
+    Id = 01,
+    Moment = DateTime.Now,
+    Status = OrderStatus.PendingPayment //A PARTIR DO . O COMPILADOR SUGERE
+};
+
+
+PARA ORGANIZAR ESSA ESTRUTURA NUM PROJETO, O IDEAL É CRIAR UMA PASTA ENTIDADES, ONDE FICARÃO TODAS AS CLASSES QUE REPRESENTAM
+ENTIDADES DA APLICAÇÃO, E DENTRO DESSA PASTA ENTIDADES, CRIAR UMA SUBPASTA ENUMS, ONDE FICARÃO OS ENUMS RELACIONADOS.
+ADICIONAR->CLASSE->NOMEAR->TROCAR class POR enum
+
+LEMBRAR DE: PARA QUE UMA ENUM/CLASSE DE UM NAMESPACE DIFERENTE SEJA VISÍVEL, É NECESSÁRIO IMPORTÁ-LA NO CÓDIGO
+using ProjetoOO_3.Entities;
+using ProjetoOO_3.Entities.Enums;
+
+
+---CONVERTENDO ENUM PARA STRING---
+string txt = OrderStatus.PendingPayment.ToString();
+
+---CONVERTENDO STRING PARA ENUM---
+OrderStatus order_status = Enum.Parse<OrderStatus>("Delivered");
+//CONSIDERANDO QUE NA ESTRUTURA DO ENUM OrderStatus JÁ TENHA O VALOR Delivered
+//ASSIM A STRING PASSADA NO PARÂMETRO SE TORNA O VALOR DO OBJETO order_status
+//NÃO FUNCIONARIA SE A STRING NÃO EXISTISSE DENTRO DA ESTRUTURA DO ENUM (Delivere POR EXEMPLO)
+
+
+
+
+
+
 
 
 
