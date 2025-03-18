@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\hourcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\hourcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\enums\\workerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\enums\\workerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Program.cs",
               "RelativeDocumentMoniker": "ProjetoOO_3\\Program.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Program.cs",
               "RelativeToolTip": "ProjetoOO_3\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T13:27:49.832Z",
               "IsPinned": true,
@@ -40,28 +48,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "ProjetoOO_3\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Order.cs",
-              "RelativeToolTip": "ProjetoOO_3\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Worker.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_3\\Entities\\Worker.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Worker.cs",
+              "RelativeToolTip": "ProjetoOO_3\\Entities\\Worker.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswDEAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T13:29:52.583Z",
+              "WhenOpened": "2025-03-18T15:10:27.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderStatus.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Enums\\OrderStatus.cs",
-              "RelativeDocumentMoniker": "ProjetoOO_3\\Entities\\Enums\\OrderStatus.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Enums\\OrderStatus.cs",
-              "RelativeToolTip": "ProjetoOO_3\\Entities\\Enums\\OrderStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "WorkerLevel.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Enums\\WorkerLevel.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_3\\Entities\\Enums\\WorkerLevel.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Enums\\WorkerLevel.cs",
+              "RelativeToolTip": "ProjetoOO_3\\Entities\\Enums\\WorkerLevel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T13:50:32.137Z",
+              "WhenOpened": "2025-03-18T15:12:25.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_3\\Entities\\Department.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Department.cs",
+              "RelativeToolTip": "ProjetoOO_3\\Entities\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T15:02:41.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HourContract.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\HourContract.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_3\\Entities\\HourContract.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\HourContract.cs",
+              "RelativeToolTip": "ProjetoOO_3\\Entities\\HourContract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T15:04:46.37Z",
               "EditorCaption": ""
             }
           ]

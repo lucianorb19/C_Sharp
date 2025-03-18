@@ -9,6 +9,16 @@ namespace ProjetoOO_3
         static void Main(string[] args)
         {
 
+
+
+
+
+
+
+
+
+
+            /*
             //INSTANCIAÇÃO DIRETA
             Order order1 = new Order
             {
@@ -22,7 +32,7 @@ namespace ProjetoOO_3
 
             OrderStatus order_status = Enum.Parse<OrderStatus>("Processing");
             Console.WriteLine(order_status);
-
+            */
 
 
         }
