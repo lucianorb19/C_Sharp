@@ -6,6 +6,6 @@ namespace ProjetoOO_3.Entities.Enums
     {
         Junior = 0,
         MidLevel = 1,
-        Senio = 2
+        Senior = 2
     }
 }

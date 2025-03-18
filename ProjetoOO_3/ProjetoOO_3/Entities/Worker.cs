@@ -50,7 +50,19 @@ namespace ProjetoOO_3.Entities
         //MÉTODO QUE CALCULA O TOTAL DE GANHOS DOS CONTRATOS PARA O FUNCIONÁRIO
         public double Income(int year, int month)
         {
+            double sum = BaseSalary;
 
+            //PARA CADA CONTRATO DA LISTA
+            foreach(HourContract contract in Contracts)
+            {
+                //SE, NO CONTRATO, O ANO E MÊS FOREM IGUAIS AOS PASSADOS NO PARÂMETRO
+                if(contract.Date.Year == year && contract.Date.Month == month)
+                {
+                    sum += contract.TotalValue();//INCREMENTO SOMA PELO VALOR DO CONTRATO
+                }
+            }
+
+            return sum;
         }
 
 
