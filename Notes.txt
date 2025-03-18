@@ -1470,6 +1470,29 @@ TimeSpan c = b.Subtract(a); //10225.00:00:00
 DateTime y = x.Subract(TimeSpan)
 
 
+-----DATETIME KIND-----
+TIPO ENUMERADO QUE DEFINE 3 VALORES POSSÍVEIS PARA LOCAL E DATA
+-LOCAL
+-UTC (Londres/Greenwich)
+-Unspecified
+
+SEMPRE ARMAZENAR DATA/HORA EM UTC, E QUANDO FOR INSTANCIAR, FORMATAR PARA FORMATO LOCAL
+ARMAZENANDO UTC E INSTANCIANDO LOCAL
+DateTime d1 = new DateTime(2025, 03, 18, 11, 30, 55, DateTimeKind.Utc);
+Console.WriteLine(d1);
+Console.WriteLine(d1.ToLocalTime());
+
+ARMAZENANDO LOCAL E INSTANCIANDO UNIVERSAL
+DateTime d1 = new DateTime(2025, 03, 18, 11, 30, 55, DateTimeKind.Local);
+Console.WriteLine(d1); //18/03/2025 11:30:55
+Console.WriteLine(d1.ToUniversalTime()); // 18/03/2025 14:30:55
+
+
+---PADRÃO ISO 8601---
+yyyy-MM-ddTHH:mm:ssZ
+DateTime d1 = DateTime.Parse("2025-03-18T11:30:55Z");
+
+Z-INDICA HORÁRIO UTC
 
 
 
@@ -1486,10 +1509,10 @@ TimeSpan t1 = new TimeSpan(15, 30, 25);
 15:30:25
 
 TimeSpan t1 = new TimeSpan(4, 15, 30, 25);
-1.15:30:25 //1 DIA, 15 HORAS, 30 MINUTOS E 25 SEGUNDOS
+4.15:30:25 //4 DIAS, 15 HORAS, 30 MINUTOS E 25 SEGUNDOS
 
 TimeSpan t1 = new TimeSpan(4, 15, 30, 25, 322);
-1.15:30:25.3220000 //1 DIA, 15 HORAS, 30 MINUTOS, 25 SEGUNDOS E 322 MILISEGUNDOS
+4.15:30:25.3220000 //4 DIAS, 15 HORAS, 30 MINUTOS, 25 SEGUNDOS E 322 MILISEGUNDOS
 
 
 ---TIMESPAN FROM---
@@ -1512,6 +1535,41 @@ TimeSpan t1 = TimeSpan.FromMilliseconds(1);
 
 TimeSpan t1 = TimeSpan.FromTicks(900000000L);
 00:01:30 //1 MINUTO E MEIO
+
+
+---PROPRIEDADES TIMESPAN---
+TimeSpan t1 = TimeSpan.MaxValue; //VALOR MÁXIMO 10MIL E TANTOS DIAS
+TimeSpan t1 = TimeSpan.MinValue; //VALOR MÍNIMO -10 E TANTOS DIAS
+TimeSpan t1 = TimeSpan.Zero;     //00:00:00
+
+TimeSpan t = new TimeSpan(2, 3, 5, 7, 11)
+t.Days; //2
+t.Hours;//3
+t.Minutes;//5
+t.Seconds;//7
+t.Milliseconds;//11
+t.Ticks;//
+t.TotalDays;//DIAS COM DECIMAIS
+t.TotalMinutes;//MINUTOS COM DECIMAIS
+t.TotalSeconds;//SEGUNDOS COM DECIMAIS
+t.TotalMilliseconds;//MILISEGUNDOS COM DECIMAIS
+
+
+---OPERAÇÕES TIMESPAN---
+TimeSpan t1 = new TimeSpan(1, 30, 10);
+TimeSpan t2 = new TimeSpan(0, 10, 5);
+
+TimeSpan sum = t1.Add(t2);
+TimeSpan dif = t1.Subtract(t2);
+TimeSpan mult = t2.Multiply(2.0);
+TimeSpan div = t2.Divide(2.0);
+
+
+
+
+
+
+
 
 
 

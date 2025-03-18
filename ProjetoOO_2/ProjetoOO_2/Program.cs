@@ -286,11 +286,10 @@ namespace ProjetoOO_2
 
             //---------------------------------------------------
             //EXERCÍCIO_43
-            DateTime a = new DateTime(1997, 03, 19);
-            DateTime b = new DateTime(2025, 03, 17);
 
-            TimeSpan c = b.Subtract(a);
-            Console.WriteLine(c);
+            DateTime d1 = DateTime.Parse("2025-03-18T11:30:55Z");
+            Console.WriteLine(d1);
+
 
 
 
