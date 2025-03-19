@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "ProjetoOO_4\\Program.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_4\\ProjetoOO_4\\Program.cs",
               "RelativeToolTip": "ProjetoOO_4\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCQAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T16:56:56.087Z",
               "IsPinned": true,
@@ -46,7 +46,7 @@
               "RelativeDocumentMoniker": "ProjetoOO_4\\Entities\\Post.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_4\\ProjetoOO_4\\Entities\\Post.cs",
               "RelativeToolTip": "ProjetoOO_4\\Entities\\Post.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAwC0AAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T17:05:08.878Z",
               "EditorCaption": ""
@@ -61,8 +61,7 @@
               "RelativeToolTip": "ProjetoOO_4\\Entities\\Comment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T17:03:41.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T17:03:41.135Z"
             }
           ]
         }

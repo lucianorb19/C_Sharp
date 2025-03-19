@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\hourcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\hourcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\enums\\workerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\enums\\workerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\enums\\workerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\enums\\workerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\hourcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|solutionrelative:projetooo_3\\entities\\hourcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4818FEEC-DE16-4F52-9AFD-3DDD20FF9E5C}|ProjetoOO_3\\ProjetoOO_3.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_3\\projetooo_3\\entities\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "ProjetoOO_3\\Program.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Program.cs",
               "RelativeToolTip": "ProjetoOO_3\\Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAgwEYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T13:27:49.832Z",
               "IsPinned": true,
@@ -56,12 +56,11 @@
               "RelativeToolTip": "ProjetoOO_3\\Entities\\Worker.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T15:10:27.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T15:10:27.406Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "WorkerLevel.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\Enums\\WorkerLevel.cs",
               "RelativeDocumentMoniker": "ProjetoOO_3\\Entities\\Enums\\WorkerLevel.cs",
@@ -87,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HourContract.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_3\\ProjetoOO_3\\Entities\\HourContract.cs",
               "RelativeDocumentMoniker": "ProjetoOO_3\\Entities\\HourContract.cs",
