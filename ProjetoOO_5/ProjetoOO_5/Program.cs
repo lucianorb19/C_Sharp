@@ -26,7 +26,6 @@ namespace ProjetoOO_5
             string status_string = "";
             while (continuar)
             {
-                Console.WriteLine();
                 Console.Write("Status: ");
                 status_string = Console.ReadLine();
                 if (status_string == "PendingPayment" || 
@@ -49,19 +48,21 @@ namespace ProjetoOO_5
             }
             OrderStatus orderStatus = Enum.Parse<OrderStatus>(status_string);
 
+            //Console.WriteLine(orderStatus);
+
             Order order = new Order();
-            //add moment
-            //add order_status
-            //add client
+            order.Moment = DateTime.Now;
+            order.Status = orderStatus;
+            order.Client = client;
 
             Console.Write("How many item to this order: ");
             int numero_itens = int.Parse(Console.ReadLine());
             for(int i = 0; i < numero_itens; i++)
             {
                 Console.WriteLine($"Enter #{i+1} item data");
-                Console.Write("Name: ");
+                Console.Write("Product name: ");
                 string product_name = Console.ReadLine();
-                Console.Write("Price: ");
+                Console.Write("Product price: ");
                 double product_price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.Write("Quantity: ");
                 int quantity = int.Parse(Console.ReadLine());
@@ -70,12 +71,10 @@ namespace ProjetoOO_5
                 OrderItem order_item = new OrderItem(quantity, product);
 
                 order.AddItem(order_item);
+                Console.WriteLine();
             }
 
-
-            
-            Console.Write("");
-            Console.Write("");
+            Console.WriteLine(order);
             
 
 

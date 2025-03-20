@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 
 namespace ProjetoOO_5.Entities
@@ -7,7 +8,7 @@ namespace ProjetoOO_5.Entities
     {
         public int Quantity { get; set; }
         public double Price { get; set; }
-        public Product Item { get; set; } = new Product();//ASSOCIAÇÃO PRODUCT
+        public Product Product { get; set; } = new Product();//ASSOCIAÇÃO PRODUCT
 
         //CONSTRUTORES
         public OrderItem()
@@ -16,16 +17,20 @@ namespace ProjetoOO_5.Entities
         }
         public OrderItem(int quantity, Product item)
         {
+            Product = item;
             Quantity = quantity;
-            Price = Item.Price;//PREÇO DO PRODUTO PASSADO PARA O ITEM
-            Item = item;
+            Price = (double)Product.Price;//PREÇO DO PRODUTO PASSADO PARA O ITEM
+            
         }
 
         //DEMAIS MÉTODOS
         public double SubTotal()
         {
-            return Quantity * Price;
+            double valor = (double)Quantity * Price;
+            return valor;
         }
+
+        
 
 
 

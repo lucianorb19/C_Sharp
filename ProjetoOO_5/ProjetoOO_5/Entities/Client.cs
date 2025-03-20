@@ -24,7 +24,7 @@ namespace ProjetoOO_5.Entities
         //DEMAIS MÉTODOS
         public override string ToString()
         {
-            return $"Client: {Name} ({BirthDate}) - {Email}";
+            return $"{Name} ({BirthDate.ToShortDateString()}) - {Email}";
         }
 
 
