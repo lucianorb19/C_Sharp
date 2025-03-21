@@ -24,5 +24,7 @@ namespace ProjetoOO_7.Entities
             return $"{Name} - ${Price.ToString("f2", CultureInfo.InvariantCulture)}";
         }
 
+
+
     }
 }

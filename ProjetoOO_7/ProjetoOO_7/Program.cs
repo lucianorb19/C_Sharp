@@ -9,6 +9,73 @@ namespace ProjetoOO_7
     {
         static void Main(string[] args)
         {
+            List<Person> taxPayers = new List<Person>();
+
+            Console.Write("Enter the number of tax payers: ");
+            int numberTaxPayers = int.Parse(Console.ReadLine());
+
+            for(int i = 0; i < numberTaxPayers; i++)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"Tax payer #{i+1}");
+                Console.Write("Individual or company [i/c]: ");
+                string op = Console.ReadLine().ToUpper();
+
+                while(op != "I" && op != "INDIVIDUAL" &&
+                      op != "C" && op != "COMPANY")
+                {
+                    Console.WriteLine("Invalid entry. Try again.");
+                    Console.Write("Individual or company [i/c]: ");
+                    op = Console.ReadLine().ToUpper();
+                }
+
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Anual income: ");
+                double anualIncome = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                if(op == "I" || op == "INDIVIDUAL")
+                {
+                    Console.Write("Health expenses: ");
+                    double healthExpenses = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    Individual individual = new Individual(name, anualIncome, healthExpenses);
+                    taxPayers.Add(individual);
+                }
+                else//op == "C" || op == "COMPANY"
+                {
+                    Console.Write("Number of employees: ");
+                    int numberEmployees = int.Parse(Console.ReadLine());
+                    LegalEntity legalEntity = new LegalEntity(name, anualIncome, numberEmployees);
+                    taxPayers.Add(legalEntity);
+                }
+                
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("TAXES PAID");
+            foreach(Person person in taxPayers)
+            {
+                Console.WriteLine(person);
+            }
+
+            double total = 0;
+            foreach (Person person in taxPayers)
+            {
+                total += person.Tax();
+            }
+            Console.WriteLine($"TOTAL TAXES: {total}");
+           
+
+
+
+
+
+
+
+
+            /*
+            //--------------------------------------------------------------
+            //EXERCISE
             List<Product> products = new List<Product>();
             Console.Write("Enter the number os products: ");
             int number_products = int.Parse(Console.ReadLine());
@@ -62,14 +129,11 @@ namespace ProjetoOO_7
             {
                 Console.WriteLine($"{product.PriceTag()}"); 
             }
-
-
-
-
-
+            */
 
 
             /*
+            //--------------------------------------------------------------
             //EXERCISE
             //EMPLOYEES LIST
             List<Employee> employees = new List<Employee>();
