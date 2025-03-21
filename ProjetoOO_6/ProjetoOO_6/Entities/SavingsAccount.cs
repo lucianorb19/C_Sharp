@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoOO_6.Entities
 {
-    class SavingsAccount : Account
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -28,6 +28,12 @@ namespace ProjetoOO_6.Entities
         public void UpdateBalance()
         {
             Balance += Balance * InterestRate;
+        }
+
+        //MÉTODO SOBRESCRITO - CONTA POUPANÇA NÃO TEM DESCONTO PARA SAQUE
+        public sealed override void WithDraw(double ammount)
+        {
+            Balance -= ammount;
         }
 
 

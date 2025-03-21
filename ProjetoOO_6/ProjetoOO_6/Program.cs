@@ -8,7 +8,13 @@ namespace ProjetoOO_6
         static void Main(string[] args)
         {
 
+            Account a = new BusinnesAccount(1, "Luciano", 400,1200);
+            Account b = new SavingsAccount(2, "Ana", 400, 0.05);
 
+            a.WithDraw(10);
+            b.WithDraw(10);
+
+            Console.WriteLine($"{a.Balance}\n{b.Balance}");
 
 
 

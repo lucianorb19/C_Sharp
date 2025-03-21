@@ -22,9 +22,10 @@ namespace ProjetoOO_6.Entities
         }
 
         //DEMAIS MÉTODOS
-        public void WithDraw(double ammount)
+        //SAQUE - CADA SAQUE TEM TAXA DE 5$
+        public virtual void WithDraw(double ammount)
         {
-            Balance -= ammount;
+            Balance -= ammount+5;
         }
 
         public void Deposit(double ammount)
