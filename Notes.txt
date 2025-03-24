@@ -1565,6 +1565,18 @@ TimeSpan mult = t2.Multiply(2.0);
 TimeSpan div = t2.Divide(2.0);
 
 
+---APLICAÇÃO DATETIME E TIMESPAN---
+DIFERENÇA EM DIAS DE UMA DATA PARA OUTRA
+
+Console.WriteLine("Check In: [DD/MM/YYYY]");
+DateTime checkIn = DateTime.Parse(Console.ReadLine());
+Console.WriteLine("Check Out: [DD/MM/YYYY]");
+DateTime checkOut = DateTime.Parse(Console.ReadLine());
+TimeSpan duration = checkOut.Subtract(checkIn);
+int result = (int)duration.TotalDays;
+Console.WriteLine(result);
+
+
 
 -----ENUM-----
 MANEIRA DE REPRESENTAR UM CONJUNTO DE CONSTANTES/PALAVRAS, SENDO CADA CONSTANTE/PALAVRA UM VALOR NUMÉRICO.
