@@ -1,38 +1,53 @@
 ﻿using System;
 using System.IO; //FILES
+using System.Collections.Generic;
+using System.Globalization;//IEnumerable
 namespace ProjetoOO_9
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //CAMINHO ARQUIVO ORIGEM
-            string sourcePath = @"C:\Users\CREAS\Desktop\arquivos\file1.txt";
-            string targetPath = @"C:\Users\CREAS\Desktop\arquivos\file2.txt";
+            //PASTA ARQUIVO ORIGINAL
+            string sourcePath = @"C:\Users\CREAS\Desktop\myfolder\file1.txt";
 
             try
             {
-                //VETOR EM QUE CADA ITEM É UMA LINHA DO ARQUIVO ORIGINAL
-                string[] lines = File.ReadAllLines(sourcePath);
-                //MODO DE ESCRITA - NO FINAL DO ARQUIVO
-                using(StreamWriter sw = File.AppendText(targetPath))
+                //CRIANDO PASTA PARA ARQUIVO SAÍDA
+                string targetPath = Path.GetDirectoryName(sourcePath) + @"\out";
+                Directory.CreateDirectory(targetPath);
+
+
+                using (FileStream fs = new FileStream(sourcePath, FileMode.OpenOrCreate))
                 {
-                    //CADA ITEM DO VETOR É ESCRITO NO FINAL DO ARQUIVO - EM MAIÚSCULO
-                    //ESCREVE UMA LINHA - ENTER
-                    foreach(string line in lines)
+                    using (StreamReader sr = new StreamReader(fs))
                     {
-                        sw.WriteLine(line.ToUpper());
+                        while (!sr.EndOfStream)
+                        {
+                            string linha = sr.ReadLine();
+                            string[] dados_linha = linha.Split(",");
+                            string nome = dados_linha[0];
+                            double valor = Convert.ToDouble(dados_linha[1], System.Globalization.CultureInfo.InvariantCulture) ;
+                            double quantidade = Convert.ToDouble(dados_linha[2], System.Globalization.CultureInfo.InvariantCulture) ;
+
+                            double valor_total = valor * quantidade;
+                            Console.WriteLine($"{nome} - {valor_total.ToString("f2",CultureInfo.InvariantCulture)}");
+
+                            //ESCREVER NO ARQUIVO NOVO
+                            //NOME,VALOR TOTAL
+                            //using (StreamWriter sw = File.AppendText(targetPath))
+                            //{
+                            //
+                            //}
+                        }
+
                     }
                 }
-
-
             }
-            catch (IOException e)
+            catch(IOException e)
             {
                 Console.WriteLine($"Erro. {e.Message}");
             }
-
-
         }
     }
 }
