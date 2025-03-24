@@ -27,7 +27,7 @@ namespace ProjetoOO_7.Entities
             {
                 tax = AnualIncome * 0.16;
             }
-            else//EmployeeNumber >=10
+            else//EmployeeNumber >10
             {
                 tax = AnualIncome * 0.14;
             }
