@@ -1,0 +1,15 @@
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\bin\Debug\net8.0\ProjetoOO_11.exe
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\bin\Debug\net8.0\ProjetoOO_11.deps.json
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\bin\Debug\net8.0\ProjetoOO_11.runtimeconfig.json
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\bin\Debug\net8.0\ProjetoOO_11.dll
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\bin\Debug\net8.0\ProjetoOO_11.pdb
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ProjetoOO_11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ProjetoOO_11.AssemblyInfoInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ProjetoOO_11.AssemblyInfo.cs
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ProjetoOO_11.csproj.CoreCompileInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ProjetoOO_11.sourcelink.json
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ProjetoOO_11.dll
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\refint\ProjetoOO_11.dll
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ProjetoOO_11.pdb
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ProjetoOO_11.genruntimeconfig.cache
+C:\Users\CREAS\Desktop\C_Sharp\ProjetoOO_11\ProjetoOO_11\obj\Debug\net8.0\ref\ProjetoOO_11.dll
