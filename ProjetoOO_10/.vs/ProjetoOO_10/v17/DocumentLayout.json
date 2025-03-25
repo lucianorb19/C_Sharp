@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\entities\\installment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\entities\\installment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\services\\feecalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\services\\feecalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\services\\ifeecalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\services\\ifeecalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Program.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_10\\Program.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Program.cs",
+              "RelativeToolTip": "ProjetoOO_10\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T14:19:42.134Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Contract.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Entities\\Contract.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_10\\Entities\\Contract.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Entities\\Contract.cs",
+              "RelativeToolTip": "ProjetoOO_10\\Entities\\Contract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T14:23:43.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Installment.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Entities\\Installment.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_10\\Entities\\Installment.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Entities\\Installment.cs",
+              "RelativeToolTip": "ProjetoOO_10\\Entities\\Installment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T14:22:15.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FeeCalculation.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Services\\FeeCalculation.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_10\\Services\\FeeCalculation.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Services\\FeeCalculation.cs",
+              "RelativeToolTip": "ProjetoOO_10\\Services\\FeeCalculation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T14:37:03.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IFeeCalculation.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Services\\IFeeCalculation.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_10\\Services\\IFeeCalculation.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Services\\IFeeCalculation.cs",
+              "RelativeToolTip": "ProjetoOO_10\\Services\\IFeeCalculation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T14:32:02.642Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
