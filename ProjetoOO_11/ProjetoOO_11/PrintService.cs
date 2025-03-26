@@ -36,6 +36,7 @@ namespace ProjetoOO_11
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
+            //LAÇO QUE MOSTRA OS ITENS, ATÉ O PENÚLTIMO DE UMA FORMA, E O ÚLTIMO DE OUTRA FORMA
             sb.Append("[ ");
             for(int i = 0; i < _values.Length; i++)
             {
@@ -53,6 +54,8 @@ namespace ProjetoOO_11
 
             return sb.ToString();
         }
+
+
 
 
     }
