@@ -9,6 +9,84 @@ namespace ProjetoOO_11
         static void Main(string[] args)
         {
 
+
+
+
+
+
+
+
+
+
+            /*
+            //------------------------------------------------------------------------
+            //EXERCISE
+            try
+            {
+                //HASHSETS QUE REPRESENTAM CADA TURMA
+                HashSet<int> A = new HashSet<int>();
+                HashSet<int> B = new HashSet<int>();
+                HashSet<int> C = new HashSet<int>();
+
+                //INPUT - CLASS A
+                Console.Write("How many strudents for course A? ");
+                int aNumber = int.Parse(Console.ReadLine());
+                for (int i = 0; i < aNumber; i++)
+                {
+                    Console.Write("->> ");
+                    int aluno_id = int.Parse(Console.ReadLine());
+                    A.Add(aluno_id);
+                }
+                //INPUT - CLASS B
+                Console.Write("How many strudents for course B? ");
+                int bNumber = int.Parse(Console.ReadLine());
+                for (int i = 0; i < bNumber; i++)
+                {
+                    Console.Write("->> ");
+                    int aluno_id = int.Parse(Console.ReadLine());
+                    B.Add(aluno_id);
+                }
+
+                //INPUT - CLASS C
+                Console.Write("How many strudents for course C? ");
+                int cNumber = int.Parse(Console.ReadLine());
+                for (int i = 0; i < cNumber; i++)
+                {
+                    Console.Write("->> ");
+                    int aluno_id = int.Parse(Console.ReadLine());
+                    C.Add(aluno_id);
+                }
+
+                //UNION BETWEEN CLASSES A, B AND C
+                //UNION - ONLY DIFFERENT NUMBERS
+                HashSet<int> alunosAlex = new HashSet<int>(A);
+                alunosAlex.UnionWith(B);
+                alunosAlex.UnionWith(C);
+
+                Console.WriteLine($"Total students: {alunosAlex.Count}");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine($"Erro. {e.Message}");
+            }
+            
+
+            //MÉTODO ESTÁTICO QUE PRINTA A COLEÇÃO
+            static void PrintCollection<T>(IEnumerable<T> collection)
+            {
+                foreach (T item in collection)
+                {
+                    Console.WriteLine($"{item}");
+                }
+                Console.WriteLine();
+            }
+            */
+
+
+
+            /*
+            //------------------------------------------------------------------------
+            //EXERCISE
             SortedSet<int> a = new SortedSet<int>() {0, 4, 2, 5, 8, 6, 10 };
             SortedSet<int> b = new SortedSet<int>() {5, 6, 7, 8, 9, 10};
 
@@ -36,10 +114,6 @@ namespace ProjetoOO_11
             PrintCollection(d);
             PrintCollection(e);
 
-
-
-
-
             //MÉTODO ESTÁTICO PARA PERCORRER A COLEÇÃO
 
             //IEnumerable - INTERFACE PARA GetEnumerate
@@ -53,9 +127,7 @@ namespace ProjetoOO_11
                 }
                 Console.WriteLine();
             }
-
-
-
+            */
 
 
 
