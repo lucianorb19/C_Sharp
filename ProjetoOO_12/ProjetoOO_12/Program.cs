@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjetoOO_12.Extensions;
 
 namespace ProjetoOO_12
 {
@@ -6,8 +7,30 @@ namespace ProjetoOO_12
     {
         static void Main(string[] args)
         {
-
+            Console.Write("Digite uma data passada [DD/MM/YYYY]:");
+            DateTime data = DateTime.Parse(Console.ReadLine());
             
+            while (data >= DateTime.Now)
+            {
+                Console.WriteLine("Not a past data. Try again");
+                Console.Write("Digite uma data passada [DD/MM/YYYY]:");
+                data = DateTime.Parse(Console.ReadLine());
+
+            }
+            Console.WriteLine(data.ElapsedTime());
+            //DateTime data = new DateTime(2025, 01, 10, 11, 30, 25);
+
+
+
+
+
+
+
+
+
+
+
+            /*
             //--------------------------------------------------------------------
             //EXERCÍCIO
             Dictionary<string, int> candidatos = new Dictionary<string, int>();
@@ -50,7 +73,7 @@ namespace ProjetoOO_12
             {
                 Console.WriteLine($"Erro. {e.Message}");
             }
-            
+            */
 
 
 

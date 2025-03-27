@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A3886997-AECF-432E-8B54-41A85B632D84}|ProjetoOO_12\\ProjetoOO_12.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_12\\projetooo_12\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3886997-AECF-432E-8B54-41A85B632D84}|ProjetoOO_12\\ProjetoOO_12.csproj|solutionrelative:projetooo_12\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3886997-AECF-432E-8B54-41A85B632D84}|ProjetoOO_12\\ProjetoOO_12.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_12\\projetooo_12\\extensions\\datetimeextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3886997-AECF-432E-8B54-41A85B632D84}|ProjetoOO_12\\ProjetoOO_12.csproj|solutionrelative:projetooo_12\\extensions\\datetimeextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,10 +28,23 @@
               "RelativeDocumentMoniker": "ProjetoOO_12\\Program.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_12\\ProjetoOO_12\\Program.cs",
               "RelativeToolTip": "ProjetoOO_12\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBIAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T12:54:52.657Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DateTimeExtension.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_12\\ProjetoOO_12\\Extensions\\DateTimeExtension.cs",
+              "RelativeDocumentMoniker": "ProjetoOO_12\\Extensions\\DateTimeExtension.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_12\\ProjetoOO_12\\Extensions\\DateTimeExtension.cs",
+              "RelativeToolTip": "ProjetoOO_12\\Extensions\\DateTimeExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:52:34.849Z",
               "EditorCaption": ""
             }
           ]
