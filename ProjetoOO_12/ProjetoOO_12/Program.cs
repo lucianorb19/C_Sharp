@@ -1,5 +1,6 @@
 ﻿using System;
 using ProjetoOO_12.Extensions;
+using String;
 
 namespace ProjetoOO_12
 {
@@ -7,6 +8,44 @@ namespace ProjetoOO_12
     {
         static void Main(string[] args)
         {
+
+
+
+
+
+
+
+
+
+
+            /*
+            //--------------------------------------------------------------------
+            //EXERCÍCIO
+            try
+            {
+                Console.Write("Digite uma frase: ");
+                string frase = Console.ReadLine();
+                int tamanho = frase.Length;
+                Console.Write($"Cortar até qual tamanho? max:{tamanho - 1}\n--> ");
+                int tamanhoCorte = int.Parse(Console.ReadLine());
+                while (tamanhoCorte >= tamanho)
+                {
+                    Console.WriteLine("Tamanho de corte muito grande. Tente novamente");
+                    Console.Write($"Cortar até qual tamanho? max:{tamanho - 1}\n--> ");
+                    tamanhoCorte = int.Parse(Console.ReadLine());
+                }
+                Console.WriteLine(frase.Cut(tamanhoCorte));
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine($"Erro. {e.Message}");
+            }
+            */
+
+
+            /*
+            //--------------------------------------------------------------------
+            //EXERCÍCIO
             Console.Write("Digite uma data passada [DD/MM/YYYY]:");
             DateTime data = DateTime.Parse(Console.ReadLine());
             
@@ -19,14 +58,7 @@ namespace ProjetoOO_12
             }
             Console.WriteLine(data.ElapsedTime());
             //DateTime data = new DateTime(2025, 01, 10, 11, 30, 25);
-
-
-
-
-
-
-
-
+            */
 
 
 
