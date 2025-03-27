@@ -4,24 +4,36 @@ using ProjetoOO_13.Services;
 
 namespace ProjetoOO_13
 {
-    //DECLARAÇÃO DO DELEGATE NOME issoEhUmDelegate
-    delegate void issoEhUmDelegate(double n1, double n2);
-
     class Program
     {
         static void Main(string[] args)
         {
+            List<Product> produtos = new List<Product>();
 
-            double a = 10;
-            double b = 5;
-            
-            //VARIÁVEL operation AGORA É UMA REFERÊNCIA PARA OS MÉTODOS ShowSum e ShowMax
-            issoEhUmDelegate operation = CalculationService.ShowSum;
-            operation += CalculationService.ShowMax;
+            produtos.Add(new Product("TV", 900));
+            produtos.Add(new Product("MOUSE",50));
+            produtos.Add(new Product("TABLET",350));
+            produtos.Add(new Product("HD",80.9));
 
-            operation.Invoke(a, b);
-            
+            //USO DO DELEGATE ACTION PELA FUNÇÃO ForEach - NATIVO DE LISTAS
+            //QUE RECEBE O MÉTODO UpdatePrice COMO PARÂMETRO
+            //UpdatePrice É UM MÉTODO ESTÁTICO VOID QUE ACEITA UM TIPO GENÉRICO
+            //OU SEJA, PODE SER USADO COM DELEGATE ACTION
+            //UpdatePrice AUMENTA EM 10% TODOS VALORES
+            produtos.ForEach(UpdatePrice);
 
+            //TAMBÉM FUNCIONA ASSIM - OBJETO TIPO ACTION
+            //Action<Product> action = UpdatePrice;
+            //produtos.ForEach(action);
+
+            //TAMBÉM FUNCIONA ASSIM - FUNÇÃO LAMBDA
+            //Action<Product> action = p => { p.Price += p.Price * 0.1; };
+
+
+            foreach (Product produto in produtos)
+            {
+                Console.WriteLine(produto);
+            }
 
 
             /*
@@ -70,10 +82,13 @@ namespace ProjetoOO_13
 
         }
 
-        //MÉTODO ESTÁTICO QUE É USADO NO DELEGATE PARA A FUNÇÃO Sort
-        static int CompareProducts(Product p1, Product p2)
+        //MÉTODO USADO NO ACTION - ACEITA TIPO GENÉRICO E NÃO TEM RETORNO
+        static void UpdatePrice(Product produto)
         {
-            return p1.Name.ToUpper().CompareTo(p2.Name.ToUpper());
+            produto.Price += produto.Price * 0.1;//AUMENTO 10%
         }
+
+
+
     }
 }

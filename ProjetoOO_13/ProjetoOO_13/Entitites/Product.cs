@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Globalization;
 
 namespace ProjetoOO_13.Entitites
 {
@@ -20,7 +20,7 @@ namespace ProjetoOO_13.Entitites
 
         public override string ToString()
         {
-            return $"{Name} - ${Price}";
+            return $"{Name} - ${Price.ToString("f2", CultureInfo.InvariantCulture)}";
         }
     }
 }
