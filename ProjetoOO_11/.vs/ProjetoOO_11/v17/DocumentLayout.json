@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_11\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\calculationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\calculationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\printservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\printservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\calculationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\calculationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_11\\projetooo_11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77932964-6BA8-470D-977C-041DEA35F7C5}|ProjetoOO_11\\ProjetoOO_11.csproj|solutionrelative:projetooo_11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_11\\ProjetoOO_11\\Program.cs",
               "RelativeDocumentMoniker": "ProjetoOO_11\\Program.cs",
@@ -48,15 +48,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_11\\ProjetoOO_11\\Entities\\Client.cs",
               "RelativeDocumentMoniker": "ProjetoOO_11\\Entities\\Client.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_11\\ProjetoOO_11\\Entities\\Client.cs",
               "RelativeToolTip": "ProjetoOO_11\\Entities\\Client.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwCUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T16:31:39.764Z"
+              "WhenOpened": "2025-03-26T16:31:39.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -66,25 +67,27 @@
               "RelativeDocumentMoniker": "ProjetoOO_11\\CalculationService.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_11\\ProjetoOO_11\\CalculationService.cs",
               "RelativeToolTip": "ProjetoOO_11\\CalculationService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T12:37:31.236Z"
+              "WhenOpened": "2025-03-26T12:37:31.236Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_11\\ProjetoOO_11\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "ProjetoOO_11\\Entities\\Product.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_11\\ProjetoOO_11\\Entities\\Product.cs",
               "RelativeToolTip": "ProjetoOO_11\\Entities\\Product.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAqwAkAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwAkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T13:13:22.944Z"
+              "WhenOpened": "2025-03-26T13:13:22.944Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PrintService.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_11\\ProjetoOO_11\\PrintService.cs",
               "RelativeDocumentMoniker": "ProjetoOO_11\\PrintService.cs",
@@ -92,7 +95,8 @@
               "RelativeToolTip": "ProjetoOO_11\\PrintService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T19:35:04.67Z"
+              "WhenOpened": "2025-03-25T19:35:04.67Z",
+              "EditorCaption": ""
             }
           ]
         }

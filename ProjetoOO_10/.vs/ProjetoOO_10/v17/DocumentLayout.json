@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\entities\\installment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\entities\\installment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\services\\feecalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\services\\feecalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\services\\ifeecalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\services\\ifeecalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\entities\\installment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\entities\\installment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|c:\\users\\creas\\desktop\\c_sharp\\projetooo_10\\projetooo_10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0558B9F6-359B-4C6B-914C-8BE9D9FE76E4}|ProjetoOO_10\\ProjetoOO_10.csproj|solutionrelative:projetooo_10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Program.cs",
               "RelativeDocumentMoniker": "ProjetoOO_10\\Program.cs",
@@ -48,7 +48,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Contract.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Entities\\Contract.cs",
               "RelativeDocumentMoniker": "ProjetoOO_10\\Entities\\Contract.cs",
@@ -74,20 +74,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FeeCalculation.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Services\\FeeCalculation.cs",
               "RelativeDocumentMoniker": "ProjetoOO_10\\Services\\FeeCalculation.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Services\\FeeCalculation.cs",
               "RelativeToolTip": "ProjetoOO_10\\Services\\FeeCalculation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T14:37:03.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "IFeeCalculation.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\ProjetoOO_10\\ProjetoOO_10\\Services\\IFeeCalculation.cs",
               "RelativeDocumentMoniker": "ProjetoOO_10\\Services\\IFeeCalculation.cs",
