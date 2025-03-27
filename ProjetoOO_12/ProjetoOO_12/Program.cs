@@ -7,7 +7,7 @@ namespace ProjetoOO_12
         static void Main(string[] args)
         {
 
-            /*
+            
             //--------------------------------------------------------------------
             //EXERCÍCIO
             Dictionary<string, int> candidatos = new Dictionary<string, int>();
@@ -15,28 +15,31 @@ namespace ProjetoOO_12
             try
             {
                 //C:\\Users\\CREAS\\Desktop\\myfolder\\file2.txt
-                Console.Write("Digite o caminho do arquivo [Use barra dupla]\n--> ");
+                //C:\Users\CREAS\Desktop\myfolder\file2.txt
+                Console.Write("Digite o caminho do arquivo\n--> ");
                 string path = Console.ReadLine();
 
                 StreamReader sr = null;
-                sr = File.OpenText(path);
-                while (!sr.EndOfStream)//ENQUANTO NÃO CHEGAR AO FINAL DO ARQUIVO
+                using (sr = File.OpenText(path))
                 {
-                    string[] dados = sr.ReadLine().Split(",");
-                    string name = dados[0];
-                    int votos = int.Parse(dados[1]);
+                    while (!sr.EndOfStream)//ENQUANTO NÃO CHEGAR AO FINAL DO ARQUIVO
+                    {
+                        string[] dados = sr.ReadLine().Split(",");
+                        string name = dados[0];
+                        int votos = int.Parse(dados[1]);
 
-                    //AVALIAR A SITUAÇÃO DE O NOME SER IGUAL-NOME É A CHAVE
-                    if (candidatos.ContainsKey(name))
-                    {
-                        candidatos[name] += votos;//ESSE CANDIDATO TEM SEU NÚMERO DE VOTOS INCREMENTADO
-                    }
-                    else//SE JÁ NÃO ESTIVER NO DICIONÁRIO, SÓ ADICIONO
-                    {
-                        candidatos.Add(name, votos);
+                        //AVALIAR A SITUAÇÃO DE O NOME SER IGUAL-NOME É A CHAVE
+                        if (candidatos.ContainsKey(name))
+                        {
+                            candidatos[name] += votos;//ESSE CANDIDATO TEM SEU NÚMERO DE VOTOS INCREMENTADO
+                        }
+                        else//SE JÁ NÃO ESTIVER NO DICIONÁRIO, SÓ ADICIONO
+                        {
+                            candidatos.Add(name, votos);
+                        }
                     }
                 }
-
+                
                 //PERCORRENDO O DICIONÁRIO RESULTANTE
                 foreach(KeyValuePair<string, int> candidato in candidatos)
                 {
@@ -47,7 +50,7 @@ namespace ProjetoOO_12
             {
                 Console.WriteLine($"Erro. {e.Message}");
             }
-            */
+            
 
 
 
