@@ -1,6 +1,7 @@
 ﻿using System;
 using ProjetoOO_13.Entitites;
 using ProjetoOO_13.Services;
+using System.Linq; //FUNÇÃO SELECT
 
 namespace ProjetoOO_13
 {
@@ -10,29 +11,40 @@ namespace ProjetoOO_13
         {
             List<Product> produtos = new List<Product>();
 
-            produtos.Add(new Product("TV", 900));
-            produtos.Add(new Product("MOUSE",50));
-            produtos.Add(new Product("TABLET",350));
-            produtos.Add(new Product("HD",80.9));
+            produtos.Add(new Product("tv", 900));
+            produtos.Add(new Product("mouse",50));
+            produtos.Add(new Product("tablet",350));
+            produtos.Add(new Product("hd",80.9));
 
-            //USO DO DELEGATE ACTION PELA FUNÇÃO ForEach - NATIVO DE LISTAS
-            //QUE RECEBE O MÉTODO UpdatePrice COMO PARÂMETRO
-            //UpdatePrice É UM MÉTODO ESTÁTICO VOID QUE ACEITA UM TIPO GENÉRICO
-            //OU SEJA, PODE SER USADO COM DELEGATE ACTION
-            //UpdatePrice AUMENTA EM 10% TODOS VALORES
-            produtos.ForEach(UpdatePrice);
+            //A NOVA LISTA RESULTADO RECEBE PARA CADA ITEM DE produtos, O RESULTADO DA FUNÇÃO
+            //NameUpper APLICADA A ELES. - UMA LISTA DE STRINGS
+            List<string> resultado = produtos.Select(NameUpper).ToList();
 
-            //TAMBÉM FUNCIONA ASSIM - OBJETO TIPO ACTION
-            //Action<Product> action = UpdatePrice;
-            //produtos.ForEach(action);
 
-            //TAMBÉM FUNCIONA ASSIM - FUNÇÃO LAMBDA
-            //Action<Product> action = p => { p.Price += p.Price * 0.1; };
+            //TAMBÉM FUNCIONA ASSIM
+            //Func<Product, string> func = NameUpper;
+            //List<string> resultado = produtos.Select(func).ToList();
+
+
+            //TAMBÉM FUNCIONA ASSIM - FUNÇÃO LAMBDA - NÃO É PRECISO O MÉTODO ESTÁTICO
+            //Func<Product, string> func = p => p.Name.ToUpper();
+            //List<string> resultado = produtos.Select(func).ToList();
+
+
+            //TAMBÉM FUNCIONA ASSIM - FUNÇÃO LAMBDA - NÃO É PRECISO O MÉTODO ESTÁTICO
+            //List<string> resultado = produtos.Select(p => p.Name.ToUpper()).ToList();
+
 
 
             foreach (Product produto in produtos)
             {
                 Console.WriteLine(produto);
+            }
+            Console.WriteLine();
+
+            foreach (string nome in resultado)
+            {
+                Console.WriteLine(nome);
             }
 
 
@@ -82,13 +94,11 @@ namespace ProjetoOO_13
 
         }
 
-        //MÉTODO USADO NO ACTION - ACEITA TIPO GENÉRICO E NÃO TEM RETORNO
-        static void UpdatePrice(Product produto)
+        //MÉTODO USADO NO FUNC - ACEITA TIPO GENÉRICO E TEM RETORNO STRING
+        static string NameUpper(Product p)
         {
-            produto.Price += produto.Price * 0.1;//AUMENTO 10%
+            return p.Name.ToUpper();
         }
-
-
 
     }
 }
