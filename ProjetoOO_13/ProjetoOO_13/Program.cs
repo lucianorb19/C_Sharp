@@ -7,45 +7,92 @@ namespace ProjetoOO_13
 {
     class Program
     {
-        static void Main(string[] args)
+        //MÉTODO ESTÁTICO GENÉRICO PARA IMPRIMIR RESULTADOS
+        static void Print<T>(string message, IEnumerable<T> collection)
         {
-            List<Product> produtos = new List<Product>();
-
-            produtos.Add(new Product("tv", 900));
-            produtos.Add(new Product("mouse",50));
-            produtos.Add(new Product("tablet",350));
-            produtos.Add(new Product("hd",80.9));
-
-            //A NOVA LISTA RESULTADO RECEBE PARA CADA ITEM DE produtos, O RESULTADO DA FUNÇÃO
-            //NameUpper APLICADA A ELES. - UMA LISTA DE STRINGS
-            List<string> resultado = produtos.Select(NameUpper).ToList();
-
-
-            //TAMBÉM FUNCIONA ASSIM
-            //Func<Product, string> func = NameUpper;
-            //List<string> resultado = produtos.Select(func).ToList();
-
-
-            //TAMBÉM FUNCIONA ASSIM - FUNÇÃO LAMBDA - NÃO É PRECISO O MÉTODO ESTÁTICO
-            //Func<Product, string> func = p => p.Name.ToUpper();
-            //List<string> resultado = produtos.Select(func).ToList();
-
-
-            //TAMBÉM FUNCIONA ASSIM - FUNÇÃO LAMBDA - NÃO É PRECISO O MÉTODO ESTÁTICO
-            //List<string> resultado = produtos.Select(p => p.Name.ToUpper()).ToList();
-
-
-
-            foreach (Product produto in produtos)
+            Console.WriteLine(message);
+            foreach(T obj in collection)
             {
-                Console.WriteLine(produto);
+                Console.WriteLine(obj);
             }
             Console.WriteLine();
+            Console.WriteLine();
 
-            foreach (string nome in resultado)
-            {
-                Console.WriteLine(nome);
-            }
+        }
+        static void Main(string[] args)
+        {
+            Category c1 = new Category() { Id = 1, Name = "Tools", Tier = 2 };
+            Category c2 = new Category() { Id = 2, Name = "Computers", Tier = 1 };
+            Category c3 = new Category() { Id = 3, Name = "Electronics", Tier = 1 };
+
+            List<Product1> products = new List<Product1>() {
+                new Product1() { Id = 1, Name = "Computer", Price = 1100.0, Category = c2 },
+                new Product1() { Id = 2, Name = "Hammer", Price = 90.0, Category = c1 },
+                new Product1() { Id = 3, Name = "TV", Price = 1700.0, Category = c3 },
+                new Product1() { Id = 4, Name = "Notebook", Price = 1300.0, Category = c2 },
+                new Product1() { Id = 5, Name = "Saw", Price = 80.0, Category = c1 },
+                new Product1() { Id = 6, Name = "Tablet", Price = 700.0, Category = c2 },
+                new Product1() { Id = 7, Name = "Camera", Price = 700.0, Category = c3 },
+                new Product1() { Id = 8, Name = "Printer", Price = 350.0, Category = c3 },
+                new Product1() { Id = 9, Name = "MacBook", Price = 1800.0, Category = c2 },
+                new Product1() { Id = 10, Name = "Sound Bar", Price = 700.0, Category = c3 },
+                new Product1() { Id = 11, Name = "Level", Price = 70.0, Category = c1 }
+            };
+
+            var r1 = products.Where(p => p.Price < 900 && p.Category.Tier == 1);
+            Print("PRODUTOS TIER 1 E PREÇO < 900",r1);
+            //LÊ-SE
+            //Where(p => p.Price) -OBJETOS P ONDE O PREÇO P.... 
+
+            var r2 = products.Where(p => p.Category.Name == "Tools")
+                             .Select(p => p.Name);
+            Print("PRODUTOS CATEGOARIA TOOLS", r2);
+            //LÊ-SE
+            //.Select(p=>p.Name) - SELECIONANDO P E TRANSFORMANDO EM p.NAME
+
+            var r3 = products.Where(p => p.Name[0] == 'C')
+                             .Select(p => new { p.Name,p.Price, CategoryName = p.Category.Name });
+            Print("PRODUTOS QUE COMEÇAM COM A LETRA C, MOSTRAR NOME, PREÇO E CATEGORIA",r3);
+            //new { p.Name,p.Price, CategoryName = p.Category.Name }
+            //OBJETO ANÔNIMO QUE OBTEM AS INFORMAÇÕES DO PRODUTO (NOME, PREÇO E NOME DA CATEGORIA)
+
+            //CategoryName = p.Category.Name - É ASSIM PQ OS CAMPOS TEM O MESMO NOME, ENTÃO CRIA-SE UM APELIDO
+            //PARA UM DELE
+
+            var r4 = products.Where(p => p.Category.Tier == 1).OrderBy(p => p.Price).ThenBy(p => p.Name);
+            Print("PRODUTOS DE CATEGORIA TIER 1, ORDENADOS POR: PREÇO -> NOME", r4);
+
+            //LÊ-SE
+            //OrderBy(p => p.Price) - ORDENADOS OBJETOS P CONSIDERANDO O p.Price
+            //ThenBy(p => p.Name) - E DEPOIS, CASO HAJA "EMPATE", ORDENAR OBJETOS P CONSIDERANDO p.Name
+
+            var r5 = r4.Skip(2).Take(4);
+            Print("PRODUTOS DE CATEGORIA TIER 1, ORDENADOS POR: PREÇO -> NOME\n" +
+                  "PULA OS DOIS PRIMEIROS - MOSTRA OS 4 PRÓXIMOS", r5);
+
+            var r6 = products.First();
+            //var r6 = products.FirstOrDefault();
+            
+            Console.WriteLine($"PRIMEIRO ELEMENTO DA LISTA: {r6}");
+            //CASO SEJA UMA LISTA VAZIA, GERA ERRO.
+            //MELHOR USAR .FirstOrDefault() - QUE NÃO MOSTRA NADA CASO NÃO HAJA ELEMENTOS
+
+            var r8 = products.Where(p => p.Id == 3).SingleOrDefault();
+            Console.WriteLine($"PRODUTO COM ID 3 - USANDO SingleOrDefault PARA GARANTIR UM ÚNICO ELEMENTO\n" +
+                              $"{r8}");
+            //GERA EXCEÇÃO CASO O RESULTADO SEJA MAIS QUE UM ITEM
+            //SÓ ACEITA UM OU NENHUM ELEMENTO
+
+
+
+
+
+
+
+
+
+
+
 
 
             /*
@@ -93,12 +140,5 @@ namespace ProjetoOO_13
             */
 
         }
-
-        //MÉTODO USADO NO FUNC - ACEITA TIPO GENÉRICO E TEM RETORNO STRING
-        static string NameUpper(Product p)
-        {
-            return p.Name.ToUpper();
-        }
-
     }
 }
