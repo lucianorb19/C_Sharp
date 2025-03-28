@@ -7,20 +7,24 @@ namespace ProjetoOO_13
 {
     class Program
     {
-        //MÉTODO ESTÁTICO GENÉRICO PARA IMPRIMIR RESULTADOS
-        static void Print<T>(string message, IEnumerable<T> collection)
-        {
-            Console.WriteLine(message);
-            foreach(T obj in collection)
-            {
-                Console.WriteLine(obj);
-            }
-            Console.WriteLine();
-            Console.WriteLine();
+        
 
-        }
         static void Main(string[] args)
         {
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            /*
+            //-------------------------------------------------------
+            //EXERCÍCIO
             Category c1 = new Category() { Id = 1, Name = "Tools", Tier = 2 };
             Category c2 = new Category() { Id = 2, Name = "Computers", Tier = 1 };
             Category c3 = new Category() { Id = 3, Name = "Electronics", Tier = 1 };
@@ -59,7 +63,9 @@ namespace ProjetoOO_13
             //CategoryName = p.Category.Name - É ASSIM PQ OS CAMPOS TEM O MESMO NOME, ENTÃO CRIA-SE UM APELIDO
             //PARA UM DELE
 
-            var r4 = products.Where(p => p.Category.Tier == 1).OrderBy(p => p.Price).ThenBy(p => p.Name);
+            var r4 = products.Where(p => p.Category.Tier == 1)
+                             .OrderBy(p => p.Price)
+                             .ThenBy(p => p.Name);
             Print("PRODUTOS DE CATEGORIA TIER 1, ORDENADOS POR: PREÇO -> NOME", r4);
 
             //LÊ-SE
@@ -73,26 +79,67 @@ namespace ProjetoOO_13
             var r6 = products.First();
             //var r6 = products.FirstOrDefault();
             
-            Console.WriteLine($"PRIMEIRO ELEMENTO DA LISTA: {r6}");
+            Console.WriteLine($"PRIMEIRO ELEMENTO DA LISTA: {r6}\n");
             //CASO SEJA UMA LISTA VAZIA, GERA ERRO.
             //MELHOR USAR .FirstOrDefault() - QUE NÃO MOSTRA NADA CASO NÃO HAJA ELEMENTOS
 
-            var r8 = products.Where(p => p.Id == 3).SingleOrDefault();
+            var r8 = products.Where(p => p.Id == 3)
+                             .SingleOrDefault();
             Console.WriteLine($"PRODUTO COM ID 3 - USANDO SingleOrDefault PARA GARANTIR UM ÚNICO ELEMENTO\n" +
-                              $"{r8}");
+                              $"{r8}\n");
             //GERA EXCEÇÃO CASO O RESULTADO SEJA MAIS QUE UM ITEM
             //SÓ ACEITA UM OU NENHUM ELEMENTO
 
+            var r10 = products.Max(p => p.Price);
+            Console.WriteLine($"MAIOR PREÇO: {r10}\n");
+            //MAX PARA NUMÉRICO - MAIOR VALOR
+            //MAX PARA STRING - MAIS DISTANTE NA ORDEM ALFABÉTICA
 
+            var r11 = products.Min(p => p.Price);
+            Console.WriteLine($"MENOR PREÇO: {r11}\n");
+            //MAX PARA NUMÉRICO - MAIOR VALOR
+            //MAX PARA STRING - MAIS DISTANTE NA ORDEM ALFABÉTICA
 
+            var r12 = products.Where(p => p.Category.Id == 1)
+                              .Sum(p => p.Price);
+            Console.WriteLine($"SOMA DE TODOS VALORES DE PRODUTOS DA CATEGORIA 1: {r12}\n");
 
+            //var r13 = products.Where(p => p.Category.Id == 1).Average(p => p.Price);
+            //Console.WriteLine($"MÉDIA DE TODOS VALORES DE PRODUTOS DA CATEGORIA 1: {r13}\n");
 
+            //MÉDIA GERA EXEÇÃO CASO SEJA MÉDIA DE UM CONJUNTO VAZIO. PARA REMEDIAR ISSO, USA-SE O CAMPO QUE
+            //SERIA CALCULADA A MÉDIA PARA FORMAR UMA LISTA DE DOUBLEs (USANDO SELECT) JUNTO COM A FUNÇÃO
+            //DefaultIfEmpty(0.0) E SOBRE TODA ESSA EXPRESSÃO, APLICA-SE O Average
 
+            var r13 = products.Where(p => p.Category.Id == 1)
+                              .Select(p => p.Price)
+                              .DefaultIfEmpty(0)//ATÉ AQUI, É GERADA UMA LISTA COM OS VALORES - SE FOR VAZIA, 0
+                              .Average();//MÉDIA DE 0 É 0
+            Console.WriteLine($"MÉDIA DE TODOS VALORES DE PRODUTOS DA CATEGORIA 1: {r13}\n");
 
+            //AGGREGATE - FUNÇÃO PERSONALIZÁVEL PARA PROCESSAR DADOS
 
+            var r14 = products.Where(p => p.Category.Id == 1)//PRODUTOS DE CATEGORIA 1
+                              .Select(p => p.Price) //SELECIONO O PREÇO DELES
+                              .Aggregate(0.0, (x, y) => x + y); //AGREGO OS PREÇOS FAZENDO A SOMA
+                              //0.0 - RETORNA 0 CASO SEJA AGGREGATE DE UM CONJUNTO VAZIO
+                              //(x, y) => x + y - FUNÇÃO ANÔNIMA - RETORNA A SOMA DOS PREÇOS
+            Console.WriteLine($"SOMA DE TODOS OS PREÇOS DOS PRODUTOS DE CATEGORIA 1 (COM AGGREGATE): {r14}\n");
 
-
-
+            //GROUPBY - AGRUPA OS DADOS EM GRUPOS CONSIDERANDO UM CRITÉRIO/CAMPO
+            //PRODUTOS AGRUPADOS POR CATEGORIA
+            var r15 = products.GroupBy(p => p.Category);
+            //FOR EACH ESPECIAL PARA RESULTADOS DE GROUP BY
+            foreach(IGrouping<Category, Product1> grupo in r15)
+            {
+                Console.WriteLine($"Categoria: {grupo.Key.Name}");
+                foreach(Product1 p in grupo)
+                {
+                    Console.WriteLine(p);
+                }
+                Console.WriteLine();
+            }
+            */
 
 
             /*
@@ -140,5 +187,24 @@ namespace ProjetoOO_13
             */
 
         }
+
+
+
+        /*
+        //MÉTODO ESTÁTICO GENÉRICO PARA IMPRIMIR RESULTADOS
+        static void Print<T>(string message, IEnumerable<T> collection)
+        {
+            Console.WriteLine(message);
+            foreach (T obj in collection)
+            {
+                Console.WriteLine(obj);
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+        }
+        */
+
+
     }
 }
