@@ -9,10 +9,76 @@ namespace ProjetoOO_13
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
+
+
+
+
+
+            /*
+            //-------------------------------------------------------
+            //EXERCÍCIO
+            try
+            {
+                List<Employee> lista = new List<Employee>();
+
+                Console.Write("Enter file full path: "); //C:\Users\Luciano\Desktop\myfolder\file3.txt
+                string path = Console.ReadLine();
+
+                using(StreamReader sr = File.OpenText(path))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string[] dados = sr.ReadLine().Split(",");
+                        string name = dados[0];
+                        string email = dados[1];
+                        double salary = double.Parse(dados[2], CultureInfo.InvariantCulture);
+                        Employee employee = new Employee(name, email, salary);
+                        lista.Add(employee);
+                    }
+                }
+                Console.WriteLine();
+
+                Console.WriteLine("Employees");
+                foreach(Employee empregado in lista)
+                {
+                    Console.WriteLine(empregado);
+                }
+                Console.WriteLine();
+
+                Console.Write("Show employess with salary above: $ ");
+                double salaryAbove = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                var consulta1 = lista.Where(e => e.Salary > salaryAbove)
+                                     .OrderBy(e => e.Email)
+                                     .Select(e => e.Email)
+                                     .DefaultIfEmpty("Empty");
+
+                Console.WriteLine($"Email of employees with salary above {salaryAbove}");
+                foreach (string employee in consulta1)
+                {
+                    Console.WriteLine(employee);
+                }
+                Console.WriteLine();
+
+                var consulta2 = lista.Where(e => e.Name[0] == 'M')
+                                     .Sum(e => e.Salary);
+
+                Console.WriteLine($"Sum of salaries - employees with name starting with 'M': {consulta2}");
+
+            }
+            catch(Exception erro)
+            {
+                Console.WriteLine($"Erro! {erro.Message}");
+            }
+            */
+
+
+
+            /*
+            //-------------------------------------------------------
+            //EXERCÍCIO
             try
             {
                 List<Product> lista = new List<Product>();
@@ -52,7 +118,8 @@ namespace ProjetoOO_13
             {
                 Console.WriteLine($"Erro. {e.Message}");
             }
-            
+            */
+
 
 
             /*
@@ -256,7 +323,7 @@ namespace ProjetoOO_13
             lista.Add(new Product("Tablet", 450));
 
             //lista.Sort(CompareProducts);
-            
+
             //Sort NÃO FUNCIONARIA SEM A PASSAGEM DO MÉTODO COMO PARÂMETRO
             //PQ OS OBJETOS Product NÃO SABEM COMO PODEM SE COMPARAR, JÁ QUE
             //A CLASSE Product NÃO IMPLEMENTA A INTERFACE IComparable
@@ -265,7 +332,7 @@ namespace ProjetoOO_13
             //O MÉTODO ESTÁTICO É USADO COMO PARÂMETRO, ASSIM O SORT USA A LÓGICA
             //DELE PARA ORDERNAR
             //CompareProducts FICA NO MESMO ARQUIVO, FORA DA MAIN
-            
+
 
 
             //ASSIM TAMBÉM FUNCIONARIA
@@ -279,7 +346,7 @@ namespace ProjetoOO_13
 
             //ASSIM TAMBÉM FUNCIONARIA - PASSANDO A FUNÇÃO LAMBDA DIRETO NO SORT
             //lista.Sort((p1, p2) => p1.Name.ToUpper().CompareTo(p2.Name.ToUpper()));
-            
+
             //CADA VEZ MENOS LINHAS E MENOS COMPREENSÍVEL
 
 
