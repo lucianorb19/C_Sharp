@@ -2,6 +2,8 @@
 using ProjetoOO_13.Entitites;
 using ProjetoOO_13.Services;
 using System.Linq; //FUNÇÃO SELECT
+using System.Globalization;
+using System.Linq;
 
 namespace ProjetoOO_13
 {
@@ -11,8 +13,46 @@ namespace ProjetoOO_13
 
         static void Main(string[] args)
         {
+            try
+            {
+                List<Product> lista = new List<Product>();
 
+                Console.Write("Enter full file path: ");// C:\Users\Luciano\Desktop\myfolder\file1.txt
+                string path = Console.ReadLine();
 
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string[] dados = sr.ReadLine().Split(",");
+                        string name = dados[0];
+                        double price = double.Parse(dados[1], CultureInfo.InvariantCulture);
+                        lista.Add(new Product(name, price));
+                    }
+                }
+
+                Console.WriteLine();
+                //MÉDIA DE PREÇOS DA LISTA
+                var media = lista.Select(p => p.Price).DefaultIfEmpty(0).Average();
+                Console.WriteLine($"Média de preço da lista: {media.ToString("f2", CultureInfo.InvariantCulture)}");
+
+                //NOME DOS PRODUTOS CUJO PREÇO É ABAIXO DA MÉDIA
+                var abaixoMedia = lista.Where(p => p.Price < media).
+                    OrderByDescending(p => p.Name).
+                    Select(p => p.Name);
+
+                Console.WriteLine();
+                Console.WriteLine("Produto com preço abaixo da média: ");
+                foreach(String produto in abaixoMedia)
+                {
+                    Console.WriteLine(produto);
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine($"Erro. {e.Message}");
+            }
+            
 
 
             /*
