@@ -1,0 +1,15 @@
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\bin\Debug\net8.0\1VariaveisETipos.exe
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\bin\Debug\net8.0\1VariaveisETipos.deps.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\bin\Debug\net8.0\1VariaveisETipos.runtimeconfig.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\bin\Debug\net8.0\1VariaveisETipos.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\bin\Debug\net8.0\1VariaveisETipos.pdb
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\1VariaveisETipos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\1VariaveisETipos.AssemblyInfoInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\1VariaveisETipos.AssemblyInfo.cs
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\1VariaveisETipos.csproj.CoreCompileInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\1VariaveisETipos.sourcelink.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\1VariaveisETipos.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\refint\1VariaveisETipos.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\1VariaveisETipos.pdb
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\1VariaveisETipos.genruntimeconfig.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\1VariaveisETipos\1VariaveisETipos\obj\Debug\net8.0\ref\1VariaveisETipos.dll

@@ -1,0 +1,15 @@
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\bin\Debug\net8.0\2Condicionais.exe
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\bin\Debug\net8.0\2Condicionais.deps.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\bin\Debug\net8.0\2Condicionais.runtimeconfig.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\bin\Debug\net8.0\2Condicionais.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\bin\Debug\net8.0\2Condicionais.pdb
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\2Condicionais.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\2Condicionais.AssemblyInfoInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\2Condicionais.AssemblyInfo.cs
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\2Condicionais.csproj.CoreCompileInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\2Condicionais.sourcelink.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\2Condicionais.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\refint\2Condicionais.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\2Condicionais.pdb
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\2Condicionais.genruntimeconfig.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\2Condicionais\2Condicionais\obj\Debug\net8.0\ref\2Condicionais.dll
