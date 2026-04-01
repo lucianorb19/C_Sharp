@@ -1,0 +1,15 @@
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\bin\Debug\net8.0\3Lacos.exe
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\bin\Debug\net8.0\3Lacos.deps.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\bin\Debug\net8.0\3Lacos.runtimeconfig.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\bin\Debug\net8.0\3Lacos.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\bin\Debug\net8.0\3Lacos.pdb
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\3Lacos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\3Lacos.AssemblyInfoInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\3Lacos.AssemblyInfo.cs
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\3Lacos.csproj.CoreCompileInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\3Lacos.sourcelink.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\3Lacos.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\refint\3Lacos.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\3Lacos.pdb
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\3Lacos.genruntimeconfig.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\3Lacos\3Lacos\obj\Debug\net8.0\ref\3Lacos.dll

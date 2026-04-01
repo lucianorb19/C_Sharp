@@ -1,0 +1,15 @@
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\bin\Debug\net8.0\4POO.exe
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\bin\Debug\net8.0\4POO.deps.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\bin\Debug\net8.0\4POO.runtimeconfig.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\bin\Debug\net8.0\4POO.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\bin\Debug\net8.0\4POO.pdb
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\4POO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\4POO.AssemblyInfoInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\4POO.AssemblyInfo.cs
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\4POO.csproj.CoreCompileInputs.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\4POO.sourcelink.json
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\4POO.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\refint\4POO.dll
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\4POO.pdb
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\4POO.genruntimeconfig.cache
+C:\Users\CREAS\Desktop\C_Sharp\Alura - carreira\4POO\4POO\obj\Debug\net8.0\ref\4POO.dll
