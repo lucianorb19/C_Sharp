@@ -5,30 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\filme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\filme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\retangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\retangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\contabancaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\contabancaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\passagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\passagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +14,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Program.cs",
+              "RelativeDocumentMoniker": "4POO\\Program.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Program.cs",
+              "RelativeToolTip": "4POO\\Program.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAwKkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T18:18:11.494Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -55,97 +45,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Filme.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Filme.cs",
-              "RelativeDocumentMoniker": "4POO\\Filme.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Filme.cs",
-              "RelativeToolTip": "4POO\\Filme.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA9wBAAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T18:41:06.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Retangulo.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Retangulo.cs",
-              "RelativeDocumentMoniker": "4POO\\Retangulo.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Retangulo.cs",
-              "RelativeToolTip": "4POO\\Retangulo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T18:36:27.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Funcionario.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Funcionario.cs",
-              "RelativeDocumentMoniker": "4POO\\Funcionario.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Funcionario.cs",
-              "RelativeToolTip": "4POO\\Funcionario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T18:26:54.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ContaBancaria.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\ContaBancaria.cs",
-              "RelativeDocumentMoniker": "4POO\\ContaBancaria.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\ContaBancaria.cs",
-              "RelativeToolTip": "4POO\\ContaBancaria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T18:20:41.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Passagem.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Passagem.cs",
-              "RelativeDocumentMoniker": "4POO\\Passagem.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Passagem.cs",
-              "RelativeToolTip": "4POO\\Passagem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T18:16:39.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Livro.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Livro.cs",
-              "RelativeDocumentMoniker": "4POO\\Livro.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Livro.cs",
-              "RelativeToolTip": "4POO\\Livro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T18:12:51.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Program.cs",
-              "RelativeDocumentMoniker": "4POO\\Program.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Program.cs",
-              "RelativeToolTip": "4POO\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T18:12:13.104Z",
-              "EditorCaption": ""
             }
           ]
         }
