@@ -1,5 +1,6 @@
 ﻿using _4POO;
 using _4POO.Alura;
+using _4POO.Polimorfismo;
 
 /*
 Artista luciano = new("Luciano Rodrigues Batista",29);
@@ -167,10 +168,48 @@ avaliacao.AtribuirNota(8.5);  // válido
 Paciente paciente = new Paciente("Luiz Costa", 42);
 HistoricoMedico historico = new HistoricoMedico("XPT-9987");
 historico.ExibirCodigo();
+//----------------------------------------------------------------------------
+Funcionario4 f = new Funcionario4("Fernanda Lima", 4000);
+f.ReajustarSalario(3500); // Inválido
+f.ReajustarSalario(4200); // Válido
+//----------------------------------------------------------------------------
+Projeto projeto = new Projeto("Sistema de Inventário");
+projeto.AdicionarTarefa("Criar tela de login");
+projeto.AdicionarTarefa("Implementar banco de dados");
+projeto.ExibirTarefas();
+//----------------------------------------------------------------------------
+ContaBancaria2 conta = new ContaBancaria2("Carlos Silva", 2500);
+conta.Sacar(1500); // inválido
+conta.Sacar(800);  // válido
+//----------------------------------------------------------------------------
+Agenda agenda = new Agenda("Marina Souza");
+agenda.AdicionarContato(new Contato("Carlos", "11998887777"));
+agenda.AdicionarContato(new Contato("Carlos", "11991112222")); // duplicado
+agenda.AdicionarContato(new Contato("Julia", "21988776655"));
+agenda.ListarContatos();
+//----------------------------------------------------------------------------
+Estudante estudante = new Estudante("Lucas Rocha");
+estudante.Nota1 = 2.5;
+estudante.Nota2 = 5.0;
+Console.WriteLine($"Estudante: {estudante.Nome}\nMedia: {estudante.Media}\nSituação: {estudante.Situacao}");
+//----------------------------------------------------------------------------
+Curso curso = new Curso("Lógica de Programação", 2);
+curso.Matricular(new Estudante2("Rafaela"));
+curso.Matricular(new Estudante2("João"));
+curso.Matricular(new Estudante2("Mirela")); // excede o limite
+curso.ListarMatriculados();
+//----------------------------------------------------------------------------
+Hospede hospede = new Hospede("Juliana Moura");
+Quarto quarto = new Quarto(101);
+quarto.ValorDiaria = 250;
+
+Reserva reserva = new Reserva(hospede, quarto, 3);
+reserva.ExibirRerva();
 */
 //----------------------------------------------------------------------------
-
-
+Calculadora.Somar(10, 20);
+Calculadora.Somar(5, 10, 15);
+Calculadora.Somar(3.5, 2.8);
 //----------------------------------------------------------------------------
 
 
@@ -190,5 +229,8 @@ historico.ExibirCodigo();
 
 
 //----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+
 
 

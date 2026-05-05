@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\historicomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\historicomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|c:\\users\\creas\\desktop\\c_sharp\\alura - carreira\\4poo\\4poo\\polimorfismo\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFECC057-0047-440D-947A-532784F88F9B}|4POO\\4POO.csproj|solutionrelative:4poo\\polimorfismo\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,20 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Program.cs",
               "RelativeDocumentMoniker": "4POO\\Program.cs",
               "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Program.cs",
               "RelativeToolTip": "4POO\\Program.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAwKgAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAAwNUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-06T18:18:11.494Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Calculadora.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Polimorfismo\\Calculadora.cs",
+              "RelativeDocumentMoniker": "4POO\\Polimorfismo\\Calculadora.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Polimorfismo\\Calculadora.cs",
+              "RelativeToolTip": "4POO\\Polimorfismo\\Calculadora.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T19:03:55.179Z",
               "EditorCaption": ""
             },
             {
@@ -53,32 +62,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HistoricoMedico.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\HistoricoMedico.cs",
-              "RelativeDocumentMoniker": "4POO\\HistoricoMedico.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\HistoricoMedico.cs",
-              "RelativeToolTip": "4POO\\HistoricoMedico.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T19:09:56.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Paciente.cs",
-              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Paciente.cs",
-              "RelativeDocumentMoniker": "4POO\\Paciente.cs",
-              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\Alura - carreira\\4POO\\4POO\\Paciente.cs",
-              "RelativeToolTip": "4POO\\Paciente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T19:08:28.099Z",
-              "EditorCaption": ""
             }
           ]
         }

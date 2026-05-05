@@ -1,0 +1,4 @@
+Bibliotecas instaladas
+
+Projeto ProductClientHub.API
+-> FluentValidation
