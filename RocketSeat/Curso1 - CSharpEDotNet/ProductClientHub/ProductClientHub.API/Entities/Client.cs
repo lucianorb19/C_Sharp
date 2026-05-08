@@ -1,0 +1,13 @@
+﻿namespace ProductClientHub.API.Entities
+{
+    public class Client : EntityBase
+    {
+        public string Name { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+
+        //ASSOCIAÇÃO TABELA PRODUTOS
+        //1 CLIENTE - N PRODUTOS
+        public List<Product> Products { get; set; } = [];
+
+    }
+}

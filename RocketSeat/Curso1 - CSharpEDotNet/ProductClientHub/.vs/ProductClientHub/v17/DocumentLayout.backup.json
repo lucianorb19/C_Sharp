@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE2512B7-48D8-4C0F-B47B-C89BC796E3DC}|ProductClientHub.API\\ProductClientHub.API.csproj|c:\\users\\creas\\desktop\\c_sharp\\rocketseat\\curso1 - csharpedotnet\\productclienthub\\productclienthub.api\\usecases\\clients\\getbyid\\getclientbyidusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE2512B7-48D8-4C0F-B47B-C89BC796E3DC}|ProductClientHub.API\\ProductClientHub.API.csproj|solutionrelative:productclienthub.api\\usecases\\clients\\getbyid\\getclientbyidusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE2512B7-48D8-4C0F-B47B-C89BC796E3DC}|ProductClientHub.API\\ProductClientHub.API.csproj|c:\\users\\creas\\desktop\\c_sharp\\rocketseat\\curso1 - csharpedotnet\\productclienthub\\productclienthub.api\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE2512B7-48D8-4C0F-B47B-C89BC796E3DC}|ProductClientHub.API\\ProductClientHub.API.csproj|solutionrelative:productclienthub.api\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE2512B7-48D8-4C0F-B47B-C89BC796E3DC}|ProductClientHub.API\\ProductClientHub.API.csproj|c:\\users\\creas\\desktop\\c_sharp\\rocketseat\\curso1 - csharpedotnet\\productclienthub\\productclienthub.api\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE2512B7-48D8-4C0F-B47B-C89BC796E3DC}|ProductClientHub.API\\ProductClientHub.API.csproj|solutionrelative:productclienthub.api\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE2512B7-48D8-4C0F-B47B-C89BC796E3DC}|ProductClientHub.API\\ProductClientHub.API.csproj|c:\\users\\creas\\desktop\\c_sharp\\rocketseat\\curso1 - csharpedotnet\\productclienthub\\productclienthub.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE2512B7-48D8-4C0F-B47B-C89BC796E3DC}|ProductClientHub.API\\ProductClientHub.API.csproj|solutionrelative:productclienthub.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +43,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\ProductClientHub.API\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "ProductClientHub.API\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\ProductClientHub.API\\Entities\\Product.cs",
+              "RelativeToolTip": "ProductClientHub.API\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T12:26:08.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\ProductClientHub.API\\Entities\\Client.cs",
+              "RelativeDocumentMoniker": "ProductClientHub.API\\Entities\\Client.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\ProductClientHub.API\\Entities\\Client.cs",
+              "RelativeToolTip": "ProductClientHub.API\\Entities\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T12:24:17.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetClientByIdUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\ProductClientHub.API\\UseCases\\Clients\\GetById\\GetClientByIdUseCase.cs",
+              "RelativeDocumentMoniker": "ProductClientHub.API\\UseCases\\Clients\\GetById\\GetClientByIdUseCase.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\ProductClientHub.API\\UseCases\\Clients\\GetById\\GetClientByIdUseCase.cs",
+              "RelativeToolTip": "ProductClientHub.API\\UseCases\\Clients\\GetById\\GetClientByIdUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T12:11:09.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\ProductClientHub.API\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "ProductClientHub.API\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\CREAS\\Desktop\\C_Sharp\\RocketSeat\\Curso1 - CSharpEDotNet\\ProductClientHub\\ProductClientHub.API\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "ProductClientHub.API\\Controllers\\ClientsController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwEIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T12:03:51.804Z",
+              "EditorCaption": ""
             }
           ]
         }

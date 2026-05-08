@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProductClientHub.API.UseCases.Clients.Delete;
+using ProductClientHub.API.UseCases.Clients.GetAll;
+using ProductClientHub.API.UseCases.Clients.GetById;
 using ProductClientHub.API.UseCases.Clients.Register;
+using ProductClientHub.API.UseCases.Clients.Update;
 using ProductClientHub.Communication.Requests;
 using ProductClientHub.Communication.Responses;
-using ProductClientHub.Exceptions.ExceptionBase;
 
 namespace ProductClientHub.API.Controllers
 {
@@ -12,59 +15,68 @@ namespace ProductClientHub.API.Controllers
     {
         [HttpPost]
         //A RESPOSTA PRODUZIDA PELO MÉTODO PODE SER DO TIPO ResponseClientJson COM CÓDIGO HTTP 201
-        //COLOCANDO ESSA LINHA, APARECE ISSO NA DOCUMENTAÇÃO SWEAGGER
-        [ProducesResponseType(typeof(ResponseClientJson), StatusCodes.Status201Created)]
+        //COLOCANDO ESSE ATRIBUTO, É MOSTRADO ISSO NA DOCUMENTAÇÃO SWAGGER
+        [ProducesResponseType(typeof(ResponseShortClientJson), StatusCodes.Status201Created)]
 
         //A RESPOSTA DO TIPO ResponseErrorMessageJson COM CÓDIGO HTTP 400
         [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status500InternalServerError)]
         public IActionResult Register([FromBody] RequestClientJson request)
         {
-            try
-            {
-                var useCase = new RegisterClientUseCase();
-                var response = useCase.Execute(request);
-                return Created(string.Empty, response);
-            }
-            //SE FOR EXCEÇÃO DE ARGUMENTO, RETORNO EXCEÇÃO BadRequest
-            catch(ProductClientHubException ex)
-            {
-                var errors = ex.GetErrors();
-                //BadRequest TEM COMO RETORNO CÓDIGO HTTP 400
-                return BadRequest(new ResponseErrorMessagesJson(errors));
-            }
-            //SE NÃO SEI QUAL O ERRO, JOGO NUM CATH GENÉRICO COM CÓDIGO 500
-            catch
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                                  new ResponseErrorMessagesJson("ERRO DESCONHECIDO"));
-            }
+            var useCase = new RegisterClientUseCase();
+            var response = useCase.Execute(request);
+            return Created(string.Empty, response);
         }
 
         [HttpPut]
-        public IActionResult Update()
+        [Route("{id}")]
+        //OPERAÇÃO DE ATUALIZAÇÃO EFETUADA, NÃO DAMOS NENHUMA INFORMAÇÃO NO RETORNO
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        //DADOS DA REQUEST NÃO VALIDADOS
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
+        //ID PASSADO COMO PARÂMETRO NÃO ENCONTRADO
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status404NotFound)]
+        public IActionResult Update([FromRoute] Guid id,
+                                    [FromBody] RequestClientJson request)
         {
-            return Ok();
+            var useCase = new UpdateClientUseCase();
+            useCase.Execute(id, request);
+            return NoContent();
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(ResponseAllClientsJson), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]//CONSULTA COM RESULTADO VAZIO
         public IActionResult GetAll()
         {
-            return Ok();
+            var useCase = new GetAllClientsUseCase();
+            var response = useCase.Execute();
+
+            if(response.Clients.Count == 0) return NoContent();
+            return Ok(response);
         }
 
         //[HttpGet("by-id")]
         [HttpGet]
         [Route("{id}")]
+        [ProducesResponseType(typeof(ResponseClientJson), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status404NotFound)]
         public IActionResult GetById([FromRoute]Guid id)
         {
-            return Ok();
+            var useCase = new GetClientByIdUseCase();
+            var response = useCase.Execute(id);
+            return Ok(response);
         }
 
         [HttpDelete]
-        public IActionResult Delete()
+        [Route("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status404NotFound)]
+        public IActionResult Delete([FromRoute] Guid id)
         {
-            return Ok();
+            var useCase = new DeleteClientUseCase();
+            useCase.Execute(id);
+            return NoContent();
         }
 
     }

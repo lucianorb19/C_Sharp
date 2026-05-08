@@ -2,3 +2,5 @@ Bibliotecas instaladas
 
 Projeto ProductClientHub.API
 -> FluentValidation
+-> Microsoft.EntityFrameworkCore
+-> Microsoft.EntityFrameworkCore.Sqlite
