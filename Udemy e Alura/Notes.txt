@@ -148,6 +148,16 @@ Console.WriteLine("{0} tem {1} anos e R${2:F2} na conta!", nome, idade, saldo);
 CONCATENAÇÃO
 Console.WriteLine(nome +" tem "+idade+" anos e R$"+saldo.ToString("f2")+" na conta!");
 
+STRING BUILDER
+USADO PARA GRANDES SAÍDAS DE DADOS COM OTIMIZAÇÃO DE MEMÓRIA
+using System.Text;
+
+string nome = "Luciano Rodrigues Batista";
+int idade = 29;
+StringBuilder exemplo = new StringBuilder();
+exemplo.append(nome, idade,......)
+
+
 
 
 -----ATRIBUIÇÃO-----
@@ -1333,6 +1343,7 @@ switch(x)
 
 
 
+
 ---CONDICIONAL TERNÁRIA---
 EXPRESSÃO QUE PODE SUBSTITUIR UM IF-ELSE SIMPLES.
 ELA DEFINE UM RETORNO OU OUTRO, SE UMA CONDIÇÃO É VERDADEIRA OU FALSA
@@ -1344,6 +1355,20 @@ double desconto = (preco > 50) ? preco * 0.1 : preco * 0.05;
 Console.WriteLine(desconto);
 //CASO O PREÇO SEJA MAIOR QUE 50, O DESCONTO É DE 10%
 //CASO NÃO SEJA, O DESCONTO É DE 5%
+
+
+SWITCH TERNÁRIO
+int numero = 7;
+string resultado = numero switch
+{
+  7 => "Restulado 1",
+  9 => "Resultado 2",
+  15 => "Resultado 3",
+  _ => "Resultado padrão"
+};
+
+O VALOR ATRIBUÍDO A resultado É "Resultado 1" CASO O VALOR DE NÚMERO SEJA 7, OU "Resultado 2" CASO O VALOR DE NÚMERO SEJA 9,......
+E SE NENHUMA DAS CONDIÇÕES ANTERIORES FOR ATENDIDA, O VALOR PADRÃO ASSUMIDO POR resultado É "Resultado padrão".
 
 
 ---FUNÇÕES PARA STRING---
