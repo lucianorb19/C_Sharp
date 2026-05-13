@@ -37,12 +37,54 @@ string frasePalavraSemEspacos = fraseOuPalavra.Replace(" ", "");
 int tamanho = frasePalavraSemEspacos.Length;
 Console.WriteLine($"\nQuantidade de caractéres na frase/palavra (desconsiderando espaços vazios):" +
                   $" {tamanho}");
+
+//----------------------------------------------------------------
+bool placaValida=false;
+
+Console.Write("Digite a placa de um veículo:\n--> ");
+string placa = Console.ReadLine().ToUpper();
+
+if (placa.Length == 7)//7 DÍGITOS NA PLACA
+{
+    for(int i = 0; i < 3; i++)
+    {
+        char letraAtual = placa[i];
+        if ((letraAtual >= 'A' && letraAtual <= 'Z'))//3 PRIMEIROS LETRAS
+        {
+            placaValida = true;
+        }
+        else
+        {
+            placaValida = false;
+            break;
+        }
+    }
+
+    for(int i = 3; i< placa.Length; i++)
+    {
+        char digitoAtual = placa[i];
+        if (char.IsDigit(digitoAtual))//4 ÚLTIMOS NÚMEROS
+        {
+            placaValida = true;
+        }
+        else
+        {
+            placaValida = false;
+            break;
+        }
+    }
+}
+else placaValida = false;
+
+Console.WriteLine($"Placa válida: {placaValida}");
+
+//----------------------------------------------------------------
+TimeZoneInfo fusoBrasilia = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+DateTime agora = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, fusoBrasilia);
+
+Console.WriteLine($"{agora.ToLongDateString()} --- {agora.ToLongTimeString()}");
+Console.WriteLine($"{agora.ToShortDateString()}");
+Console.WriteLine($"{agora.ToShortTimeString()}");
+Console.WriteLine($"{agora.ToLongDateString()}");
 */
-//----------------------------------------------------------------
 
-
-//----------------------------------------------------------------
-//----------------------------------------------------------------
-//----------------------------------------------------------------
-//----------------------------------------------------------------
-//----------------------------------------------------------------
