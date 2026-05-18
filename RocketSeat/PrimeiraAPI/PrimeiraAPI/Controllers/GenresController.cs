@@ -1,63 +1,64 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PrimeiraAPI.Communication.Request;
 using PrimeiraAPI.Communication.Response;
-using PrimeiraAPI.UseCases.Authors;
+using PrimeiraAPI.UseCases.Genres;
 
 namespace PrimeiraAPI.Controllers;
 [Route("api/[controller]")]
 [ApiController]
-public class AuthorsController : ControllerBase
+public class GenresController : ControllerBase
 {
+
     [HttpPost]
-    [ProducesResponseType(typeof(ResponseAuthorJson), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ResponseGenreJson), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status500InternalServerError)]
-    public IActionResult Register([FromBody] RequestAuthorJson request)
+    public IActionResult Register([FromBody] RequestGenreJson request)
     {
-        var useCase = new RegisterAuthorUseCase();
+        var useCase = new RegisterGenreUseCase();
         var response = useCase.Execute(request);
         return Created(string.Empty, response);
     }
 
 
     [HttpGet]
-    [ProducesResponseType(typeof(ResponseAllAuthorsJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseAllGenresJson), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]//CONSULTA COM RESULTADO VAZIO
     public IActionResult GetAll()
     {
-        var useCase = new GetAllAuthorsUseCase();
+        var useCase = new GetAllGenresUseCase();
         var response = useCase.Execute();
 
-        if (response.Authors.Count == 0) return NoContent();
+        if (response.Genres.Count == 0) return NoContent();
         return Ok(response);
     }
 
 
     [HttpGet]
     [Route("{id}")]
-    [ProducesResponseType(typeof(ResponseAuthorJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseGenreJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status404NotFound)]
     public IActionResult GetById([FromRoute] Guid id)
     {
-        var usecase = new GetAuthorByIdUseCase();
+        var usecase = new GetGenreByIdUseCase();
         var response = usecase.Execute(id);
         return Ok(response);
     }
 
 
+    //PUT
     [HttpPut]
     [Route("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status404NotFound)]
     public IActionResult Update([FromRoute] Guid id,
-                                [FromBody] RequestAuthorJson request)
+                                [FromBody] RequestGenreJson request)
     {
-        var useCase = new UpdateAuthorUseCase();
+        var useCase = new UpdateGenreUseCase();
         useCase.Execute(id, request);
         return NoContent();
     }
-
 
     [HttpDelete]
     [Route("{id}")]
@@ -65,8 +66,9 @@ public class AuthorsController : ControllerBase
     [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status404NotFound)]
     public IActionResult Delete([FromRoute] Guid id)
     {
-        var useCase = new DeleteAuthorUseCase();
+        var useCase = new DeleteGenreUseCase();
         useCase.Execute(id);
         return NoContent();
     }
+
 }
