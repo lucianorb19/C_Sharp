@@ -10,4 +10,8 @@ public class Book : EntityBase
     public Guid AuthorId { get; set; }
     public Guid GenreId { get; set; }
 
+    //ACESSO A AUTORES PELA INSTÂNCIA DE LIVRO
+    public Author Author { get; set; } = default!;
+    public Genre Genre { get; set; } = default!;
+
 }
