@@ -1,0 +1,23 @@
+﻿using CashFlow.Communication.Requests;
+using CashFlow.Exception;
+using FluentValidation;
+
+namespace CashFlow.Application.UseCases.Expenses;
+public class RegisterExpenseValidator : AbstractValidator<RequestRegisterExpenseJson>
+{
+    public RegisterExpenseValidator()
+    {
+        RuleFor(expense => expense.Title).NotEmpty()
+                                         .WithMessage(ResourceErrorMessages.TITLE_REQUIRED);
+
+        RuleFor(expense => expense.Amount).GreaterThan(0)
+                                          .WithMessage(ResourceErrorMessages.AMOUNT_GREATER_THAN_ZERO);
+
+        RuleFor(expense => expense.Date).LessThanOrEqualTo(DateTime.UtcNow)
+                                        .WithMessage(ResourceErrorMessages.EXPENSE_DATE_NOT_FUTURE);
+
+        RuleFor(expense => expense.PaymentType).IsInEnum()
+                                               .WithMessage(ResourceErrorMessages.EXPENSE_TYPE_NOT_VALID);
+
+    }
+}
