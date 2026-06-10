@@ -15,10 +15,10 @@ internal class ExpensesRepository : IExpensesRepository
         _dbContext = dbContext;
     }
 
-    public void Add(Expense expense)
+    public async Task Add(Expense expense)
     {
         //var dbContext = new CashFlowDbContext();
-        _dbContext.Expenses.Add(expense);
+        await _dbContext.Expenses.AddAsync(expense);
         //_dbContext.SaveChanges(); FEITO EM UnityOfWork
     }
 }
