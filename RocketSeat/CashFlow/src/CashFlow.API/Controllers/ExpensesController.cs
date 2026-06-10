@@ -1,4 +1,5 @@
 ﻿using CashFlow.Application.UseCases.Expenses;
+using CashFlow.Application.UseCases.Expenses.Register;
 using CashFlow.Communication.Requests;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +11,11 @@ public class ExpensesController : ControllerBase
 {
     [HttpPost]
     //[ProducesResponseType()]
-    public IActionResult Register([FromBody] RequestRegisterExpenseJson request)
+    public IActionResult Register(
+        [FromServices] IRegisterExpenseUseCase useCase,//USO DE INJEÇÃO DE DEPENDÊNCIA
+        [FromBody] RequestRegisterExpenseJson request)
     {
-        var response = new RegisterExpenseUseCase().Execute(request);
+        var response = useCase.Execute(request);
         return Created(string.Empty, response);
     }
 }
