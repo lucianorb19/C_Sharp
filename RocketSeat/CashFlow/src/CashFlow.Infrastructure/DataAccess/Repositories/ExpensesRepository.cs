@@ -6,7 +6,7 @@ namespace CashFlow.Infrastructure.DataAccess.Repositories;
 
 
 //IMPLEMENTA AS FUNÇÕES RESPONSÁVEIS PELAS OPERAÇÕES NA BD
-internal class ExpensesRepository : IExpensesRepository
+internal class ExpensesRepository : IExpensesReadOnlyRepository, IExpensesWriteOnlyRepository
 {
 
     private readonly CashFlowDbContext _dbContext;

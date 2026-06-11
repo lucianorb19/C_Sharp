@@ -24,10 +24,11 @@ public static class DependencyInjectionExtension
     {
         //INJEÇÃO DE PEDENDÊNCIA
         //EM QUALQUER LUGAR DO CÓDIGO, AO USAR A PROPRIEDADE [FromServices] OU
-        //UM OBJETO IExpenseRepository
-        //É INJETADA UMA INSTÂNCIA, QUE INDICADA COMO IExpensesRepository,
+        //UM OBJETO IExpensesWriteRepository / IExpensesReadOnlyRepository
+        //É INJETADA UMA INSTÂNCIA, QUE INDICADA COMO IExpensesWriteRepository / IExpensesReadOnlyRepository,
         //INSTANCIA UM TIPO ExpensesRepository
-        services.AddScoped<IExpensesRepository, ExpensesRepository>();
+        services.AddScoped<IExpensesReadOnlyRepository, ExpensesRepository>();
+        services.AddScoped<IExpensesWriteOnlyRepository, ExpensesRepository>();
         services.AddScoped<IUnityOfWork, UnityOfWork>();
     }
 
