@@ -6,7 +6,9 @@ namespace CashFlow.Infrastructure.DataAccess.Repositories;
 
 
 //IMPLEMENTA AS FUNÇÕES RESPONSÁVEIS PELAS OPERAÇÕES NA BD
-internal class ExpensesRepository : IExpensesReadOnlyRepository, IExpensesWriteOnlyRepository
+internal class ExpensesRepository : IExpensesReadOnlyRepository, 
+                                    IExpensesWriteOnlyRepository, 
+                                    IExpensesUpateOnlyRepository
 {
 
     private readonly CashFlowDbContext _dbContext;
@@ -31,10 +33,18 @@ internal class ExpensesRepository : IExpensesReadOnlyRepository, IExpensesWriteO
         return await _dbContext.Expenses.AsNoTracking().ToListAsync();
     }
 
-    public async Task<Expense?> GetById(long id)
+    //DOIS MÉTODOS GetById COM ASSINATURAS SIMILARES,DIFERENTECIADOS POR 
+    //IExpensesReadOnlyRepository. E
+    //IExpensesUpateOnlyRepository.
+    async Task<Expense?> IExpensesReadOnlyRepository.GetById(long id)
     {
         return await _dbContext.Expenses.AsNoTracking()
                                         .FirstOrDefaultAsync(expense => expense.Id == id);
+    }
+
+    async Task<Expense?> IExpensesUpateOnlyRepository.GetById(long id)
+    {
+        return await _dbContext.Expenses.FirstOrDefaultAsync(expense => expense.Id == id);
     }
 
     public async Task<bool> Delete(long id)
@@ -43,5 +53,10 @@ internal class ExpensesRepository : IExpensesReadOnlyRepository, IExpensesWriteO
         if (result is null) return false;
         _dbContext.Expenses.Remove(result);
         return true;
+    }
+
+    public void Update(Expense expense)
+    {
+        _dbContext.Expenses.Update(expense);
     }
 }

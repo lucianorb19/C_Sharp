@@ -11,7 +11,7 @@ public class RegisterExpenseValidatorTests
     public void Sucess_ExpenseRegisterWithValidFieldsIsValid()
     {
         //ARRANGE
-        var validator = new RegisterExpenseValidator();
+        var validator = new ExpenseValidator();
         var request = RequestRegisterExpenseJsonBuilder.Build();
         
 
@@ -35,7 +35,7 @@ public class RegisterExpenseValidatorTests
     public void ErrorEmptyOrWhiteSpaceOrNullTytle(string emptyTitle)
     {
         //ARRANGE
-        var validator = new RegisterExpenseValidator();
+        var validator = new ExpenseValidator();
         var request = RequestRegisterExpenseJsonBuilder.Build();
         request.Title = emptyTitle;
         
@@ -54,7 +54,7 @@ public class RegisterExpenseValidatorTests
     public void ErrorFutureExpenseDate()
     {
         //ARRANGE
-        var validator = new RegisterExpenseValidator();
+        var validator = new ExpenseValidator();
         var request = RequestRegisterExpenseJsonBuilder.Build();
         request.Date = DateTime.UtcNow.AddDays(2);
 
@@ -73,7 +73,7 @@ public class RegisterExpenseValidatorTests
     public void ErrorPaymentTypeNotAValidEnum()
     {
         //ARRANGE
-        var validator = new RegisterExpenseValidator();
+        var validator = new ExpenseValidator();
         var request = RequestRegisterExpenseJsonBuilder.Build();
         request.PaymentType = (PaymentType)8;
 
@@ -96,7 +96,7 @@ public class RegisterExpenseValidatorTests
     public void ErrorAmountLessThanOrEqualToZero(decimal testAmount)
     {
         //ARRANGE
-        var validator = new RegisterExpenseValidator();
+        var validator = new ExpenseValidator();
         var request = RequestRegisterExpenseJsonBuilder.Build();
         request.Amount = testAmount;
 
