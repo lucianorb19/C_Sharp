@@ -1,4 +1,5 @@
-﻿using CashFlow.Domain.Reports;
+﻿using CashFlow.Domain.Extensions;
+using CashFlow.Domain.Reports;
 using CashFlow.Domain.Repositories.Expenses;
 using ClosedXML.Excel;
 
@@ -37,7 +38,7 @@ public class GenerateExpensesReportExcelUseCase : IGenerateExpensesReportExcelUs
         {
             worksheet.Cell($"A{linha}").Value = expense.Title;
             worksheet.Cell($"B{linha}").Value = expense.Date;
-            worksheet.Cell($"C{linha}").Value = ConvertPaymentType(expense.PaymentType);
+            worksheet.Cell($"C{linha}").Value = expense.PaymentType.PaymentTypeToString();
 
             worksheet.Cell($"D{linha}").Value = expense.Amount;
             worksheet.Cell($"D{linha}")
@@ -68,18 +69,6 @@ public class GenerateExpensesReportExcelUseCase : IGenerateExpensesReportExcelUs
         worksheet.Cell("C1").Value = ResourceReportGenerationMessages.PAYMENT_TYPE;
         worksheet.Cell("D1").Value = ResourceReportGenerationMessages.AMOUNT;
         worksheet.Cell("E1").Value = ResourceReportGenerationMessages.DESCRIPTION;
-    }
-
-    private string ConvertPaymentType(CashFlow.Domain.Enums.PaymentType paymentType)
-    {
-        return paymentType switch
-        {
-            CashFlow.Domain.Enums.PaymentType.Cash => ResourceReportGenerationPaymentType.CASH,
-            CashFlow.Domain.Enums.PaymentType.CreditCard => ResourceReportGenerationPaymentType.CREDIT_CARD,
-            CashFlow.Domain.Enums.PaymentType.DebitCard => ResourceReportGenerationPaymentType.DEBIT_CARD,
-            CashFlow.Domain.Enums.PaymentType.EletronicTransfer => ResourceReportGenerationPaymentType.ELETRONIC_TRANSFER,
-            _ => string.Empty
-        };
     }
 
 }
