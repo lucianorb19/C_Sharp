@@ -1,3 +1,4 @@
+using BarberShop.API.Filters;
 using BarberShop.Application;
 using BarberShop.Infrastructure;
 
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //EXCEPTION FILTER AQUI
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 //INJEÇÕES DE DEPENDÊNCIA
 builder.Services.AddApplication();

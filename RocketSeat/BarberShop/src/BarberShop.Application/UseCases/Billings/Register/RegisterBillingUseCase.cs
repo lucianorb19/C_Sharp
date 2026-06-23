@@ -32,4 +32,9 @@ public class RegisterBillingUseCase : IRegisterBillingUseCase
 
         return _mapper.Map<ResponseRegisteredBillingJson>(entity);
     }
+
+    private void Validate(RequestBillingJson request)
+    {
+        //VALIDAR AQUI COM VALIDATOR
+    }
 }
