@@ -1,7 +1,5 @@
-using CashFlow.API.Filters;
-using CashFlow.API.Middleware;
-using CashFlow.Application;
-using CashFlow.Infrastructure;
+using BarberShop.Application;
+using BarberShop.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,15 +10,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
+//EXCEPTION FILTER AQUI
 
-//INJEÇÃO DE DEPENDÊNCIA
-//MÉTODO DE EXTENSÃO DO PROJETO Infrastructure CRIADO PARA builder.Services
-builder.Services.AddInfrastructure(builder.Configuration);
-//DO PROJETO APPLICATION
+//INJEÇÕES DE DEPENDÊNCIA
 builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
 
-//builder.Services.
+
 
 var app = builder.Build();
 
@@ -30,9 +26,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-//USO DO MIDDLEWARE DE LINGUAGEM (EN, PT-BR) ENTRE SOLICITAÇÃO->MIDDLEWARE->REQUISIÇÃO
-app.UseMiddleware<CultureMiddleware>();
 
 app.UseHttpsRedirection();
 

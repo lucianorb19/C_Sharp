@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BarberShop.Communication\BarberShop.Communication.csproj" />
+    <ProjectReference Include="..\BarberShop.Domain\BarberShop.Domain.csproj" />
+    <ProjectReference Include="..\BarberShop.Exception\BarberShop.Exception.csproj" />
+  </ItemGroup>
+
+</Project>
