@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AMOUNT_GREATER_THAN_ZERO" xml:space="preserve">
-    <value>Valor deve ser maior ou igual a zero.</value>
+  <data name="AMOUNT_ZERO_WHEN_CANCELED" xml:space="preserve">
+    <value>Valor precisa ser zero quando o serviço é cancelado.</value>
   </data>
   <data name="BARBER_REQUIRED" xml:space="preserve">
-    <value>Nome do barbeiro necessário. Máximo de 80 caracteres.</value>
+    <value>Nome do barbeiro necessário. 2 a 80 caracteres.</value>
   </data>
   <data name="CLIENT_REQUIRED" xml:space="preserve">
-    <value>Nome do cliente necessário. Máximo de 120 caracteres.</value>
+    <value>Nome do cliente necessário. 2 a 120 caracteres.</value>
   </data>
   <data name="DATE_REQUIRED" xml:space="preserve">
     <value>Data de faturamento necessária.</value>
@@ -133,12 +133,21 @@
     <value>Método de pagamento inválido.</value>
   </data>
   <data name="SERVICE_NAME_REQUIRED" xml:space="preserve">
-    <value>Descrição do serviço necessária. Máximo de 120 caracteres.</value>
+    <value>Descrição do serviço necessária. 2 a 120 caracteres.</value>
   </data>
   <data name="INVALID_STATUS" xml:space="preserve">
     <value>Status inválido.</value>
   </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Erro desconhecido.</value>
+  </data>
+  <data name="NOTE_LENGTH_LESS_THAN_OR_EQUAL_TO_500" xml:space="preserve">
+    <value>Nota deve possuir máximo de 500 caracteres.</value>
+  </data>
+  <data name="AMOUNT_GREATER_THAN_ZERO" xml:space="preserve">
+    <value>Valor precisa ser maior que zero.</value>
+  </data>
+  <data name="AMOUNT_REQUIRED" xml:space="preserve">
+    <value>Valor necessário.</value>
   </data>
 </root>

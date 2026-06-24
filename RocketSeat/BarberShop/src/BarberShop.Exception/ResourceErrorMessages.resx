@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AMOUNT_GREATER_THAN_ZERO" xml:space="preserve">
-    <value>Amount must be greater or equal to zero.</value>
+  <data name="AMOUNT_ZERO_WHEN_CANCELED" xml:space="preserve">
+    <value>Amount must be zero when the service is canceled.</value>
   </data>
   <data name="BARBER_REQUIRED" xml:space="preserve">
-    <value>Barber name required. Max 80 characters.</value>
+    <value>Barber name required. 2 to 80 characters.</value>
   </data>
   <data name="CLIENT_REQUIRED" xml:space="preserve">
-    <value>Client name required. Max 120 characters</value>
+    <value>Client name required. 2 to 120 characters</value>
   </data>
   <data name="DATE_REQUIRED" xml:space="preserve">
     <value>Billing date required.</value>
@@ -133,12 +133,21 @@
     <value>Invalid Payment method.</value>
   </data>
   <data name="SERVICE_NAME_REQUIRED" xml:space="preserve">
-    <value>Service name required. Max 120 characters.</value>
+    <value>Service name required. 2 to 120 characters.</value>
   </data>
   <data name="INVALID_STATUS" xml:space="preserve">
     <value>Status invalid.</value>
   </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Unknown error.</value>
+  </data>
+  <data name="NOTE_LENGTH_LESS_THAN_OR_EQUAL_TO_500" xml:space="preserve">
+    <value>Note must have a maximum of 500 characters.</value>
+  </data>
+  <data name="AMOUNT_GREATER_THAN_ZERO" xml:space="preserve">
+    <value>Amount must be greater than zero.</value>
+  </data>
+  <data name="AMOUNT_REQUIRED" xml:space="preserve">
+    <value>Amount required.</value>
   </data>
 </root>

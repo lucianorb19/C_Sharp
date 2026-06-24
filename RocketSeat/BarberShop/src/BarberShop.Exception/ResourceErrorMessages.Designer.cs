@@ -61,7 +61,7 @@ namespace BarberShop.Exception {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Amount must be greater or equal to zero..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Amount must be greater than zero..
         /// </summary>
         public static string AMOUNT_GREATER_THAN_ZERO {
             get {
@@ -70,7 +70,25 @@ namespace BarberShop.Exception {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Barber name required. Max 80 characters..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Amount required..
+        /// </summary>
+        public static string AMOUNT_REQUIRED {
+            get {
+                return ResourceManager.GetString("AMOUNT_REQUIRED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Amount must be zero when the service is canceled..
+        /// </summary>
+        public static string AMOUNT_ZERO_WHEN_CANCELED {
+            get {
+                return ResourceManager.GetString("AMOUNT_ZERO_WHEN_CANCELED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Barber name required. 2 to 80 characters..
         /// </summary>
         public static string BARBER_REQUIRED {
             get {
@@ -79,7 +97,7 @@ namespace BarberShop.Exception {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Client name required. Max 120 characters.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Client name required. 2 to 120 characters.
         /// </summary>
         public static string CLIENT_REQUIRED {
             get {
@@ -115,7 +133,16 @@ namespace BarberShop.Exception {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Service name required. Max 120 characters..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Note must have a maximum of 500 characters..
+        /// </summary>
+        public static string NOTE_LENGTH_LESS_THAN_OR_EQUAL_TO_500 {
+            get {
+                return ResourceManager.GetString("NOTE_LENGTH_LESS_THAN_OR_EQUAL_TO_500", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Service name required. 2 to 120 characters..
         /// </summary>
         public static string SERVICE_NAME_REQUIRED {
             get {

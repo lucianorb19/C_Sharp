@@ -10,7 +10,7 @@ public class BillingController : ControllerBase
 {
     [HttpPost]
     [ProducesResponseType(typeof(ResponseRegisteredBillingJson), StatusCodes.Status201Created)]
-    //[ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> Register(
         [FromServices] IRegisterBillingUseCase useCase,
         [FromBody] RequestBillingJson request)

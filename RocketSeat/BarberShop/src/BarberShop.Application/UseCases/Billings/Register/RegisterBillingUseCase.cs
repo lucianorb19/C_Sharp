@@ -4,7 +4,7 @@ using BarberShop.Communication.Responses;
 using BarberShop.Domain.Entities;
 using BarberShop.Domain.Repositories;
 using BarberShop.Domain.Repositories.Billings;
-using System.Runtime.CompilerServices;
+using BarberShop.Exception.ExceptionBase;
 
 namespace BarberShop.Application.UseCases.Billings.Register;
 public class RegisterBillingUseCase : IRegisterBillingUseCase
@@ -24,7 +24,11 @@ public class RegisterBillingUseCase : IRegisterBillingUseCase
 
     public async Task<ResponseRegisteredBillingJson> Execute(RequestBillingJson request)
     {
-        //Validate(request)
+
+        request.CreatedAt = DateTime.UtcNow;
+        request.UpdatedAt = DateTime.UtcNow;
+
+        Validate(request);
 
         var entity = _mapper.Map<Billing>(request);
         await _repository.Add(entity);
@@ -35,6 +39,12 @@ public class RegisterBillingUseCase : IRegisterBillingUseCase
 
     private void Validate(RequestBillingJson request)
     {
-        //VALIDAR AQUI COM VALIDATOR
+        var result = new BillingValidator().Validate(request);
+        if(result.IsValid == false)
+        {
+            var errorMessages = result.Errors.Select(failure => failure.ErrorMessage)
+                                             .ToList();
+            throw new ErrorOnValidationException(errorMessages);
+        }
     }
 }
