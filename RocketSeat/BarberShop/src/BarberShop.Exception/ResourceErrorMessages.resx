@@ -150,4 +150,7 @@
   <data name="AMOUNT_REQUIRED" xml:space="preserve">
     <value>Amount required.</value>
   </data>
+  <data name="BILLING_NOT_FOUND" xml:space="preserve">
+    <value>Billing not found.</value>
+  </data>
 </root>

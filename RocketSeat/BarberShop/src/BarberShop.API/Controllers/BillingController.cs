@@ -1,4 +1,5 @@
 ﻿using BarberShop.Application.UseCases.Billings.GetAll;
+using BarberShop.Application.UseCases.Billings.GetById;
 using BarberShop.Application.UseCases.Billings.Register;
 using BarberShop.Communication.Requests;
 using BarberShop.Communication.Responses;
@@ -32,6 +33,17 @@ public class BillingController : ControllerBase
 
     }
 
+    [HttpGet]
+    [Route("{id}")]
+    [ProducesResponseType(typeof(ResponseBillingJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetById(
+        [FromServices] IGetBillingByIdUseCase useCase,
+        [FromRoute] Guid id)
+    {
+        var response = await useCase.Execute(id);
+        return Ok(response);
+    }
 
 
 
