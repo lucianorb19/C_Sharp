@@ -1,4 +1,5 @@
 using BarberShop.API.Filters;
+using BarberShop.API.Middleware;
 using BarberShop.Application;
 using BarberShop.Infrastructure;
 
@@ -7,17 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//EXCEPTION FILTER AQUI
+//FILTRO PARA EXCEÇÕES
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
-//INJEÇÕES DE DEPENDÊNCIA
+//INJEÇÕES DE DEPENDÊNCIA COM MÉTODOS DE EXTENSÃO
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
-
 
 
 var app = builder.Build();
@@ -28,6 +27,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//MIDDLEWARE DE IDIOMAS
+app.UseMiddleware<CultureMiddleware>();
 
 app.UseHttpsRedirection();
 

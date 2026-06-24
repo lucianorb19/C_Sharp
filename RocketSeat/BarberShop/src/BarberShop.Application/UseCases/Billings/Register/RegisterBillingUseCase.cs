@@ -22,7 +22,7 @@ public class RegisterBillingUseCase : IRegisterBillingUseCase
         _mapper = mapper;
     }
 
-    public async Task<ResponseRegisteredBillingJson> Execute(RequestBillingJson request)
+    public async Task<ResponseShortBillingJson> Execute(RequestBillingJson request)
     {
 
         request.CreatedAt = DateTime.UtcNow;
@@ -34,7 +34,7 @@ public class RegisterBillingUseCase : IRegisterBillingUseCase
         await _repository.Add(entity);
         await _unityOfWork.Commit();
 
-        return _mapper.Map<ResponseRegisteredBillingJson>(entity);
+        return _mapper.Map<ResponseShortBillingJson>(entity);
     }
 
     private void Validate(RequestBillingJson request)

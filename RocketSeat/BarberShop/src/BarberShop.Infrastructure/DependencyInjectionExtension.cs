@@ -29,6 +29,7 @@ public static class DependencyInjectionExtension
         //É INJETADA UMA INSTÂNCIA, QUE INDICADA COMO IExpensesWriteRepository / IExpensesReadOnlyRepository,
         //INSTANCIA UM TIPO ExpensesRepository
         services.AddScoped<IBillingsWriteOnlyRepository, BillingRepository>();
+        services.AddScoped<IBillingsReadOnlyRepository, BillingRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
 

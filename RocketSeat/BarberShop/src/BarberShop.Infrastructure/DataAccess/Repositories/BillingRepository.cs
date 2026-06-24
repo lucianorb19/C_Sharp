@@ -3,7 +3,8 @@ using BarberShop.Domain.Repositories.Billings;
 using Microsoft.EntityFrameworkCore;
 
 namespace BarberShop.Infrastructure.DataAccess.Repositories;
-internal class BillingRepository : IBillingsWriteOnlyRepository
+internal class BillingRepository : IBillingsWriteOnlyRepository,
+                                   IBillingsReadOnlyRepository
 {
 
     private readonly BarberShopDbContext _dbContext;
@@ -26,5 +27,8 @@ internal class BillingRepository : IBillingsWriteOnlyRepository
         return true;
     }
 
-
+    public async Task<List<Billing>> GetAll()
+    {
+        return await _dbContext.Billings.AsNoTracking().ToListAsync();
+    }
 }
