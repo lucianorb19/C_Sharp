@@ -30,6 +30,7 @@ public static class DependencyInjectionExtension
         //INSTANCIA UM TIPO ExpensesRepository
         services.AddScoped<IBillingsWriteOnlyRepository, BillingRepository>();
         services.AddScoped<IBillingsReadOnlyRepository, BillingRepository>();
+        services.AddScoped<IBillingsUpateOnlyRepository, BillingRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
 

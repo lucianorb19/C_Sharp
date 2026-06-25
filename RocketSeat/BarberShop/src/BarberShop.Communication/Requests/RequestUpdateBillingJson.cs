@@ -1,7 +1,7 @@
 ﻿using BarberShop.Communication.Enums;
 
 namespace BarberShop.Communication.Requests;
-public class RequestBillingJson
+public class RequestUpdateBillingJson
 {
     public DateOnly Date { get; set; }
     public string BarberName { get; set; } = string.Empty;
@@ -11,6 +11,4 @@ public class RequestBillingJson
     public PaymentMethod PaymentMethod { get; set; }
     public Status Status { get; set; }
     public string Notes { get; set; } = string.Empty;
-    public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
 }

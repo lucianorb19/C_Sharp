@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BarberShop.Infrastructure.DataAccess.Repositories;
 internal class BillingRepository : IBillingsWriteOnlyRepository,
-                                   IBillingsReadOnlyRepository
+                                   IBillingsReadOnlyRepository,
+                                   IBillingsUpateOnlyRepository
 {
 
     private readonly BarberShopDbContext _dbContext;
@@ -32,9 +33,24 @@ internal class BillingRepository : IBillingsWriteOnlyRepository,
         return await _dbContext.Billings.AsNoTracking().ToListAsync();
     }
 
-    public async Task<Billing?> GetById(Guid id)
+
+    //DOIS MÉTODOS GetById COM ASSINATURAS SIMILARES,DIFERENTECIADOS POR 
+    //IBillingsReadOnlyRepository. E
+    //IBillingsUpateOnlyRepository.
+    async Task<Billing?> IBillingsReadOnlyRepository.GetById(Guid id)
     {
         return await _dbContext.Billings.AsNoTracking()
                                         .FirstOrDefaultAsync(billing => billing.Id == id);
+    }
+
+    async Task<Billing?> IBillingsUpateOnlyRepository.GetById(Guid id)
+    {
+        return await _dbContext.Billings.FirstOrDefaultAsync(billing => billing.Id == id);
+    }
+
+
+    public void Update(Billing billing)
+    {
+        _dbContext.Billings.Update(billing);
     }
 }
