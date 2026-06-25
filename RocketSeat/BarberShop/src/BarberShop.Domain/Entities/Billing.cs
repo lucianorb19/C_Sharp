@@ -4,7 +4,7 @@ namespace BarberShop.Domain.Entities;
 public class Billing
 {
     public Guid Id { get; set; } = new Guid();
-    public DateOnly Date { get; set; }
+    public DateTime Date { get; set; }
     public string BarberName { get; set; } = string.Empty;
     public string ClientName { get; set; } = string.Empty;
     public string ServiceName { get; set; } = string.Empty;
