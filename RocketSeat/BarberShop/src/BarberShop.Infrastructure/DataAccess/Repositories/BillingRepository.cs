@@ -53,4 +53,23 @@ internal class BillingRepository : IBillingsWriteOnlyRepository,
     {
         _dbContext.Billings.Update(billing);
     }
+
+    public async Task<List<Billing>> FilterByMonth(DateOnly date)
+    {
+        //DIA INICIAL DO MÊS
+        var startDate = new DateTime(year: date.Year, month: date.Month, day: 1).Date;
+
+        //DIA FINAL DO MÊS
+        var daysInMonth = DateTime.DaysInMonth(year: date.Year, month: date.Month);
+        var endDate = new DateTime(year: date.Year, month: date.Month, day: daysInMonth,
+                                   hour: 23, minute: 59, second: 59);
+
+        return await _dbContext
+            .Billings
+            .AsNoTracking()
+            .Where(billing => billing.Date >= startDate && billing.Date <= endDate)
+            .OrderBy(billing => billing.Date)
+            .ThenBy(billing => billing.Amount)
+            .ToListAsync();
+    }
 }

@@ -1,5 +1,4 @@
 ﻿using BarberShop.Application.UseCases.Billings;
-using BarberShop.Exception;
 using CommonTestUtilities.Requests;
 using FluentAssertions;
 
