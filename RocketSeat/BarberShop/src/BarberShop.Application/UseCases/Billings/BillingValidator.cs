@@ -33,7 +33,7 @@ public class BillingValidator : AbstractValidator<RequestBillingJson>
                                           .When(billing => billing.Status == Communication.Enums.Status.Paid)
                                           .WithMessage(ResourceErrorMessages.AMOUNT_GREATER_THAN_ZERO);
 
-        RuleFor(billing => billing.PaymentMethod).NotEmpty()
+        RuleFor(billing => billing.PaymentMethod).NotNull()
                                                  .IsInEnum()
                                                  .WithMessage(ResourceErrorMessages.INVALID_PAYMENT_METHOD);
         

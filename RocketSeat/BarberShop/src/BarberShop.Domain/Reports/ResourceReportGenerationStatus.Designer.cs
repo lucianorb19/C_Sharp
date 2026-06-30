@@ -22,14 +22,14 @@ namespace BarberShop.Domain.Reports {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ResourceReportGenerationMessages {
+    public class ResourceReportGenerationStatus {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ResourceReportGenerationMessages() {
+        internal ResourceReportGenerationStatus() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace BarberShop.Domain.Reports {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BarberShop.Domain.Reports.ResourceReportGenerationMessages", typeof(ResourceReportGenerationMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BarberShop.Domain.Reports.ResourceReportGenerationStatus", typeof(ResourceReportGenerationStatus).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,83 +61,20 @@ namespace BarberShop.Domain.Reports {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Amount.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Canceled.
         /// </summary>
-        public static string AMOUNT {
+        public static string CACELED {
             get {
-                return ResourceManager.GetString("AMOUNT", resourceCulture);
+                return ResourceManager.GetString("CACELED", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Barber.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Paid.
         /// </summary>
-        public static string BARBER_NAME {
+        public static string PAID {
             get {
-                return ResourceManager.GetString("BARBER_NAME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Client.
-        /// </summary>
-        public static string CLIENT_NAME {
-            get {
-                return ResourceManager.GetString("CLIENT_NAME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Date.
-        /// </summary>
-        public static string DATE {
-            get {
-                return ResourceManager.GetString("DATE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Notes.
-        /// </summary>
-        public static string NOTES {
-            get {
-                return ResourceManager.GetString("NOTES", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Payment in.
-        /// </summary>
-        public static string PAYMENT_METHOD {
-            get {
-                return ResourceManager.GetString("PAYMENT_METHOD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Service.
-        /// </summary>
-        public static string SERVICE_NAME {
-            get {
-                return ResourceManager.GetString("SERVICE_NAME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Status.
-        /// </summary>
-        public static string STATUS {
-            get {
-                return ResourceManager.GetString("STATUS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Total.
-        /// </summary>
-        public static string TOTAL {
-            get {
-                return ResourceManager.GetString("TOTAL", resourceCulture);
+                return ResourceManager.GetString("PAID", resourceCulture);
             }
         }
     }

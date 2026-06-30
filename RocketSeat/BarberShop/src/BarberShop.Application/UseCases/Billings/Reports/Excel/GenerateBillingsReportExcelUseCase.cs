@@ -20,6 +20,7 @@ public class GenerateBillingsReportExcelUseCase : IGenerateBillingsReportExcelUs
     public async Task<byte[]> Execute(DateOnly month)
     {
         var billings = await _repository.FilterByMonth(month);
+        var totalBillings = billings.Sum(billing => billing.Amount);
         if (billings.Count == 0) return [];
 
         //using PARA GARANTIR QUE O USO DOS RECURSOS É INTERROMPIDO
@@ -45,12 +46,19 @@ public class GenerateBillingsReportExcelUseCase : IGenerateBillingsReportExcelUs
             workSheet.Cell($"D{linha}").Value = billing.Amount;
             workSheet.Cell($"E{linha}").Value = billing.Date;
             workSheet.Cell($"F{linha}").Value = billing.PaymentMethod.PaymentMethodToString();
-            //CONTINUE
-
-
-
-
+            workSheet.Cell($"G{linha}").Value = billing.Status.StatusToString();
+            workSheet.Cell($"H{linha}").Value = billing.Notes;
+            linha++;
         }
+        workSheet.Cell($"J2").Value = totalBillings;
+
+        workSheet.Columns().AdjustToContents();
+
+        //ARQUIVO SALVO COMO ARRAY DE BYTES
+        var file = new MemoryStream();
+        workBook.SaveAs(file);
+        return file.ToArray();
+
 
     }
 
@@ -59,7 +67,7 @@ public class GenerateBillingsReportExcelUseCase : IGenerateBillingsReportExcelUs
         workSheet.Cells("A1:H1").Style.Font.Bold = true;
         workSheet.Cells("A1:H1").Style.Fill.BackgroundColor = XLColor.FromHtml("#FAEBD7");
         workSheet.Cells("A1:C1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-        workSheet.Cell("D1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+        workSheet.Cell("D1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
         workSheet.Cells("E1:H1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
 
         workSheet.Cell("J1").Style.Font.Bold = true;
@@ -69,7 +77,7 @@ public class GenerateBillingsReportExcelUseCase : IGenerateBillingsReportExcelUs
         workSheet.Cell("A1").Value = ResourceReportGenerationMessages.SERVICE_NAME;
         workSheet.Cell("B1").Value = ResourceReportGenerationMessages.CLIENT_NAME;
         workSheet.Cell("C1").Value = ResourceReportGenerationMessages.BARBER_NAME;
-        workSheet.Cell("D1").Value = ResourceReportGenerationMessages.AMOUNT;
+        workSheet.Cell("D1").Value = $"{ResourceReportGenerationMessages.AMOUNT} ({CURRENCY_SYMBOL})";
         workSheet.Cell("E1").Value = ResourceReportGenerationMessages.DATE;
         workSheet.Cell("F1").Value = ResourceReportGenerationMessages.PAYMENT_METHOD;
         workSheet.Cell("G1").Value = ResourceReportGenerationMessages.STATUS;

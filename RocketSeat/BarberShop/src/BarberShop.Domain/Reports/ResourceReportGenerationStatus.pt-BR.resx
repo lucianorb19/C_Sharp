@@ -117,31 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AMOUNT" xml:space="preserve">
-    <value>Amount</value>
+  <data name="CACELED" xml:space="preserve">
+    <value>Cancelado</value>
   </data>
-  <data name="BARBER_NAME" xml:space="preserve">
-    <value>Barber</value>
-  </data>
-  <data name="CLIENT_NAME" xml:space="preserve">
-    <value>Client</value>
-  </data>
-  <data name="DATE" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="NOTES" xml:space="preserve">
-    <value>Notes</value>
-  </data>
-  <data name="PAYMENT_METHOD" xml:space="preserve">
-    <value>Payment in</value>
-  </data>
-  <data name="SERVICE_NAME" xml:space="preserve">
-    <value>Service</value>
-  </data>
-  <data name="STATUS" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="TOTAL" xml:space="preserve">
-    <value>Total</value>
+  <data name="PAID" xml:space="preserve">
+    <value>Pago</value>
   </data>
 </root>

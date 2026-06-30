@@ -17,6 +17,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ResourceReportGenerationPaymentMethod.resx</DependentUpon>
     </Compile>
+    <Compile Update="Reports\ResourceReportGenerationStatus.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResourceReportGenerationStatus.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +32,10 @@
     <EmbeddedResource Update="Reports\ResourceReportGenerationPaymentMethod.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourceReportGenerationPaymentMethod.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Reports\ResourceReportGenerationStatus.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceReportGenerationStatus.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
