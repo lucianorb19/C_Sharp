@@ -87,16 +87,5 @@ internal class BillingRepository : IBillingsWriteOnlyRepository,
             .OrderBy(billing => billing.Date)
             .ThenBy(billing => billing.Amount)
             .ToListAsync();
-
-        /*
-         var inicioSemana = hoje.AddDays(-(int)hoje.DayOfWeek + (hoje.DayOfWeek == DayOfWeek.Sunday ? -6 : 1));
-
-// Domingo da semana atual
-var fimSemana = inicioSemana.AddDays(7);
-
-var resultado = dados.Where(x =>
-    x.DataFaturamento >= inicioSemana &&
-    x.DataFaturamento < fimSemana);
-         */
     }
 }

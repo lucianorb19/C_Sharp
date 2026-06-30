@@ -25,12 +25,14 @@ public class RegisterBillingUseCase : IRegisterBillingUseCase
     public async Task<ResponseShortBillingJson> Execute(RequestBillingJson request)
     {
 
-        request.CreatedAt = DateTime.UtcNow;
-        request.UpdatedAt = DateTime.UtcNow;
+        //request.CreatedAt = DateTime.UtcNow;
+        //request.UpdatedAt = DateTime.UtcNow;
 
         Validate(request);
 
         var entity = _mapper.Map<Billing>(request);
+        entity.CreatedAt = DateTime.UtcNow;
+        entity.UpdatedAt = DateTime.UtcNow;
         await _repository.Add(entity);
         await _unityOfWork.Commit();
 

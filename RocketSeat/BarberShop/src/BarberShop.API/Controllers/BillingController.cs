@@ -69,7 +69,7 @@ public class BillingController : ControllerBase
     public async Task<IActionResult> Update(
         [FromServices] IUpdateBillingUseCase useCase,
         [FromRoute] Guid id,
-        [FromBody] RequestUpdateBillingJson request)
+        [FromBody] RequestBillingJson request)
     {
         await useCase.Execute(id, request);
         return NoContent();

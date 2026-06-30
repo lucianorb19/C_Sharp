@@ -3,5 +3,5 @@
 namespace BarberShop.Application.UseCases.Billings.Update;
 public interface IUpdateBillingUseCase
 {
-    Task Execute(Guid id, RequestUpdateBillingJson request);
+    Task Execute(Guid id, RequestBillingJson request);
 }

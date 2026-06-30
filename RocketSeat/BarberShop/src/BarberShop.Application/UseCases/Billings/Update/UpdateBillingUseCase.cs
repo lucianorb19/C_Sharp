@@ -20,7 +20,7 @@ public class UpdateBillingUseCase : IUpdateBillingUseCase
         _repository = repository;
     }
 
-    public async Task Execute(Guid id, RequestUpdateBillingJson request)
+    public async Task Execute(Guid id, RequestBillingJson request)
     {
         
         Validate(request);
@@ -34,9 +34,9 @@ public class UpdateBillingUseCase : IUpdateBillingUseCase
         await _unityOfWork.Commit();
     }
 
-    private void Validate(RequestUpdateBillingJson request)
+    private void Validate(RequestBillingJson request)
     {
-        var result = new BillingUpdateValidator().Validate(request);
+        var result = new BillingValidator().Validate(request);
         if (result.IsValid == false)
         {
             var errorMessages = result.Errors.Select(failure => failure.ErrorMessage)
