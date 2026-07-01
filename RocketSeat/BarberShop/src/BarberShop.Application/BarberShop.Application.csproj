@@ -7,16 +7,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\BebasNeue-Regular.ttf" />
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\Roboto-Medium.ttf" />
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\BebasNeue-Regular.ttf" />
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="ClosedXML" Version="0.105.0" />
     <PackageReference Include="FluentValidation" Version="11.9.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.8" />
+    <PackageReference Include="PDFsharp-MigraDoc" Version="6.2.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BarberShop.Communication\BarberShop.Communication.csproj" />
     <ProjectReference Include="..\BarberShop.Domain\BarberShop.Domain.csproj" />
     <ProjectReference Include="..\BarberShop.Exception\BarberShop.Exception.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Logo\foto_perfilPequena.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Logo\patinho.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Logo\patinho2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -140,5 +140,23 @@ namespace BarberShop.Domain.Reports {
                 return ResourceManager.GetString("TOTAL", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Total earned in {0}.
+        /// </summary>
+        public static string TOTAL_EARNED_IN {
+            get {
+                return ResourceManager.GetString("TOTAL_EARNED_IN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Hey,.
+        /// </summary>
+        public static string WELCOME_MESSAGE {
+            get {
+                return ResourceManager.GetString("WELCOME_MESSAGE", resourceCulture);
+            }
+        }
     }
 }

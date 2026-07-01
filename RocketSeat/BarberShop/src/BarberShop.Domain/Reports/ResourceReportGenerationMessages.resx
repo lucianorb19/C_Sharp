@@ -144,4 +144,10 @@
   <data name="TOTAL" xml:space="preserve">
     <value>Total</value>
   </data>
+  <data name="TOTAL_EARNED_IN" xml:space="preserve">
+    <value>Total earned in {0}</value>
+  </data>
+  <data name="WELCOME_MESSAGE" xml:space="preserve">
+    <value>Hey,</value>
+  </data>
 </root>

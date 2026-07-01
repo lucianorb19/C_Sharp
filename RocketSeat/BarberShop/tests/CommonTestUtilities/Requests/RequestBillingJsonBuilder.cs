@@ -18,12 +18,10 @@ public class RequestBillingJsonBuilder
             BarberName = faker.Name.FullName(),
             ClientName = faker.Name.FullName(),
             ServiceName = faker.PickRandom("Corte","Barba","Corte e barba"),
-            Status = faker.PickRandomWithout<Status>(0),//NÃO SERÁ TESTADO PEDIDO CANCELADO
+            Status = faker.PickRandomWithout<Status>(0),//DESCONSIDERANDO PEDIDO CANCELADO
             Amount = faker.Random.Decimal(min:10, max:1000),
             PaymentMethod = faker.PickRandom<PaymentMethod>(),
             Notes = faker.Commerce.ProductDescription(),
-            CreatedAt = faker.Date.Recent(),
-            UpdatedAt = faker.Date.Recent()
         };
         return request;
         
