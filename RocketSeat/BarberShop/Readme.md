@@ -20,7 +20,7 @@ Para obter uma cópia local funcional, siga estes passos:
 ### Instalação
 1. Clone este repositório (ou faça o download do projeto): 
 ```
-https://github.com/lucianorb19/C_Sharp.git
+LINK REPOSITÓRIO AQUI
 ```
 2. Preencha as informações no arquivo `BarberShop.API/appsettings.Development.json` com a _connection string_ do seu banco de dados já criado.
 ```
@@ -30,7 +30,7 @@ https://github.com/lucianorb19/C_Sharp.git
   }
 }
 ```
-   1. Atente-se para a necessidade de **criar seu banco de dados antes de utilizar este repositório**. Ele funciona baseado na ideia de que o banco de dados já exite previamente. Caso seja necessário, abaixo o a estrutura base da tabela base de dados:
+   * Atente-se para a necessidade de **criar seu banco de dados antes de utilizar este repositório**. Ele funciona baseado na ideia de que o banco de dados já exite previamente. Caso seja necessário, abaixo o código sql que gera a base de dados e a estrutura da tabela, já com alguns registros:
    ```
    -- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
     --
@@ -78,7 +78,22 @@ https://github.com/lucianorb19/C_Sharp.git
 
     LOCK TABLES `billings` WRITE;
     /*!40000 ALTER TABLE `billings` DISABLE KEYS */;
-    INSERT INTO `billings` VALUES ('08ded156-2466-4e18-840d-3bc60447e24e','2026-06-23 00:00:00','LUCIANO','LUCIANO 2','Corte moicano',40.00,2,1,'Demorou muito','2026-06-23 18:34:12','2026-06-23 18:34:12'),('08ded156-9623-4d40-8c0c-adadc44dc86f','2026-06-23 00:00:00','Luiz','Gustavo','Barba',0.00,0,0,'','2026-06-23 18:37:36','2026-06-23 18:37:36'),('08ded1f4-cc33-45eb-8e33-d3d42b42a615','2026-06-24 00:00:00','Luciano1','Luciano1','Corte1',40.00,4,1,'Pago','2026-06-24 13:30:45','2026-06-24 13:30:45'),('08ded1f4-f624-4fed-8830-c4855f92fe89','2026-06-24 00:00:00','Luciano2','Luciano2','Corte2',40.00,4,1,'Pago','2026-06-24 13:31:56','2026-06-24 13:31:56'),('08ded1f6-8470-4af9-8e05-759e7a30b5fe','2026-06-25 00:00:00','Luciano3 Updated','string','string',0.00,4,0,'Cancelado Updated','2026-06-24 13:43:04','2026-06-25 13:17:51'),('08ded6ac-c1b7-44bf-8156-d9ec6b4208a7','2026-04-30 13:36:08','teste','teste','teste',50.00,1,1,'teste','2026-06-30 13:37:40','2026-06-30 13:37:40'),('08ded6ac-d415-44c0-8590-ebecf58e7d83','2026-04-30 13:36:08','teste1','teste1','teste1',200.00,2,1,'teste1','2026-06-30 13:38:11','2026-06-30 13:38:11'),('08ded6ac-e17c-43a2-83ef-07bf9a2632ec','2026-04-30 13:36:08','teste2','teste2','teste2',40.00,3,1,'teste3','2026-06-30 13:38:34','2026-06-30 13:38:34'),('08ded6b3-1e73-4dd3-880d-6ebc1530b568','2026-04-30 14:20:09','teste3','teste3','teste3',0.00,0,0,'cancelado','2026-06-30 14:23:12','2026-06-30 14:23:12'),('08ded6b3-70d2-4d5a-8f96-da29a270dde8','2026-04-30 00:00:00','teste4','teste4','teste4',15.00,1,1,'teste4','2026-06-30 14:25:31','2026-06-30 14:25:31'),('08ded6d3-9f4b-4bb8-8a89-c341523f51a2','2026-06-30 18:15:13','teste5','teste5','teste5',50.00,4,1,'teste5','2026-06-30 18:15:53','2026-06-30 18:15:53'),('08ded6d3-af7a-48e5-8fbb-eb322fd2de97','2026-06-29 18:15:13','teste6','teste6','teste6',40.00,4,1,'teste6','2026-06-30 18:16:20','2026-06-30 18:16:20'),('08ded6d3-bf6a-4c89-8257-67625a5da130','2026-06-30 18:42:41','teste7 UPDATED','teste7 UPDATED','teste7 UPDATED',55.00,4,1,'teste7 UPDATED','2026-06-30 18:16:47','2026-06-30 18:43:34'),('08ded6d7-4276-4d61-8a91-e84b91262aa8','2026-06-30 18:41:20','teste8','teste8','teste8',35.00,3,1,'teste8','2026-06-30 18:41:55','2026-06-30 18:41:55'),('08ded83a-a7e0-4b9b-8d1a-c4e5bb33677f','2026-06-02 13:04:03','teste8','teste8','teste8',50.00,3,1,'teste8','2026-07-02 13:05:56','2026-07-02 13:05:56');
+    INSERT INTO `billings` VALUES ('08ded156-2466-4e18-840d-3bc60447e24e','2026-06-23 00:00:00','LUCIANO','LUCIANO 2','Corte moicano',40.00,2,1,'Demorou muito','2026-06-23 18:34:12','2026-06-23 18:34:12'),
+    ('08ded156-9623-4d40-8c0c-adadc44dc86f','2026-06-23 00:00:00','Luiz','Gustavo','Barba',0.00,0,0,'','2026-06-23 18:37:36','2026-06-23 18:37:36'),
+    ('08ded1f4-cc33-45eb-8e33-d3d42b42a615','2026-06-24 00:00:00','Luciano1','Luciano1','Corte1',40.00,4,1,'Pago','2026-06-24 13:30:45','2026-06-24 13:30:45'),
+    ('08ded1f4-f624-4fed-8830-c4855f92fe89','2026-06-24 00:00:00','Luciano2','Luciano2','Corte2',40.00,4,1,'Pago','2026-06-24 13:31:56','2026-06-24 13:31:56'),
+    ('08ded1f6-8470-4af9-8e05-759e7a30b5fe','2026-06-25 00:00:00','Luciano3 Updated','string','string',0.00,4,0,'Cancelado Updated','2026-06-24 13:43:04','2026-06-25 13:17:51'),
+    ('08ded6ac-c1b7-44bf-8156-d9ec6b4208a7','2026-04-30 13:36:08','teste','teste','teste',50.00,1,1,'teste','2026-06-30 13:37:40','2026-06-30 13:37:40'),
+    ('08ded6ac-d415-44c0-8590-ebecf58e7d83','2026-04-30 13:36:08','teste1','teste1','teste1',200.00,2,1,'teste1','2026-06-30 13:38:11','2026-06-30 13:38:11'),
+    ('08ded6ac-e17c-43a2-83ef-07bf9a2632ec','2026-04-30 13:36:08','teste2','teste2','teste2',40.00,3,1,'teste3','2026-06-30 13:38:34','2026-06-30 13:38:34'),
+    ('08ded6b3-1e73-4dd3-880d-6ebc1530b568','2026-04-30 14:20:09','teste3','teste3','teste3',0.00,0,0,'cancelado','2026-06-30 14:23:12','2026-06-30 14:23:12'),
+    ('08ded6b3-70d2-4d5a-8f96-da29a270dde8','2026-04-30 00:00:00','teste4','teste4','teste4',15.00,1,1,'teste4','2026-06-30 14:25:31','2026-06-30 14:25:31'),
+    ('08ded6d3-9f4b-4bb8-8a89-c341523f51a2','2026-06-30 18:15:13','teste5','teste5','teste5',50.00,4,1,'teste5','2026-06-30 18:15:53','2026-06-30 18:15:53'),
+    ('08ded6d3-af7a-48e5-8fbb-eb322fd2de97','2026-06-29 18:15:13','teste6','teste6','teste6',40.00,4,1,'teste6','2026-06-30 18:16:20','2026-06-30 18:16:20'),
+    ('08ded6d3-bf6a-4c89-8257-67625a5da130','2026-06-30 18:42:41','teste7 UPDATED','teste7 UPDATED','teste7 UPDATED',55.00,4,1,'teste7 UPDATED','2026-06-30 18:16:47','2026-06-30 18:43:34'),
+    ('08ded6d7-4276-4d61-8a91-e84b91262aa8','2026-06-30 18:41:20','teste8','teste8','teste8',35.00,3,1,'teste8','2026-06-30 18:41:55','2026-06-30 18:41:55'),
+    ('08ded83a-a7e0-4b9b-8d1a-c4e5bb33677f','2026-06-02 13:04:03','teste8','teste8','teste8',50.00,3,1,'teste8','2026-07-02 13:05:56','2026-07-02 13:05:56');
+
     /*!40000 ALTER TABLE `billings` ENABLE KEYS */;
     UNLOCK TABLES;
     /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
