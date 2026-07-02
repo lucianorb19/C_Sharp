@@ -129,6 +129,9 @@
   <data name="DATE" xml:space="preserve">
     <value>Data</value>
   </data>
+  <data name="MONTH_REPORT" xml:space="preserve">
+    <value>Relatório mensal</value>
+  </data>
   <data name="NOTES" xml:space="preserve">
     <value>Observações</value>
   </data>
@@ -144,8 +147,14 @@
   <data name="TOTAL" xml:space="preserve">
     <value>Total</value>
   </data>
-  <data name="TOTAL_EARNED_IN" xml:space="preserve">
+  <data name="TOTAL_COLLECTED_IN" xml:space="preserve">
     <value>Total arrecadado em {0}</value>
+  </data>
+  <data name="WEEK_REPORT" xml:space="preserve">
+    <value>Relatório semanal</value>
+  </data>
+  <data name="WEEK_TOTAL_MESSAGE" xml:space="preserve">
+    <value>Arrecadado durante a semana</value>
   </data>
   <data name="WELCOME_MESSAGE" xml:space="preserve">
     <value>Olá,</value>

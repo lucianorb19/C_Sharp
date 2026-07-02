@@ -1,39 +1,38 @@
 ﻿
 using BarberShop.Application.UseCases.Billings.Reports.Pdf.Colors;
 using BarberShop.Application.UseCases.Billings.Reports.Pdf.Fonts;
-using BarberShop.Domain.Extension;
 using BarberShop.Domain.Repositories.Billings;
+using BarberShop.Domain.Extension;
+using PdfSharp.Fonts;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.DocumentObjectModel.Tables;
-using PdfSharp.Fonts;
 
 namespace BarberShop.Application.UseCases.Billings.Reports.Pdf;
-public class GenerateMonthBillingsReportPdfUseCase : IGenerateMonthBillingsReportPdfUseCase
+public class GenerateWeekBillingsReportPdfUseCase : IGenerateWeekBillingsReportPdfUseCase
 {
     private const string CURRENCY_SYMBOL = "R$";
     private const int HEIGHT_ROW_BILLING_TABLE = 25;
     private readonly IBillingsReadOnlyRepository _repository;
 
-    public GenerateMonthBillingsReportPdfUseCase(IBillingsReadOnlyRepository repository)
+    public GenerateWeekBillingsReportPdfUseCase(IBillingsReadOnlyRepository repository)
     {
         _repository = repository;
         GlobalFontSettings.FontResolver = new BillingsReportFontResolver();
     }
 
-
-    public async Task<byte[]> Execute(DateOnly month)
+    public async Task<byte[]> Execute()
     {
-        var billings = await _repository.FilterByMonth(month);
+        var billings = await _repository.FilterByWeek();
         var totalBillings = billings.Where(billing => billing.Status == Domain.Enums.Status.Paid)
                                     .Sum(billing => billing.Amount);
         if (billings.Count == 0) return [];
 
-        var document = PdfFunctions.CreateDocumentMonth(month);
+        var document = PdfFunctions.CreateDocumentWeek();
         var page = PdfFunctions.CreatePage(document);
         PdfFunctions.CreateHeaderWithProfilePhotoAndName(page);
-        PdfFunctions.CreateTotalBillingsSectionMonth(page, month, totalBillings, CURRENCY_SYMBOL);
+        PdfFunctions.CreateTotalBillingsSectionWeek(page, totalBillings, CURRENCY_SYMBOL);
 
-        foreach(var billing in billings)
+        foreach (var billing in billings)
         {
             var table = PdfFunctions.CreateBillingTable(page);
 
@@ -63,7 +62,7 @@ public class GenerateMonthBillingsReportPdfUseCase : IGenerateMonthBillingsRepor
             PdfFunctions.AddAmountForBilling(row.Cells[3], billing.Amount, CURRENCY_SYMBOL);
 
             //TERCEIRA LINHA - OBSERVAÇÃO
-            if(string.IsNullOrWhiteSpace(billing.Notes) == false)
+            if (string.IsNullOrWhiteSpace(billing.Notes) == false)
             {
                 var notesRow = table.AddRow();
                 notesRow.Cells[0].AddParagraph(billing.Notes);

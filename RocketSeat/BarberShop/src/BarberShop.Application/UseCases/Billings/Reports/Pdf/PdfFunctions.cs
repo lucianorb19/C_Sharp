@@ -1,6 +1,7 @@
 ﻿using BarberShop.Application.UseCases.Billings.Reports.Pdf.Colors;
 using BarberShop.Application.UseCases.Billings.Reports.Pdf.Fonts;
 using BarberShop.Domain.Reports;
+using DocumentFormat.OpenXml.Bibliography;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.DocumentObjectModel.Tables;
 using MigraDoc.Rendering;
@@ -10,10 +11,23 @@ using System.Reflection;
 namespace BarberShop.Application.UseCases.Billings.Reports.Pdf;
 public static class PdfFunctions
 {
-    public static Document CreateDocument(DateOnly month)
+    public static Document CreateDocumentMonth(DateOnly month)
     {
         var document = new Document();
-        document.Info.Title = $"{ResourceReportGenerationMessages.SERVICE_NAME} {month.ToString("Y")}";
+        document.Info.Title = $"{ResourceReportGenerationMessages.MONTH_REPORT} {month.ToString("Y")}";
+        document.Info.Author = "lucianorb19";
+
+        //FONTE PADRÃO
+        var styles = document.Styles["Normal"];
+        styles!.Font.Name = FontHelper.DEFAULT_FONT;
+
+        return document;
+    }
+
+    public static Document CreateDocumentWeek()
+    {
+        var document = new Document();
+        document.Info.Title = $"{ResourceReportGenerationMessages.WEEK_REPORT}";
         document.Info.Author = "lucianorb19";
 
         //FONTE PADRÃO
@@ -55,9 +69,32 @@ public static class PdfFunctions
         row.Cells[1].VerticalAlignment = MigraDoc.DocumentObjectModel.Tables.VerticalAlignment.Center;
     }
 
-    public static void CreateTotalBillingsSection(Section page, DateOnly month, decimal totalBillings, string currencySymbol)
+    public static void CreateTotalBillingsSectionMonth(Section page, DateOnly month, decimal totalBillings, string currencySymbol)
     {
-        var title = string.Format(ResourceReportGenerationMessages.TOTAL_EARNED_IN, month.ToString("Y"));
+        var title = string.Format(ResourceReportGenerationMessages.TOTAL_COLLECTED_IN, month.ToString("Y"));
+        var paragraph = page.AddParagraph();
+        paragraph.Format.SpaceAfter = 40;
+        paragraph.Format.SpaceBefore = 40;
+
+        paragraph.AddFormattedText(title, new Font
+        {
+            Name = FontHelper.ROBOTO_MEDIUM,
+            Size = 15
+        });
+        paragraph.AddLineBreak();
+
+        paragraph.AddFormattedText($"{currencySymbol} {totalBillings.ToString(new CultureInfo("pt-BR"))} ",
+                                   new Font
+                                   {
+                                       Name = FontHelper.BEBAS_NEUE_REGULAR,
+                                       Size = 50
+                                   });
+
+    }
+
+    public static void CreateTotalBillingsSectionWeek(Section page, decimal totalBillings, string currencySymbol)
+    {
+        var title = string.Format(ResourceReportGenerationMessages.WEEK_TOTAL_MESSAGE);
         var paragraph = page.AddParagraph();
         paragraph.Format.SpaceAfter = 40;
         paragraph.Format.SpaceBefore = 40;

@@ -97,6 +97,15 @@ namespace BarberShop.Domain.Reports {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Month report.
+        /// </summary>
+        public static string MONTH_REPORT {
+            get {
+                return ResourceManager.GetString("MONTH_REPORT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Notes.
         /// </summary>
         public static string NOTES {
@@ -142,11 +151,29 @@ namespace BarberShop.Domain.Reports {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Total earned in {0}.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Total collected in {0}.
         /// </summary>
-        public static string TOTAL_EARNED_IN {
+        public static string TOTAL_COLLECTED_IN {
             get {
-                return ResourceManager.GetString("TOTAL_EARNED_IN", resourceCulture);
+                return ResourceManager.GetString("TOTAL_COLLECTED_IN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Week report.
+        /// </summary>
+        public static string WEEK_REPORT {
+            get {
+                return ResourceManager.GetString("WEEK_REPORT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Collected during the week.
+        /// </summary>
+        public static string WEEK_TOTAL_MESSAGE {
+            get {
+                return ResourceManager.GetString("WEEK_TOTAL_MESSAGE", resourceCulture);
             }
         }
         

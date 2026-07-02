@@ -32,6 +32,7 @@ public static class DependencyInjectionExtension
         services.AddScoped<IGenerateMonthBillingsReportExcelUseCase, GenerateMonthBillingsReportExcelUseCase>();
         services.AddScoped<IGenerateWeekBillingsReportExcelUseCase, GenerateWeekBillingsReportExcelUseCase>();
         services.AddScoped<IGenerateMonthBillingsReportPdfUseCase, GenerateMonthBillingsReportPdfUseCase>();
+        services.AddScoped<IGenerateWeekBillingsReportPdfUseCase, GenerateWeekBillingsReportPdfUseCase>();
     }
 
 
