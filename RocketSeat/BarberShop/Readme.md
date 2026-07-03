@@ -13,7 +13,11 @@ Avaliando os pacotes _**NuGet**_ utilizados, o _**AutoMapper**_ v.13.0.1 foi o r
 * **Testes de Unidade**: Testes abrangentes com FluentAssertion que garantem funcionalidade e segurança;
 * **RESTful API com documentação Swagger**: Interface documentada que facilita a integração e testes pelos desenvolvedores.
 
-### Getting Started
+### CONSTUÍDO COM
+
+![.NET Badge](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge)
+
+### GETTING STARTED
 Para obter uma cópia local funcional, siga estes passos:
 * Visual Studio v.2022+ instalado;
 * Windows 10+ ou Linux/MacOS com [.NET 8.0 SDK] [link-download-.net8-SDK]instalado;
