@@ -13,7 +13,7 @@ Avaliando os pacotes _**NuGet**_ utilizados, o _**AutoMapper**_ v.13.0.1 foi o r
 * **Testes de Unidade**: Testes abrangentes com FluentAssertion que garantem funcionalidade e segurança;
 * **RESTful API com documentação Swagger**: Interface documentada que facilita a integração e testes pelos desenvolvedores.
 
-### CONSTUÍDO COM
+### BUILT WITH
 
 ![badge-.NET-Badge]
 ![badge-GitHub]
@@ -27,7 +27,7 @@ Para obter uma cópia local funcional, siga estes passos:
 * Windows 10+ ou Linux/MacOS com [.NET 8.0 SDK] [link-download-.net8-SDK]instalado;
 *  [MySql Server v.8.0.46+] [link-download-mySqlServer] instalado;
 
-### Instalação
+### INSTALAÇÃO
 1. Clone este repositório (ou faça o download do projeto): 
 ```
 LINK REPOSITÓRIO AQUI
@@ -127,4 +127,4 @@ LINK REPOSITÓRIO AQUI
 [badge-GitHub]: https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=for-the-badge
 [badge-visual-studio]: https://img.shields.io/badge/Visual%20Studio-5C2D91?logo=visualstudio&logoColor=fff&style=for-the-badge
 [badge-mySql]: https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff&style=for-the-badge
-[badge-swagger]: https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=000&style=flat
+[badge-swagger]: https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=000&style=for-the-badge
