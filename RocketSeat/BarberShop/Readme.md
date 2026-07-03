@@ -1,10 +1,12 @@
 ## SOBRE O PROJETO
 ---
-Este é o projeto de uma _**API**_ desenvolvida utilizando o **NET 8.0**  e _**Domain Driven Design (DDD)**_ para oferecer o básico da gestão de faturamento para uma barbearia. O objetivo principal é permitir que os gestores sejam capazes de cadastrar, consultar, editar e deletar faturamentos, além de poderem gerar relatórios mensais e semanais, em formato pdf e planilha.
+Este é o projeto de uma _**API**_ desenvolvida utilizando o **NET 8.0**  e _**Domain Driven Design (DDD)**_ para oferecer o básico da gestão de faturamento para uma barbearia. O objetivo principal é permitir que os gestores sejam capazes de cadastrar, consultar, editar e deletar faturamentos, além de poder gerar relatórios mensais e semanais, em formato pdf e planilha.
 
-A arquitetura da API se baseia em _**REST**_, com métodos _**HTTP**_ padrões para comunicação.Além disso, é complementada pela documentação _**Swagger**_, que dispõe uma interface gráfica intuitiva para que seja possível explorar e testar os endpoints da aplicação de maneira fácil.
+A arquitetura da API se baseia em _**REST**_, com métodos _**HTTP**_ padrões para comunicação. Além disso, é complementada pela documentação _**Swagger**_, que dispõe uma interface gráfica intuitiva para que seja possível explorar e testar os endpoints da aplicação de maneira fácil.
 
 Avaliando os pacotes _**NuGet**_ utilizados, o _**AutoMapper**_ v.13.0.1 foi o responsável pelo mapeamento entre os objetos do domínio e as requisições/respostas da API. O _**FluentAssertion**_ v.6.12.0 foi utilizado nos testes unitários, visando uma maior legibilidade e construção de testes claros e objetivos. Nas validações das regras de negócio para as classes de requisições, o _**FluentValidation**_ v.11.9.0 foi utilizado para validar de maneira simples e intuitiva. Por fim, o _**EntityFramework**_ atua como o _**ORM**_ (Object-Relational Mapper) que simplifica as interações entre os objetos .NET e as tabelas do banco de dados _**MySql**_, possibilitando manipular diretamente os dados, sem a necessidade de consulta puramente SQL.
+
+![imagem-sistema]
 
 ### FEATURES
 * **Domain-Driven Design (DDD)**: Estrutura modular que facilita o entendimento e a manutenção do domínio da aplicação.
@@ -13,9 +15,9 @@ Avaliando os pacotes _**NuGet**_ utilizados, o _**AutoMapper**_ v.13.0.1 foi o r
 
 ### Getting Started
 Para obter uma cópia local funcional, siga estes passos:
-* Visual Studio v.2022+
-* Windows 10+ ou Linux/MacOS com [.NET 8.0 SDK](https://dotnet.microsoft.com/pt-br/download/dotnet/8.0) instalado
-*  [MySql Server v.8.0.46+](https://dev.mysql.com/downloads/mysql/8.0.html) instalado
+* Visual Studio v.2022+ instalado;
+* Windows 10+ ou Linux/MacOS com [.NET 8.0 SDK] [link-download-.net8-SDK]instalado;
+*  [MySql Server v.8.0.46+] [link-download-mySqlServer] instalado;
 
 ### Instalação
 1. Clone este repositório (ou faça o download do projeto): 
@@ -30,7 +32,7 @@ LINK REPOSITÓRIO AQUI
   }
 }
 ```
-   * Atente-se para a necessidade de **criar seu banco de dados antes de utilizar este repositório**. Ele funciona baseado na ideia de que o banco de dados já exite previamente. Caso seja necessário, abaixo o código sql que gera a base de dados e a estrutura da tabela, já com alguns registros:
+   * Atente-se para a necessidade de **criar seu banco de dados antes de utilizar este repositório**. Ele funciona baseado na ideia de que o banco de dados já exite previamente. Caso seja necessário, abaixo o código sql que gera uma base de dados _barbershopdb_ e a estrutura da tabela _billings_, já com alguns registros:
    ```
    -- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
     --
@@ -108,3 +110,8 @@ LINK REPOSITÓRIO AQUI
    ```
 
 3. Execute a API.
+
+<!--ALIASES-->
+[link-download-.net8-SDK]: https://dotnet.microsoft.com/pt-br/download/dotnet/8.0
+[link-download-mySqlServer]:https://dev.mysql.com/downloads/mysql/8.0.html
+[imagem-sistema]: images/systemFeatures.png
