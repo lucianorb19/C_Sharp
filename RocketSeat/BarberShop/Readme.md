@@ -18,7 +18,8 @@ Avaliando os pacotes _**NuGet**_ utilizados, o _**AutoMapper**_ v.13.0.1 foi o r
 ![badge-.NET-Badge]
 ![badge-GitHub]
 ![badge-visual-studio]
-
+![badge-mySql]
+![badge-swagger]
 
 ### GETTING STARTED
 Para obter uma cópia local funcional, siga estes passos:
@@ -125,3 +126,5 @@ LINK REPOSITÓRIO AQUI
 [badge-.NET-Badge]: https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge
 [badge-GitHub]: https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=for-the-badge
 [badge-visual-studio]: https://img.shields.io/badge/Visual%20Studio-5C2D91?logo=visualstudio&logoColor=fff&style=for-the-badge
+[badge-mySql]: https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff&style=for-the-badge
+[badge-swagger]: https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=000&style=flat
