@@ -70,6 +70,33 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a This email is currently being used..
+        /// </summary>
+        public static string EMAIL_ALREADY_EXISTS {
+            get {
+                return ResourceManager.GetString("EMAIL_ALREADY_EXISTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Email must not be empty..
+        /// </summary>
+        public static string EMAIL_EMPTY {
+            get {
+                return ResourceManager.GetString("EMAIL_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Invalid email..
+        /// </summary>
+        public static string EMAIL_INVALID {
+            get {
+                return ResourceManager.GetString("EMAIL_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Expense date must not be for the future..
         /// </summary>
         public static string EXPENSE_DATE_NOT_FUTURE {
@@ -93,6 +120,24 @@ namespace CashFlow.Exception {
         public static string EXPENSE_TYPE_NOT_VALID {
             get {
                 return ResourceManager.GetString("EXPENSE_TYPE_NOT_VALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a The password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character   !  #  $  %  &amp;  *  (  )  .  ,  {  }  [  ]  =  +  -.
+        /// </summary>
+        public static string INVALID_PASSWORD {
+            get {
+                return ResourceManager.GetString("INVALID_PASSWORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Name must not be empty..
+        /// </summary>
+        public static string NAME_EMPTY {
+            get {
+                return ResourceManager.GetString("NAME_EMPTY", resourceCulture);
             }
         }
         

@@ -1,5 +1,6 @@
 ﻿using CashFlow.Domain.Repositories;
 using CashFlow.Domain.Repositories.Expenses;
+using CashFlow.Domain.Security.Cryptography;
 using CashFlow.Infrastructure.DataAccess;
 using CashFlow.Infrastructure.DataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ public static class DependencyInjectionExtension
     {
         AddRepositories(services);
         AddDbContext(services, configuration);
+        services.AddScoped<IPasswordEncripter, Infrastructure.Security.BCrypt>();
     }
 
     private static void AddRepositories(IServiceCollection services)

@@ -120,6 +120,15 @@
   <data name="AMOUNT_GREATER_THAN_ZERO" xml:space="preserve">
     <value>Amount must be greater than zero.</value>
   </data>
+  <data name="EMAIL_ALREADY_EXISTS" xml:space="preserve">
+    <value>This email is currently being used.</value>
+  </data>
+  <data name="EMAIL_EMPTY" xml:space="preserve">
+    <value>Email must not be empty.</value>
+  </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>Invalid email.</value>
+  </data>
   <data name="EXPENSE_DATE_NOT_FUTURE" xml:space="preserve">
     <value>Expense date must not be for the future.</value>
   </data>
@@ -128,6 +137,12 @@
   </data>
   <data name="EXPENSE_TYPE_NOT_VALID" xml:space="preserve">
     <value>Invalid payment type.</value>
+  </data>
+  <data name="INVALID_PASSWORD" xml:space="preserve">
+    <value>The password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character   !  #  $  %  &amp;  *  (  )  .  ,  {  }  [  ]  =  +  -</value>
+  </data>
+  <data name="NAME_EMPTY" xml:space="preserve">
+    <value>Name must not be empty.</value>
   </data>
   <data name="TITLE_REQUIRED" xml:space="preserve">
     <value>Title must not be empty.</value>

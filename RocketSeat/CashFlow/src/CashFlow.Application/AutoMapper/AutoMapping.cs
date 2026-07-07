@@ -15,6 +15,10 @@ public class AutoMapping : Profile
     private void RequestToEntity()
     {
         CreateMap<RequestExpenseJson, Expense>();
+        
+        //MAPEIA TODOS OS CAMPOS, EXCETO PASSWORD
+        CreateMap<RequestRegisterUserJson, User>()
+            .ForMember(destino => destino.Password, config => config.Ignore());
     }
 
     private void EntityToResponse()

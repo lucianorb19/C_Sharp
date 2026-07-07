@@ -2,6 +2,7 @@ using CashFlow.API.Filters;
 using CashFlow.API.Middleware;
 using CashFlow.Application;
 using CashFlow.Infrastructure;
+using CashFlow.Infrastructure.Migrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,4 +41,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//EXECUTA AS MIGRATIONS SEMPRE QUE A APLICAÇÃO FOR EXECUTADA
+//RETIRA A NECESSIDADE DE EXECUTAR NO CMD 'dotnet ef database update...'
+await MigrateDatabase();
+
 app.Run();
+
+async Task MigrateDatabase()
+{
+    await using var scope = app.Services.CreateAsyncScope();
+    await DatabaseMigration.MigrateDatabase(scope.ServiceProvider);
+}
