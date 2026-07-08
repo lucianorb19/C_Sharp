@@ -2,8 +2,10 @@
 using CashFlow.Domain.Repositories.Expenses;
 using CashFlow.Domain.Repositories.User;
 using CashFlow.Domain.Security.Cryptography;
+using CashFlow.Domain.Security.Tokens;
 using CashFlow.Infrastructure.DataAccess;
 using CashFlow.Infrastructure.DataAccess.Repositories;
+using CashFlow.Infrastructure.Security.Tokens;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,7 +22,18 @@ public static class DependencyInjectionExtension
     {
         AddRepositories(services);
         AddDbContext(services, configuration);
-        services.AddScoped<IPasswordEncripter, Infrastructure.Security.BCrypt>();
+        services.AddScoped<IPasswordEncripter, Security.Cryptography.BCrypt>();
+        AddToken(services, configuration);
+    }
+
+    private static void AddToken(IServiceCollection services, IConfiguration configuration)
+    {
+        var expirationTimeMinutes = configuration.GetValue<uint>("Settings:Jwt:ExpiresMinutes");
+        var siginKey = configuration.GetValue<string>("Settings:Jwt:SigninKey");
+
+        //CONFIGURANDO A INJEÇÃO DE DEPENDÊNCIA PARA QUE ELA SAIBA QUE, EM PROGRAM, AO USAR UM IAccessTokenGenerator
+        //SEJA INSTANCIADO UM JwtTokenGenerator CUJO CONSTRUTOR TENHA OS VALORES REPASSADOR ABAIXO
+        services.AddScoped<IAccessTokenGenerator>(config => new JwtTokenGenerator(expirationTimeMinutes, siginKey!));
     }
 
     private static void AddRepositories(IServiceCollection services)
