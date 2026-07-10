@@ -3,6 +3,9 @@ using CashFlow.API.Middleware;
 using CashFlow.Application;
 using CashFlow.Infrastructure;
 using CashFlow.Infrastructure.Migrations;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +24,22 @@ builder.Services.AddInfrastructure(builder.Configuration);
 //DO PROJETO APPLICATION
 builder.Services.AddApplication();
 
-//builder.Services.
+//USO DE AUTORIZAÇÃO E AUTENTICAÇÃO COM JWT
+var signInKey = builder.Configuration.GetValue<string>("Settings:Jwt:SigninKey");
+builder.Services.AddAuthentication(config =>
+{
+    config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(config =>
+{
+    config.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ClockSkew = new TimeSpan(0),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(signInKey!))
+    };
+});
 
 var app = builder.Build();
 
@@ -37,6 +55,7 @@ app.UseMiddleware<CultureMiddleware>();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
