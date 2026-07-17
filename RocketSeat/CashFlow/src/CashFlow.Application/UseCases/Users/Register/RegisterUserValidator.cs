@@ -11,8 +11,16 @@ public class RegisterUserValidator : AbstractValidator<RequestRegisterUserJson>
         RuleFor(user => user.Email).NotEmpty()
                                    .WithMessage(ResourceErrorMessages.EMAIL_EMPTY)
                                    .EmailAddress()
+                                   .When(user => string.IsNullOrWhiteSpace(user.Email)==false, ApplyConditionTo.CurrentValidator)
                                    .WithMessage(ResourceErrorMessages.EMAIL_INVALID);
 
         RuleFor(user => user.Password).SetValidator(new PasswordValidator<RequestRegisterUserJson>());
     }
+
+
+    /*
+     CONDICIONALIDADE DO When APLICADA SOMENTE A .EmailAddress, POR CAUSA DO ApplyConditionTo
+     .EmailAddress()
+     .When(user => string.IsNullOrWhiteSpace(user.Email)==false, ApplyConditionTo.CurrentValidator)
+     */
 }
