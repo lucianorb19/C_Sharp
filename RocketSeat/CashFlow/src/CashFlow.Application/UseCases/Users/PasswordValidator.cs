@@ -36,6 +36,7 @@ public class PasswordValidator<T> : PropertyValidator<T, string>
             return false;
         }
 
+        //SE SENHA SEM MAIÚSCULAS
         if(Regex.IsMatch(password, @"[A-Z]+") == false)
         {
             context.MessageFormatter
@@ -43,6 +44,7 @@ public class PasswordValidator<T> : PropertyValidator<T, string>
             return false;
         }
 
+        //SE SENHA SEM MINÚSCULAS
         if (Regex.IsMatch(password, @"[a-z]+") == false)
         {
             context.MessageFormatter
@@ -50,6 +52,7 @@ public class PasswordValidator<T> : PropertyValidator<T, string>
             return false;
         }
 
+        //SE SENHA SEM NÚMEROS
         if (Regex.IsMatch(password, @"[0-9]+") == false)
         {
             context.MessageFormatter
@@ -57,6 +60,7 @@ public class PasswordValidator<T> : PropertyValidator<T, string>
             return false;
         }
 
+        //SE SENHA SEM CARACTERES ESPECIAIS
         if (Regex.IsMatch(password, @"[\!\#\$\%\&\*\(\)\.\,\{\}\[\]\=\+\-]+") == false)
         {
             context.MessageFormatter
