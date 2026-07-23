@@ -86,7 +86,7 @@ public class RegisterUserUseCaseTest
         var mapper = MapperBuilder.Build();//IMPLEMENTAÇÃO REAL
         var unitOfWork = UnityOfWorkBuilder.Build(); //MOCK SIMPLES PQ RETORNO É VOID/TASK
         var writeRespository = UserWriteOnlyRepositoryBuilder.Build();//MOCK SIMPLES....
-        var passwordEncripter = PasswordEncripterBuilder.Build();
+        var passwordEncripter = new PasswordEncrypterBuilder().Build();
         var tokenGenerator = JwtTokenGeneratorBuilder.Build();
         var readRepository = new UserReadOnlyRepositoryBuilder();
 

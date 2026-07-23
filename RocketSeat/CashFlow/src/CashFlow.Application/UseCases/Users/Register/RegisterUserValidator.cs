@@ -19,7 +19,7 @@ public class RegisterUserValidator : AbstractValidator<RequestRegisterUserJson>
 
 
     /*
-     CONDICIONALIDADE DO When APLICADA SOMENTE A .EmailAddress, POR CAUSA DO ApplyConditionTo
+     CONDICIONALIDADE DO When APLICADA SOMENTE A .EmailAddress, POR CAUSA DO ApplyConditionTo...
      .EmailAddress()
      .When(user => string.IsNullOrWhiteSpace(user.Email)==false, ApplyConditionTo.CurrentValidator)
      */

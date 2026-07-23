@@ -1,4 +1,5 @@
-﻿using CashFlow.Domain.Repositories.User;
+﻿using CashFlow.Domain.Entities;
+using CashFlow.Domain.Repositories.User;
 using Moq;
 
 namespace CommonTestUtilities.Repositories;
@@ -23,5 +24,18 @@ public class UserReadOnlyRepositoryBuilder
     {
         _repository.Setup(userReadOnly => userReadOnly.ExistActiveUserWithEmail(email))
                                                       .ReturnsAsync(true);
+    }
+
+    //FUNÇÃO QUE CONFIGURA O MOCK PARA RETORNAR O USUÁRIO PASSADO COMO PARAMETRO SE
+    //A FUNÇÃO IReadOnlyRepository.GetUserByEmail RECEBER O EMAIL DESTE MESMO USUÁRIO
+    //O QUE É ÚTIL PARA O TESTE DO CASO DE SUCESSO
+    //*USA TIPO DE RETORNO UserReadOnlyRepositoryBuilder E return this PARA QUE, NA SUA
+    //CHAMADA EM DoLoginUseCaseTest.CreateUseCase, POSSAMOS ENCADEAR TODA CHAMADA
+    public UserReadOnlyRepositoryBuilder GetUserByEmail(User user)
+    {
+        _repository.Setup(userRepository => userRepository.GetUserByEmail(user.Email))
+                   .ReturnsAsync(user);
+
+        return this;
     }
 }
