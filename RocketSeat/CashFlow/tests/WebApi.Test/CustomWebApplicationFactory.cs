@@ -1,0 +1,60 @@
+﻿using CashFlow.Domain.Security.Cryptography;
+using CashFlow.Infrastructure.DataAccess;
+using CommonTestUtilities.Entities;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace WebApi.Test;
+public class CustomWebApplicationFactory : WebApplicationFactory<Program>
+{
+    private CashFlow.Domain.Entities.User _user;
+    private string _passwordReal = string.Empty;
+
+    public string GetEmail() => _user.Email;
+    public string GetName() => _user.Name;
+    public string GetPassword() => _passwordReal;
+
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
+    {
+        //DEFINE QUE O TESTE DE INTEGRAÇÃO IRÁ USAR O ARQUIVO
+        //appsettings.Test.json - AMBIENTE DE TESTE
+        builder.UseEnvironment("Test")
+            .ConfigureServices(services =>
+            {
+                //AMBIENTE DE TESTE CONFIGURADO PARA USAR BASE DE DADOS EM MEMÓRIA
+                //PARA NÃO PERSISTIR RESULTADOS DAS OPERAÇÕES NA BASE DE DADOS CashFlowDb2
+                var provider = services.AddEntityFrameworkInMemoryDatabase().BuildServiceProvider();
+                services.AddDbContext<CashFlowDbContext>(config =>
+                {
+                    config.UseInMemoryDatabase("InMemoryDbForTesting");
+                    config.UseInternalServiceProvider(provider);
+                });
+
+                //CONFIGURAÇÃO PARA ACESSO AO CashFlowDbContext e IPasswordEncrypter
+                //UTILIZANDO UMA SIMULAÇÃO DE ESCOPO, COMO SE FOSSE O ESCOPO DA REQUISIÇÃO HTTP
+                //NUM CONTEXTO REAL
+                var scope = services.BuildServiceProvider().CreateScope();
+                var dbContext = scope.ServiceProvider.GetRequiredService<CashFlowDbContext>();
+                var passwordEncrypter = scope.ServiceProvider
+                                             .GetRequiredService<IPasswordEncripter>();
+                StartDatabase(dbContext, passwordEncrypter);
+            });
+    }
+
+
+    //FUNÇÃO QUE INICIA A BASE DE DADOS EM MEMÓRIA COM UM REGISTRO DE USUÁRIO SALVO
+    //NA VARIÁVEL PRIVADA _user
+    //PARA OS TESTES DE CASO DE SUCESSO
+    private void StartDatabase(CashFlowDbContext dbContext, IPasswordEncripter passwordEncrypter)
+    {
+        _user = UserBuilder.Build();
+        _passwordReal = _user.Password; //SENHA SEM CRIPTOGRAFIA SALVA ANTES DE REGISTRAR NO BANCO
+                                        //VAI SER NECESSÁRIO PARA TESTE DE SUCESSO
+        _user.Password = passwordEncrypter.Encrypt(_user.Password);//SENHA CRIPTOGRAFADA REGISTRADA
+        dbContext.Add(_user);
+        dbContext.SaveChanges();
+    }
+
+}

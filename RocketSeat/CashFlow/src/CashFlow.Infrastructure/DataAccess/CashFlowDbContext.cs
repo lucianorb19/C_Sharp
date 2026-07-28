@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace CashFlow.Infrastructure.DataAccess;
-internal class CashFlowDbContext : DbContext
+public class CashFlowDbContext : DbContext
 {
 
     //DbContextOptions options É ATRIBUITO PARA O CONSTRUTOR DA CLASSE BASE DESTA
