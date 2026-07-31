@@ -1,6 +1,8 @@
 using CashFlow.API.Filters;
 using CashFlow.API.Middleware;
+using CashFlow.API.Token;
 using CashFlow.Application;
+using CashFlow.Domain.Security.Tokens;
 using CashFlow.Infrastructure;
 using CashFlow.Infrastructure.Extensions;
 using CashFlow.Infrastructure.Migrations;
@@ -58,6 +60,11 @@ builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)))
 builder.Services.AddInfrastructure(builder.Configuration);
 //DO PROJETO APPLICATION
 builder.Services.AddApplication();
+//DA PRÓPRIA API
+builder.Services.AddScoped<ITokenProvider, HttpContextTokenValue>();
+
+//PERMITE ACESSAR OS HEADERS HTTP EM CashFlow.API.Token.HttpContextTokenValue
+builder.Services.AddHttpContextAccessor();
 
 //USO DE AUTORIZAÇÃO E AUTENTICAÇÃO COM JWT
 var signInKey = builder.Configuration.GetValue<string>("Settings:Jwt:SigninKey");

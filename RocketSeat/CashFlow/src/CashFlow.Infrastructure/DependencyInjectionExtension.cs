@@ -3,10 +3,12 @@ using CashFlow.Domain.Repositories.Expenses;
 using CashFlow.Domain.Repositories.User;
 using CashFlow.Domain.Security.Cryptography;
 using CashFlow.Domain.Security.Tokens;
+using CashFlow.Domain.Services.LoggedUser;
 using CashFlow.Infrastructure.DataAccess;
 using CashFlow.Infrastructure.DataAccess.Repositories;
 using CashFlow.Infrastructure.Extensions;
 using CashFlow.Infrastructure.Security.Tokens;
+using CashFlow.Infrastructure.Services.LoggedUser;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,13 +17,14 @@ namespace CashFlow.Infrastructure;
 public static class DependencyInjectionExtension
 {
     //O this AQUI USADO,FAZ COM QUE NÃO SEJA NECESSÁRIO EXPLICITAR
-    //O PARÂMETRO services NA CHAMADA DO MÉTODO
+    //O PARÂMETRO services NA CHAMADA DOS MÉTODOS
     //JÁ QUE USA O VALOR DELE VINDO DA CLASSE ONDE FOR CHAMADA
     //NESSE CASO É USADO EM PROGRAM
     public static void AddInfrastructure(this IServiceCollection services, 
                                               IConfiguration configuration)
     {
         services.AddScoped<IPasswordEncripter, Security.Cryptography.BCrypt>();
+        services.AddScoped<ILoggedUser, LoggedUser>();
 
         AddToken(services, configuration);
         AddRepositories(services);
