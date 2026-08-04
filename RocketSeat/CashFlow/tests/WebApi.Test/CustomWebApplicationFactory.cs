@@ -1,4 +1,5 @@
 ﻿using CashFlow.Domain.Security.Cryptography;
+using CashFlow.Domain.Security.Tokens;
 using CashFlow.Infrastructure.DataAccess;
 using CommonTestUtilities.Entities;
 using Microsoft.AspNetCore.Hosting;
@@ -11,10 +12,12 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
     private CashFlow.Domain.Entities.User _user;
     private string _passwordReal = string.Empty;
+    private string _token = string.Empty;
 
     public string GetEmail() => _user.Email;
     public string GetName() => _user.Name;
     public string GetPassword() => _passwordReal;
+    public string GetToken() => _token;
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
@@ -32,21 +35,25 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
                     config.UseInternalServiceProvider(provider);
                 });
 
-                //CONFIGURAÇÃO PARA ACESSO AO CashFlowDbContext e IPasswordEncrypter
+                //CONFIGURAÇÃO PARA ACESSO AO CashFlowDbContext,IPasswordEncrypter e IAccessTokenGenerator
                 //UTILIZANDO UMA SIMULAÇÃO DE ESCOPO, COMO SE FOSSE O ESCOPO DA REQUISIÇÃO HTTP
                 //NUM CONTEXTO REAL
                 var scope = services.BuildServiceProvider().CreateScope();
                 var dbContext = scope.ServiceProvider.GetRequiredService<CashFlowDbContext>();
                 var passwordEncrypter = scope.ServiceProvider
                                              .GetRequiredService<IPasswordEncripter>();
+                var tokenGenerator = scope.ServiceProvider.GetRequiredService<IAccessTokenGenerator>();
+
                 StartDatabase(dbContext, passwordEncrypter);
+
+                _token = tokenGenerator.Generate(_user);
             });
     }
 
 
     //FUNÇÃO QUE INICIA A BASE DE DADOS EM MEMÓRIA COM UM REGISTRO DE USUÁRIO SALVO
     //NA VARIÁVEL PRIVADA _user
-    //PARA OS TESTES DE CASO DE SUCESSO
+    //PARA OS TESTES DE INTEGRAÇÃO DE SUCESSO
     private void StartDatabase(CashFlowDbContext dbContext, IPasswordEncripter passwordEncrypter)
     {
         _user = UserBuilder.Build();
