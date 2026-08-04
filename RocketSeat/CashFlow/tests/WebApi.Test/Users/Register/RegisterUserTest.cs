@@ -1,39 +1,29 @@
 ﻿using CashFlow.Exception;
 using CommonTestUtilities.Requests;
 using FluentAssertions;
-using System.Formats.Asn1;
 using System.Globalization;
 using System.Net;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
 using System.Text.Json;
 using WebApi.Test.InlineData;
 
+namespace WebApi.Test.Users.Register;
 
 //TESTE DE INTEGRAÇÃO - REGISTRO DE USUÁRIO
-
-//: IClassFixture<CustomWebApplicationFactory> DEFINE ESSA CLASSE COMO UMA CLASSE DE TESTE
-//DE INTEGRAÇÃO. ELA USA UMA CLASSE CUSTOMIZADA CustomWebApplicationFactory
-//PARA CUSTOMIZAR SEU SERVIDOR HTTP E TAMBÉM O SERVIDOR DO BANCO DE DADOS
-//(JÁ QUE O TESTE DE INTEGRAÇÃO NÃO PODE USAR O BANCO DE DADOS PRÓPRIO DA APLICAÇÃO)
-namespace WebApi.Test.Users.Register;
-public class RegisterUserTest : IClassFixture<CustomWebApplicationFactory>
+//HERDA DE CashFlowClassFixture - CLASSE QUE POSSUI REFATORAÇÕES DO CÓDIGO
+public class RegisterUserTest : CashFlowClassFixture
 {
     private const string METHOD = "api/User";
-    private readonly HttpClient _httpClient;
 
-    public RegisterUserTest(CustomWebApplicationFactory webApplicationFactory)
-    {
-        _httpClient = webApplicationFactory.CreateClient();
-    }
+    //CONSTRUTOR CHAMA O CONSTRUTOR DA CLASSE BASE
+    public RegisterUserTest(CustomWebApplicationFactory webApplicationFactory) : base(webApplicationFactory){}
 
     [Fact]
     public async Task Success()
     {
         var request = RequestRegisterUserJsonBuilder.Build();
-        
+       
 
-        var result = await _httpClient.PostAsJsonAsync(METHOD,request);
+        var result = await DoPost(requestUri: METHOD, request: request);
         
         
         //API DEVE PRODUZIR O CÓDIGO CREATED AO REGISTRAR UM USUÁRIO COM SUCESSO
@@ -50,14 +40,14 @@ public class RegisterUserTest : IClassFixture<CustomWebApplicationFactory>
 
     [Theory]
     [ClassData(typeof(CultureInlineDataTest))]//USA OS RETURNS DA CLASSE CultureInlineDataTest COMO PARÂMETROS DE TESTE
-    public async Task Error_EmptyNameWithDifferentLanguages(string cultureInfo)
+    public async Task Error_EmptyNameWithDifferentLanguages(string culture)
     {
         var request = RequestRegisterUserJsonBuilder.Build();
         request.Name = string.Empty;
-        //ACEITAR RESPOSTA EM pt-BR DA API
-        _httpClient.DefaultRequestHeaders.AcceptLanguage.Add(new StringWithQualityHeaderValue(cultureInfo));
+      
 
-        var result = await _httpClient.PostAsJsonAsync(METHOD, request);
+        var result = await DoPost(requestUri:METHOD, request:request, culture:culture);
+
 
         result.StatusCode.Should().Be(HttpStatusCode.BadRequest);
         var body = await result.Content.ReadAsStreamAsync();
@@ -65,9 +55,8 @@ public class RegisterUserTest : IClassFixture<CustomWebApplicationFactory>
         var errorsList = responseJson.RootElement.GetProperty("errorMessages").EnumerateArray();
         errorsList.Should().HaveCount(1);
         var error = errorsList.FirstOrDefault().GetString()!;
-        var expectedMessage = ResourceErrorMessages.ResourceManager.GetString("NAME_EMPTY", new CultureInfo(cultureInfo))!;
+        var expectedMessage = ResourceErrorMessages.ResourceManager.GetString("NAME_EMPTY", new CultureInfo(culture))!;
         error.Should().Be(expectedMessage);
-      
     }
 
 

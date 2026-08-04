@@ -1,26 +1,22 @@
 ﻿using CashFlow.Communication.Requests;
+using CashFlow.Exception;
+using CommonTestUtilities.Requests;
+using FluentAssertions;
+using System.Globalization;
 using System.Net;
 using System.Text.Json;
-using FluentAssertions;
-using System.Net.Http.Json;
-using System.Globalization;
 using WebApi.Test.InlineData;
-using CommonTestUtilities.Requests;
-using System.Net.Http.Headers;
-using CashFlow.Exception;
 
 namespace WebApi.Test.Login.DoLogin;
-public class DoLoginTest : IClassFixture<CustomWebApplicationFactory>
+public class DoLoginTest : CashFlowClassFixture
 {
     private const string METHOD = "api/Login";
-    private readonly HttpClient _httpClient;
     private readonly string _email;
     private readonly string _name;
     private readonly string _passwordReal;
 
-    public DoLoginTest(CustomWebApplicationFactory webApplicationFactory)
+    public DoLoginTest(CustomWebApplicationFactory webApplicationFactory) : base(webApplicationFactory)
     {
-        _httpClient = webApplicationFactory.CreateClient();
         _email = webApplicationFactory.GetEmail();
         _name = webApplicationFactory.GetName();
         _passwordReal = webApplicationFactory.GetPassword();
@@ -35,7 +31,9 @@ public class DoLoginTest : IClassFixture<CustomWebApplicationFactory>
             Password = _passwordReal
         };
 
-        var response = await _httpClient.PostAsJsonAsync(METHOD, request);
+
+        var response = await DoPost(requestUri:METHOD, request:request);
+
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         var responseBody = await response.Content.ReadAsStreamAsync();
@@ -47,14 +45,14 @@ public class DoLoginTest : IClassFixture<CustomWebApplicationFactory>
 
     [Theory]
     [ClassData(typeof(CultureInlineDataTest))]
-    public async Task Error_LoginInvalid(string cultureInfo)
+    public async Task Error_LoginInvalid(string culture)
     {
         var request = RequestLoginJsonBuilder.Build();//REQUEST DE UM USUÁRIO QUALQUER QUE
                                                       //NÃO VAI SER O JÁ CADASTRADO NA BD
-        _httpClient.DefaultRequestHeaders.AcceptLanguage
-                                         .Add(new StringWithQualityHeaderValue(cultureInfo));
         
-        var response = await _httpClient.PostAsJsonAsync(METHOD, request);
+       
+        var response = await DoPost(requestUri:METHOD,request:request, culture:culture);
+
 
         response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
         var responseBody = await response.Content.ReadAsStreamAsync();
@@ -63,12 +61,9 @@ public class DoLoginTest : IClassFixture<CustomWebApplicationFactory>
         var error = errors.FirstOrDefault().GetString();
         var expectedMessage = ResourceErrorMessages.ResourceManager
                                                    .GetString("EMAIL_OR_PASSWORD_INVALID", 
-                                                              new CultureInfo(cultureInfo));
+                                                              new CultureInfo(culture));
         errors.Should().HaveCount(1);
         error.Should().Be(expectedMessage);
-
-
-    
     }
 
 
