@@ -14,11 +14,13 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     private CashFlow.Domain.Entities.User _user;
     private string _passwordReal = string.Empty;
     private string _token = string.Empty;
+    private Expense _expense;
 
     public string GetEmail() => _user.Email;
     public string GetName() => _user.Name;
     public string GetPassword() => _passwordReal;
     public string GetToken() => _token;
+    public long GetExpenseId() => _expense.Id;
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
@@ -76,8 +78,8 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     //FUNÇÃO QUE ADICIONA UMA DESPESA, PARA GARANTIR O SUCESSO NO TESTE DE INTEGRAÇÃO - GetAllExpenses
     private void AddExpenses(CashFlowDbContext dbContext, User user)
     {
-        var expense = ExpenseBuilder.Build(user);
-        dbContext.Expenses.Add(expense);
+        _expense = ExpenseBuilder.Build(user);
+        dbContext.Expenses.Add(_expense);
     }
 
 }
