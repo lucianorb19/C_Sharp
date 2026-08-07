@@ -7,7 +7,7 @@ namespace WebApi.Test;
 //CLASSE QUE TRAZ REFATORAÇÕES
 //CRIA O CLIENTE HTTP
 //DEFINE A LINGUAGEM DA REQUISIÇÃO
-//REALIZA O MÉTODO POST
+//REALIZA O MÉTODO POST, GET
 
 //USA UMA CLASSE CUSTOMIZADA CustomWebApplicationFactory
 //PARA CUSTOMIZAR SEU SERVIDOR HTTP E TAMBÉM O SERVIDOR DO BANCO DE DADOS
@@ -24,15 +24,27 @@ public class CashFlowClassFixture : IClassFixture<CustomWebApplicationFactory>
     //object request - TIPO DE VARIÁVEL PODE ASSUMIR QUALQUER VALOR
     //NESSE CASO VAI ASSUMIR DIFERENTES VALORES, A DEPENDER DO TESTE EM QUE ESTIVER SENDO
     //USADA
-    protected async Task<HttpResponseMessage> DoPost(string requestUri, 
-                                object request,
-                                string token = "",
-                                string culture = "en")//CULTURA PADRÃO - INGLES
+    protected async Task<HttpResponseMessage> DoPost(
+        string requestUri, 
+        object request,
+        string token = "",
+        string culture = "en")//CULTURA PADRÃO - INGLES
     {
         AuthorizeRequest(token);
         ChangeRequestCulture(culture);
         var result = await _httpClient.PostAsJsonAsync(requestUri, request);
         return result;
+    }
+
+    protected async Task<HttpResponseMessage> DoGet(
+        string requestUri,
+        string token,//TOKEN OBRIGATÓRIO PARA CONSULTA
+        string culture = "en")
+    {
+        AuthorizeRequest(token);
+        ChangeRequestCulture(culture);
+        return await _httpClient.GetAsync(requestUri);
+
     }
 
     //FUNÇÕES AUXILIARES

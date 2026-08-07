@@ -1,4 +1,5 @@
-﻿using CashFlow.Domain.Security.Cryptography;
+﻿using CashFlow.Domain.Entities;
+using CashFlow.Domain.Security.Cryptography;
 using CashFlow.Domain.Security.Tokens;
 using CashFlow.Infrastructure.DataAccess;
 using CommonTestUtilities.Entities;
@@ -53,15 +54,30 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 
     //FUNÇÃO QUE INICIA A BASE DE DADOS EM MEMÓRIA COM UM REGISTRO DE USUÁRIO SALVO
     //NA VARIÁVEL PRIVADA _user
+    //E TAMBÉM UMA EXPENSE
     //PARA OS TESTES DE INTEGRAÇÃO DE SUCESSO
     private void StartDatabase(CashFlowDbContext dbContext, IPasswordEncripter passwordEncrypter)
+    {
+        AddUsers(dbContext, passwordEncrypter);
+        AddExpenses(dbContext, _user);
+        dbContext.SaveChanges();
+    }
+
+    //FUNÇÕES AUXILIARES
+    private void AddUsers(CashFlowDbContext dbContext, IPasswordEncripter passwordEncrypter)
     {
         _user = UserBuilder.Build();
         _passwordReal = _user.Password; //SENHA SEM CRIPTOGRAFIA SALVA ANTES DE REGISTRAR NO BANCO
                                         //VAI SER NECESSÁRIO PARA TESTE DE SUCESSO
         _user.Password = passwordEncrypter.Encrypt(_user.Password);//SENHA CRIPTOGRAFADA REGISTRADA
         dbContext.Add(_user);
-        dbContext.SaveChanges();
+    }
+
+    //FUNÇÃO QUE ADICIONA UMA DESPESA, PARA GARANTIR O SUCESSO NO TESTE DE INTEGRAÇÃO - GetAllExpenses
+    private void AddExpenses(CashFlowDbContext dbContext, User user)
+    {
+        var expense = ExpenseBuilder.Build(user);
+        dbContext.Expenses.Add(expense);
     }
 
 }
