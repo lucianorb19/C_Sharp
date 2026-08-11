@@ -7,20 +7,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using WebApi.Test.Resources;
 
 namespace WebApi.Test;
 public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
-    private CashFlow.Domain.Entities.User _user;
-    private string _passwordReal = string.Empty;
-    private string _token = string.Empty;
-    private Expense _expense;
-
-    public string GetEmail() => _user.Email;
-    public string GetName() => _user.Name;
-    public string GetPassword() => _passwordReal;
-    public string GetToken() => _token;
-    public long GetExpenseId() => _expense.Id;
+    public ExpenseIdentityManager Expense { get; private set; } = default!;
+    public UserIdentityManager User_Team_Member { get; private set; } = default!;
+    public UserIdentityManager User_Admin { get; private set; } = default!;
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
@@ -45,41 +39,48 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
                 var dbContext = scope.ServiceProvider.GetRequiredService<CashFlowDbContext>();
                 var passwordEncrypter = scope.ServiceProvider
                                              .GetRequiredService<IPasswordEncripter>();
-                var tokenGenerator = scope.ServiceProvider.GetRequiredService<IAccessTokenGenerator>();
+                var accessTokenGenerator = scope.ServiceProvider
+                                             .GetRequiredService<IAccessTokenGenerator>();
 
-                StartDatabase(dbContext, passwordEncrypter);
 
-                _token = tokenGenerator.Generate(_user);
+                StartDatabase(dbContext, passwordEncrypter, accessTokenGenerator);
+
             });
     }
 
-
-    //FUNÇÃO QUE INICIA A BASE DE DADOS EM MEMÓRIA COM UM REGISTRO DE USUÁRIO SALVO
-    //NA VARIÁVEL PRIVADA _user
-    //E TAMBÉM UMA EXPENSE
-    //PARA OS TESTES DE INTEGRAÇÃO DE SUCESSO
-    private void StartDatabase(CashFlowDbContext dbContext, IPasswordEncripter passwordEncrypter)
+    //FUNÇÃO QUE INICIA A BASE DE DADOS EM MEMÓRIA
+    private void StartDatabase(CashFlowDbContext dbContext, 
+                               IPasswordEncripter passwordEncrypter,
+                               IAccessTokenGenerator accessTokenGenerator)
     {
-        AddUsers(dbContext, passwordEncrypter);
-        AddExpenses(dbContext, _user);
+        var user = AddUserTeamMember(dbContext, passwordEncrypter, accessTokenGenerator);
+        AddExpenses(dbContext, user);
         dbContext.SaveChanges();
     }
 
     //FUNÇÕES AUXILIARES
-    private void AddUsers(CashFlowDbContext dbContext, IPasswordEncripter passwordEncrypter)
+    private User AddUserTeamMember(CashFlowDbContext dbContext, 
+                          IPasswordEncripter passwordEncrypter,
+                          IAccessTokenGenerator accessTokenGenerator)
     {
-        _user = UserBuilder.Build();
-        _passwordReal = _user.Password; //SENHA SEM CRIPTOGRAFIA SALVA ANTES DE REGISTRAR NO BANCO
+        var user = UserBuilder.Build();
+        var passwordReal = user.Password; //SENHA SEM CRIPTOGRAFIA SALVA ANTES DE REGISTRAR NO BANCO
                                         //VAI SER NECESSÁRIO PARA TESTE DE SUCESSO
-        _user.Password = passwordEncrypter.Encrypt(_user.Password);//SENHA CRIPTOGRAFADA REGISTRADA
-        dbContext.Add(_user);
+        user.Password = passwordEncrypter.Encrypt(user.Password);//SENHA CRIPTOGRAFADA REGISTRADA
+        dbContext.Add(user);
+
+        var token = accessTokenGenerator.Generate(user);
+
+        User_Team_Member = new UserIdentityManager(user, passwordReal, token);
+        return user;
     }
 
     //FUNÇÃO QUE ADICIONA UMA DESPESA, PARA GARANTIR O SUCESSO NO TESTE DE INTEGRAÇÃO - GetAllExpenses
     private void AddExpenses(CashFlowDbContext dbContext, User user)
     {
-        _expense = ExpenseBuilder.Build(user);
-        dbContext.Expenses.Add(_expense);
+        var expense = ExpenseBuilder.Build(user);
+        dbContext.Expenses.Add(expense);
+        Expense = new ExpenseIdentityManager(expense);
     }
 
 }

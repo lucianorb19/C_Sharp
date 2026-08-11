@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("3Lacos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27458d6a117417b5ede97ed4eff2290e323dc02e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d600ec3a8ac2e0664ce51132f1975cc990e42645")]
 [assembly: System.Reflection.AssemblyProductAttribute("3Lacos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("3Lacos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
