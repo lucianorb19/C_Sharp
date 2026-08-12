@@ -1,4 +1,5 @@
-﻿using System.Net.Http.Headers;
+﻿using Microsoft.Extensions.Primitives;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
 namespace WebApi.Test;
@@ -45,6 +46,27 @@ public class CashFlowClassFixture : IClassFixture<CustomWebApplicationFactory>
         ChangeRequestCulture(culture);
         return await _httpClient.GetAsync(requestUri);
 
+    }
+
+    protected async Task<HttpResponseMessage> DoDelete(
+        string requestUri,
+        string token,
+        string culture = "en")
+    {
+        AuthorizeRequest(token);
+        ChangeRequestCulture(culture);
+        return await _httpClient.DeleteAsync(requestUri);
+    }
+
+    protected async Task<HttpResponseMessage> DoPut(
+        string requestUri,
+        object request,
+        string token,
+        string culture = "en")
+    {
+        AuthorizeRequest(token);
+        ChangeRequestCulture(culture);
+        return await _httpClient.PutAsJsonAsync(requestUri, request);
     }
 
     //FUNÇÕES AUXILIARES

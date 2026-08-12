@@ -33,11 +33,6 @@ public class ExpenseBuilder
             .RuleFor(expense => expense.PaymentType, 
                                   faker => faker.PickRandom<CashFlow.Domain.Enums.PaymentType>())
             .RuleFor(expense => expense.UserId, _ => user.Id);
-
-
-
-
-
     }
 
 }

@@ -1,5 +1,8 @@
 ﻿using CashFlow.Communication.Enums;
+using CashFlow.Exception;
 using FluentAssertions;
+using System.Globalization;
+using System.Net;
 using System.Text.Json;
 using WebApi.Test.InlineData;
 
@@ -37,7 +40,16 @@ public class GetExpenseByIdTest : CashFlowClassFixture
     [ClassData(typeof(CultureInlineDataTest))]
     public async Task Error_ExpenseNotFound(string culture)
     {
+        var result = await DoGet(requestUri: $"{METHOD}/1000", token: _token, culture: culture);
 
+        result.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        var body = await result.Content.ReadAsStreamAsync();
+        var bodyJson = await JsonDocument.ParseAsync(body);
+        var errors = bodyJson.RootElement.GetProperty("errorMessages").EnumerateArray();
+        var expectedMessage = ResourceErrorMessages.ResourceManager
+                                                   .GetString("EXPENSE_NOT_FOUND",
+                                                              new CultureInfo(culture));
+        errors.Should().HaveCount(1).And.Contain(error => error.GetString()!.Equals(expectedMessage));
     }
 
 
