@@ -12,7 +12,7 @@ public class ExpensesReadOnlyRepositoryBuilder
         _repository = new Mock<IExpensesReadOnlyRepository>();
     }
 
-    //CONFIGURAÇÃO DO MOCK
+    //CONFIGURAÇÕES DOS MOCKS
     //return this - PERMITE USAR CHAMADA ENCADEADA
     public ExpensesReadOnlyRepositoryBuilder GetAll(User user, List<Expense> expenses)
     {
@@ -20,11 +20,16 @@ public class ExpensesReadOnlyRepositoryBuilder
         return this;
     }
 
-    //CONFIGURAÇÃO DO MOCK
     public ExpensesReadOnlyRepositoryBuilder GetById(User user, Expense? expense)
     {
         if (expense is not null) 
             _repository.Setup(repository => repository.GetById(user, expense.Id)).ReturnsAsync(expense);
+        return this;
+    }
+
+    public ExpensesReadOnlyRepositoryBuilder FilterByMonth(User user, List<Expense> expenses)
+    {
+        _repository.Setup(repository => repository.FilterByMonth(user, It.IsAny<DateOnly>())).ReturnsAsync(expenses);
         return this;
     }
 

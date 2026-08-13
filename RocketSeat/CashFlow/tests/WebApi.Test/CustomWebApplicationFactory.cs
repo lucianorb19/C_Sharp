@@ -1,4 +1,5 @@
 ﻿using CashFlow.Domain.Entities;
+using CashFlow.Domain.Enums;
 using CashFlow.Domain.Security.Cryptography;
 using CashFlow.Domain.Security.Tokens;
 using CashFlow.Infrastructure.DataAccess;
@@ -12,7 +13,8 @@ using WebApi.Test.Resources;
 namespace WebApi.Test;
 public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
-    public ExpenseIdentityManager Expense { get; private set; } = default!;
+    public ExpenseIdentityManager Expense_MemberTeam { get; private set; } = default!;
+    public ExpenseIdentityManager Expense_Admin { get; private set; } = default!;
     public UserIdentityManager User_Team_Member { get; private set; } = default!;
     public UserIdentityManager User_Admin { get; private set; } = default!;
 
@@ -49,12 +51,20 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     }
 
     //FUNÇÃO QUE INICIA A BASE DE DADOS EM MEMÓRIA
+    //COM UM USUÁRIO TEAM_MEMBER E SUA EXPENSE
+    //E UM USUÁRIO ADMIN E SUA EXPENSE
     private void StartDatabase(CashFlowDbContext dbContext, 
                                IPasswordEncripter passwordEncrypter,
                                IAccessTokenGenerator accessTokenGenerator)
     {
-        var user = AddUserTeamMember(dbContext, passwordEncrypter, accessTokenGenerator);
-        AddExpenses(dbContext, user);
+        var userTeamMember = AddUserTeamMember(dbContext, passwordEncrypter, accessTokenGenerator);
+        var expense_TeamMember = AddExpenses(dbContext, userTeamMember, expenseId: 1);
+        Expense_MemberTeam = new ExpenseIdentityManager(expense_TeamMember);
+
+        var userAdmin = AddUserAdmin(dbContext, passwordEncrypter, accessTokenGenerator);
+        var expense_Admin = AddExpenses(dbContext, userAdmin, expenseId: 2);
+        Expense_Admin = new ExpenseIdentityManager(expense_Admin);
+
         dbContext.SaveChanges();
     }
 
@@ -64,6 +74,7 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
                           IAccessTokenGenerator accessTokenGenerator)
     {
         var user = UserBuilder.Build();
+        user.Id = 1;
         var passwordReal = user.Password; //SENHA SEM CRIPTOGRAFIA SALVA ANTES DE REGISTRAR NO BANCO
                                         //VAI SER NECESSÁRIO PARA TESTE DE SUCESSO
         user.Password = passwordEncrypter.Encrypt(user.Password);//SENHA CRIPTOGRAFADA REGISTRADA
@@ -75,12 +86,32 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
         return user;
     }
 
+    private User AddUserAdmin(CashFlowDbContext dbContext,
+                          IPasswordEncripter passwordEncrypter,
+                          IAccessTokenGenerator accessTokenGenerator)
+    {
+        var user = UserBuilder.Build(Roles.ADMIN);
+        user.Id = 2;
+        var passwordReal = user.Password; //SENHA SEM CRIPTOGRAFIA SALVA ANTES DE REGISTRAR NO BANCO
+                                          //VAI SER NECESSÁRIO PARA TESTE DE SUCESSO
+        user.Password = passwordEncrypter.Encrypt(user.Password);//SENHA CRIPTOGRAFADA REGISTRADA
+        dbContext.Add(user);
+
+        var token = accessTokenGenerator.Generate(user);
+
+        User_Admin = new UserIdentityManager(user, passwordReal, token);
+        return user;
+    }
+
     //FUNÇÃO QUE ADICIONA UMA DESPESA, PARA GARANTIR O SUCESSO NO TESTE DE INTEGRAÇÃO - GetAllExpenses
-    private void AddExpenses(CashFlowDbContext dbContext, User user)
+    private Expense AddExpenses(CashFlowDbContext dbContext, User user, long expenseId)
     {
         var expense = ExpenseBuilder.Build(user);
+        expense.Id = expenseId;
         dbContext.Expenses.Add(expense);
-        Expense = new ExpenseIdentityManager(expense);
+
+        return expense;
+        //Expense_MemberTeam = new ExpenseIdentityManager(expense);
     }
 
 }
