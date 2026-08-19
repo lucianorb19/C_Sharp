@@ -21,7 +21,8 @@ public class GenerateExpensesReportTest : CashFlowClassFixture
     public async Task Success_Pdf()
     {
         //_expenseDate:Y É O MESMO QUE _expenseDate.ToString("Y")
-        var result = await DoGet(requestUri: $"{METHOD}/pdf?month={_expenseDate:Y}", token: _adminToken);
+        var result = await DoGet(requestUri: $"{METHOD}/pdf?month={_expenseDate.Year}-{_expenseDate.Month}",
+                                 token: _adminToken);
 
         result.StatusCode.Should().Be(HttpStatusCode.OK);
 
@@ -32,7 +33,9 @@ public class GenerateExpensesReportTest : CashFlowClassFixture
     [Fact]
     public async Task Success_Excel()
     {
-        var result = await DoGet(requestUri: $"{METHOD}/excel?month={_expenseDate}", token: _adminToken);
+        //var result = await DoGet(requestUri: $"{METHOD}/excel?month={_expenseDate}", token: _adminToken);
+        var result = await DoGet(requestUri: $"{METHOD}/excel?month={_expenseDate.Year}-{_expenseDate.Month}",
+                                 token: _adminToken);
 
         result.StatusCode.Should().Be(HttpStatusCode.OK);
 
