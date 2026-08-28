@@ -147,6 +147,9 @@
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>Name must not be empty.</value>
   </data>
+  <data name="PASSWORD_DIFFERENT_CURRENT_PASSWORD" xml:space="preserve">
+    <value>Password different from current password.</value>
+  </data>
   <data name="TITLE_REQUIRED" xml:space="preserve">
     <value>Title must not be empty.</value>
   </data>
