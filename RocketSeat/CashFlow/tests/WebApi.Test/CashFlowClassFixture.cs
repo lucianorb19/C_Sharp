@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Primitives;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
 namespace WebApi.Test;
@@ -8,7 +7,7 @@ namespace WebApi.Test;
 //CLASSE QUE TRAZ REFATORAÇÕES
 //CRIA O CLIENTE HTTP
 //DEFINE A LINGUAGEM DA REQUISIÇÃO
-//REALIZA O MÉTODO POST, GET
+//REALIZA O MÉTODO POST, GET, DELETE, PUT
 
 //USA UMA CLASSE CUSTOMIZADA CustomWebApplicationFactory
 //PARA CUSTOMIZAR SEU SERVIDOR HTTP E TAMBÉM O SERVIDOR DO BANCO DE DADOS

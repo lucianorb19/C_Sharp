@@ -111,7 +111,6 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
         dbContext.Expenses.Add(expense);
 
         return expense;
-        //Expense_MemberTeam = new ExpenseIdentityManager(expense);
     }
 
 }
