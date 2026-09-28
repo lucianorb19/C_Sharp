@@ -150,6 +150,9 @@
   <data name="PASSWORD_DIFFERENT_CURRENT_PASSWORD" xml:space="preserve">
     <value>Password different from current password.</value>
   </data>
+  <data name="TAG_TYPE_NOT_SUPPORTED" xml:space="preserve">
+    <value>Tag type not supported.</value>
+  </data>
   <data name="TITLE_REQUIRED" xml:space="preserve">
     <value>Title must not be empty.</value>
   </data>

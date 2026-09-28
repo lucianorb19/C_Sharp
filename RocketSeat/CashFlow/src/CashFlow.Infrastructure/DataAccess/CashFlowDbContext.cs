@@ -11,4 +11,12 @@ public class CashFlowDbContext : DbContext
 
     public DbSet<Expense> Expenses { get; set; }
     public DbSet<User> Users { get; set; }
+
+    //SOBRESCRITA - MUDAR NOME TABELA Tag PARA Tags
+    //TABELA Tags SEM DbSet. ELA É CRIADA PQ EM Expenses HÁ O ATRIBUTO Tags
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Tag>().ToTable("Tags");
+    }
 }

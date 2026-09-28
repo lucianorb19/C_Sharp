@@ -14,11 +14,20 @@ public class AutoMapping : Profile
 
     private void RequestToEntity()
     {
-        CreateMap<RequestExpenseJson, Expense>();
         
         //MAPEIA TODOS OS CAMPOS, EXCETO PASSWORD
         CreateMap<RequestRegisterUserJson, User>()
             .ForMember(destino => destino.Password, config => config.Ignore());
+
+        //NO MAPEAMENTO DAS TAGS DA REQUEST PARA A ENTIDADE Expense, TIRA AS TAGS DUPLICADAS
+        CreateMap<RequestExpenseJson, Expense>()
+            .ForMember(destino => destino.Tags, config => config.MapFrom(source => source.Tags.Distinct()));
+
+
+        //MAPEAMENTO DE ENUM TAG PARA CLASSE Tag
+        //VALOR DO ENUM ATRIBUÍDO PARA O CAMPO TagValue DO OBJETO Tag
+        CreateMap<Communication.Enums.Tag, Tag>()
+            .ForMember(destino => destino.ValueTag, config => config.MapFrom(source => source));
     }
 
     private void EntityToResponse()
