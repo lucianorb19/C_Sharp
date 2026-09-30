@@ -1,6 +1,7 @@
 ﻿using CashFlow.Domain.Entities;
 using CashFlow.Domain.Repositories.Expenses;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace CashFlow.Infrastructure.DataAccess.Repositories;
 
@@ -40,15 +41,15 @@ internal class ExpensesRepository : IExpensesReadOnlyRepository,
     //IExpensesUpateOnlyRepository.
     async Task<Expense?> IExpensesReadOnlyRepository.GetById(User user,long id)
     {
-        return await _dbContext.Expenses.AsNoTracking()
-                                        .FirstOrDefaultAsync(expense => expense.Id == id &&
-                                                             expense.UserId == user.Id);
+        return await GetFullExpense()
+            .AsNoTracking()
+            .FirstOrDefaultAsync(expense => expense.Id == id && expense.UserId == user.Id);
     }
 
     async Task<Expense?> IExpensesUpateOnlyRepository.GetById(User user,long id)
     {
-        return await _dbContext.Expenses.FirstOrDefaultAsync(expense => expense.Id == id &&
-                                                             expense.UserId == user.Id);
+        return await GetFullExpense()
+            .FirstOrDefaultAsync(expense => expense.Id == id && expense.UserId == user.Id);
     }
 
     public async Task Delete(long id)
@@ -82,5 +83,13 @@ internal class ExpensesRepository : IExpensesReadOnlyRepository,
             OrderBy(expense => expense.Date).
             ThenBy(expense => expense.Title).
             ToListAsync();
+    }
+
+
+    //FUNÇÕES AUXILIARES
+    private IIncludableQueryable<Expense, ICollection<Tag>> GetFullExpense()
+    {
+        return _dbContext.Expenses
+            .Include(expense => expense.Tags);
     }
 }
