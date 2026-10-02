@@ -58,11 +58,11 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
                                IAccessTokenGenerator accessTokenGenerator)
     {
         var userTeamMember = AddUserTeamMember(dbContext, passwordEncrypter, accessTokenGenerator);
-        var expense_TeamMember = AddExpenses(dbContext, userTeamMember, expenseId: 1);
+        var expense_TeamMember = AddExpenses(dbContext, userTeamMember, expenseId: 1, tagId: 1);
         Expense_MemberTeam = new ExpenseIdentityManager(expense_TeamMember);
 
         var userAdmin = AddUserAdmin(dbContext, passwordEncrypter, accessTokenGenerator);
-        var expense_Admin = AddExpenses(dbContext, userAdmin, expenseId: 2);
+        var expense_Admin = AddExpenses(dbContext, userAdmin, expenseId: 2, tagId: 2);
         Expense_Admin = new ExpenseIdentityManager(expense_Admin);
 
         dbContext.SaveChanges();
@@ -104,10 +104,17 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     }
 
     //FUNÇÃO QUE ADICIONA UMA DESPESA, PARA GARANTIR O SUCESSO NO TESTE DE INTEGRAÇÃO - GetAllExpenses
-    private Expense AddExpenses(CashFlowDbContext dbContext, User user, long expenseId)
+    private Expense AddExpenses(CashFlowDbContext dbContext, User user, long expenseId, long tagId)
     {
         var expense = ExpenseBuilder.Build(user);
         expense.Id = expenseId;
+
+        foreach(var tag in expense.Tags)
+        {
+            tag.Id = tagId;
+            tag.ExpenseId = expenseId;
+        }
+
         dbContext.Expenses.Add(expense);
 
         return expense;

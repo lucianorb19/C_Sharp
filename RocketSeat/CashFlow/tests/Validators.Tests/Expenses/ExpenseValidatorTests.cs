@@ -5,7 +5,7 @@ using CommonTestUtilities.Requests;
 using FluentAssertions;
 
 namespace Validators.Tests.Expenses;
-public class RegisterExpenseValidatorTests
+public class ExpenseValidatorTests
 {
     [Fact]
     public void Sucess_ExpenseRegisterWithValidFieldsIsValid()
@@ -111,6 +111,25 @@ public class RegisterExpenseValidatorTests
                      ResourceErrorMessages.AMOUNT_GREATER_THAN_ZERO));
     }
 
+
+    [Fact]
+    public void ErrorTagInvalid()
+    {
+        //ARRANGE
+        var validator = new ExpenseValidator();
+        var request = RequestExpenseJsonBuilder.Build();
+        request.Tags.Add((Tag)1000);//TAG INVÁLIDA
+
+        //ACT
+        var result = validator.Validate(request);
+
+        //ASSERT COM FLUENTASSERTION
+        result.IsValid.Should().BeFalse();//TEM QUE GERAR ERRO
+        //TEM QUE SER SOMENTE UM ERRO, COM A STRING ESPECÍFICA QUE GERAMOS EM RESOURCES
+        result.Errors.Should().ContainSingle()
+              .And.Contain(erro => erro.ErrorMessage.Equals(
+                     ResourceErrorMessages.TAG_TYPE_NOT_SUPPORTED));
+    }
 
 
 

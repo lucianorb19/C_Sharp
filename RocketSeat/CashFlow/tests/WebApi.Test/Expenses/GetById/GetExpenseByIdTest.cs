@@ -32,6 +32,9 @@ public class GetExpenseByIdTest : CashFlowClassFixture
         bodyJson.RootElement.GetProperty("description").GetString().Should().NotBeNullOrWhiteSpace();
         bodyJson.RootElement.GetProperty("date").GetDateTime().Should().NotBeAfter(DateTime.Today);
         bodyJson.RootElement.GetProperty("amount").GetDecimal().Should().BeGreaterThan(0);
+        bodyJson.RootElement.GetProperty("tags").EnumerateArray().Should().NotBeNullOrEmpty();
+
+
         var paymentType = bodyJson.RootElement.GetProperty("paymentType").GetInt32();
         Enum.IsDefined(typeof(PaymentType), paymentType).Should().BeTrue();
     }
