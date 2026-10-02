@@ -35,6 +35,11 @@ public class UpdateExpenseUseCase : IUpdateExpenseUseCase
             throw new NotFoundException(ResourceErrorMessages.EXPENSE_NOT_FOUND);
         }
 
+        //LIMPA TODAS AS TAGS ANTES DE MAPEAR A REQUISIÇÃO
+        //MÉTODO MAIS FÁCIL PARA SUBSTITUIR AS TAGS NO CASO DE UMA
+        //ATUALIZAÇÃO
+        expense.Tags.Clear();
+
         //ATRIBUI DE request PARA expense
         _mapper.Map(request, expense);
 
